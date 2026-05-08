@@ -18,7 +18,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://thefolp.org"),
+  metadataBase: new URL("https://lafayetteparkfriends.org"),
   title: {
     default: "Friends of Lafayette-Pointer Park",
     template: "%s — Friends of Lafayette-Pointer Park",
