@@ -44,39 +44,39 @@ function MissionStrip() {
 
 function Hero() {
   return (
-    <section
-      aria-label="Be a part of your community"
-      className="relative isolate overflow-hidden"
-    >
-      <div className="absolute inset-0 -z-10">
-        <ParkIllustration className="h-full w-full object-cover" />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-[color:var(--primary-deep)]/55 mix-blend-multiply"
-        />
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[color:var(--primary-deep)]/40"
-        />
-      </div>
+    <Section className="pb-20 pt-4 sm:pb-24">
+      <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+        <div>
+          <p className="eyebrow">Chevy Chase, Washington DC</p>
+          <h1 className="mt-4 font-heading text-4xl uppercase tracking-[0.16em] text-balance sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
+            Be a part of your community
+          </h1>
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+            Volunteer-led, neighbor-funded, plant by plant since 1999.
+            Cleanup days, replanted gardens, gazebo concerts, and benches
+            that hadn&rsquo;t been replaced in a generation — until we
+            did it.
+          </p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Button asChild size="lg">
+              <Link href="/get-involved#donate">Donate now</Link>
+            </Button>
+            <Button asChild size="lg" variant="outline">
+              <Link href="/about">Learn more</Link>
+            </Button>
+          </div>
+        </div>
 
-      <div className="mx-auto flex max-w-6xl flex-col items-center px-4 py-32 text-center text-white sm:px-6 sm:py-40 lg:px-8">
-        <h1 className="font-heading text-4xl uppercase tracking-[0.18em] text-white sm:text-5xl lg:text-6xl">
-          Be a part of your community
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/90">
-          Volunteer-led, neighbor-funded, plant by plant for twenty-five years.
-        </p>
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          <Button asChild size="lg">
-            <Link href="/get-involved#donate">Donate now</Link>
-          </Button>
-          <Button asChild size="lg" variant="outline" className="border-white/70 bg-white/10 text-white hover:bg-white hover:text-[color:var(--primary-deep)]">
-            <Link href="/about">Learn more</Link>
-          </Button>
+        <div className="relative">
+          <div className="overflow-hidden rounded-2xl shadow-sm ring-1 ring-border/80 aspect-[3/4]">
+            <ParkIllustration variant="portrait" className="h-full w-full" />
+          </div>
+          <span className="absolute -bottom-4 left-6 rounded-full bg-card px-4 py-2 font-heading text-xs uppercase tracking-[0.2em] text-primary-deep shadow-md ring-1 ring-border/80">
+            Nine acres · since 1999
+          </span>
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
@@ -109,7 +109,7 @@ function DonationForm() {
   return (
     <form
       aria-label="Make a donation"
-      className="h-fit rounded-3xl border border-border bg-card p-7 shadow-sm sm:p-8"
+      className="h-fit rounded-2xl border border-border bg-card p-7 shadow-sm sm:p-8"
       action={site.donateUrl}
       target="_blank"
       rel="noreferrer"
@@ -156,28 +156,131 @@ function DonationForm() {
 }
 
 function PledgeBanner() {
+  const pct = Math.min(
+    100,
+    Math.round((annualGoal.pledgeCurrent / annualGoal.pledgeGoal) * 100),
+  );
   return (
     <section className="bg-primary text-white">
-      <div className="mx-auto max-w-6xl px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
-        <p className="font-heading uppercase tracking-[0.22em] text-white/80">
-          {annualGoal.eyebrow}
-        </p>
-        <h2 className="mx-auto mt-4 max-w-3xl font-heading text-4xl tracking-tight text-balance text-white sm:text-5xl">
-          {annualGoal.title}
-        </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
-          {annualGoal.description}
-        </p>
-        <Button
-          asChild
-          size="lg"
-          variant="outline"
-          className="mt-8 border-white bg-transparent text-white hover:bg-white hover:text-[color:var(--primary-deep)]"
-        >
-          <Link href="/get-involved#membership">Make your 2026 pledge</Link>
-        </Button>
+      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-20 lg:px-8">
+        <div>
+          <p className="font-heading uppercase tracking-[0.22em] text-white/80">
+            {annualGoal.eyebrow}
+          </p>
+          <h2 className="mt-4 font-heading text-4xl tracking-tight text-balance text-white sm:text-5xl">
+            {annualGoal.title}
+          </h2>
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
+            {annualGoal.description}
+          </p>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="mt-8 border-white bg-transparent text-white hover:bg-white hover:text-[color:var(--primary-deep)]"
+          >
+            <Link href="/get-involved#membership">Make your 2026 pledge</Link>
+          </Button>
+        </div>
+
+        <Thermometer
+          percent={pct}
+          current={annualGoal.pledgeCurrent}
+          goal={annualGoal.pledgeGoal}
+          unit={annualGoal.pledgeUnit}
+        />
       </div>
     </section>
+  );
+}
+
+function Thermometer({
+  percent,
+  current,
+  goal,
+  unit,
+}: {
+  percent: number;
+  current: number;
+  goal: number;
+  unit: string;
+}) {
+  // Vertical thermometer with bulb at the bottom
+  const trackTop = 24;
+  const trackBottom = 360;
+  const trackHeight = trackBottom - trackTop;
+  const fillHeight = Math.round((percent / 100) * trackHeight);
+  const fillTop = trackBottom - fillHeight;
+  return (
+    <div className="mx-auto flex items-center gap-6 lg:mx-0">
+      <svg
+        viewBox="0 0 110 440"
+        className="h-72 w-auto sm:h-80"
+        aria-label={`${current} of ${goal} ${unit}`}
+        role="img"
+      >
+        {/* outer tube */}
+        <rect
+          x="35"
+          y={trackTop - 8}
+          width="40"
+          height={trackHeight + 16}
+          rx="20"
+          fill="rgba(255,255,255,0.18)"
+          stroke="rgba(255,255,255,0.4)"
+          strokeWidth="2"
+        />
+        {/* fill */}
+        <rect
+          x="42"
+          y={fillTop}
+          width="26"
+          height={fillHeight + 30}
+          rx="13"
+          fill="white"
+        />
+        {/* bulb */}
+        <circle cx="55" cy="395" r="32" fill="white" />
+        <circle cx="55" cy="395" r="32" stroke="rgba(255,255,255,0.4)" strokeWidth="2" fill="none" />
+        {/* tick marks */}
+        {[0, 25, 50, 75, 100].map((m) => {
+          const y = trackBottom - (m / 100) * trackHeight;
+          return (
+            <g key={m}>
+              <line
+                x1="78"
+                x2="92"
+                y1={y}
+                y2={y}
+                stroke="rgba(255,255,255,0.55)"
+                strokeWidth="2"
+              />
+              <text
+                x="96"
+                y={y + 4}
+                fill="rgba(255,255,255,0.85)"
+                fontSize="13"
+                fontFamily="var(--font-heading)"
+              >
+                {m}%
+              </text>
+            </g>
+          );
+        })}
+      </svg>
+      <div>
+        <p className="font-heading text-5xl tracking-tight text-white sm:text-6xl">
+          {current}
+          <span className="text-white/60">/{goal}</span>
+        </p>
+        <p className="mt-1 font-heading uppercase tracking-[0.2em] text-white/70 text-xs">
+          {unit}
+        </p>
+        <p className="mt-3 max-w-[16ch] text-sm text-white/80">
+          {goal - current} more pledges to reach our 2026 goal.
+        </p>
+      </div>
+    </div>
   );
 }
 
@@ -193,17 +296,19 @@ function Sponsors() {
             Neighbors and partners who help keep the park thriving.
           </h2>
         </div>
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-14 grid gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
           {sponsors.map((s) => (
-            <li
-              key={s.name}
-              className="rounded-2xl border border-white/15 bg-white/5 px-6 py-7 text-center"
-            >
-              <p className="font-heading text-xl tracking-wide text-white">
-                {s.name}
+            <li key={s.name} className="flex flex-col items-center text-center">
+              <div className="flex size-24 items-center justify-center rounded-full bg-white/95 text-[color:var(--primary-deep)] shadow-md ring-1 ring-white/30">
+                <span className="font-heading text-2xl tracking-wide">
+                  {s.monogram}
+                </span>
+              </div>
+              <p className="mt-4 font-heading text-base leading-tight text-white">
+                {s.short}
               </p>
               {s.tier ? (
-                <p className="mt-2 text-xs uppercase tracking-[0.2em] text-white/60">
+                <p className="mt-1 font-heading text-[0.7rem] uppercase tracking-[0.22em] text-white/60">
                   {s.tier}
                 </p>
               ) : null}
@@ -264,8 +369,11 @@ function UpcomingPeek() {
 function ContactSignup() {
   return (
     <Section className="pb-24">
-      <div className="grid gap-10 rounded-3xl border border-border bg-card p-8 sm:p-12 lg:grid-cols-2">
-        <div>
+      <div className="grid items-stretch gap-8 rounded-2xl border border-border bg-card p-8 shadow-sm sm:p-10 lg:grid-cols-[1fr_1.05fr_0.85fr]">
+        <div className="overflow-hidden rounded-2xl bg-secondary aspect-[4/5] lg:aspect-auto lg:min-h-[260px]">
+          <ParkIllustration variant="portrait" className="h-full w-full" />
+        </div>
+        <div className="flex flex-col justify-center">
           <p className="eyebrow">Contact us</p>
           <h2 className="mt-3 font-heading text-3xl tracking-tight sm:text-4xl">
             Keep in touch.
@@ -279,7 +387,7 @@ function ContactSignup() {
               {site.email}
             </a>
             <br />
-            Follow us on Instagram:{" "}
+            Follow on Instagram:{" "}
             <a
               className="text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
               href={`https://instagram.com/${site.instagram}`}
@@ -290,17 +398,15 @@ function ContactSignup() {
             </a>
           </p>
         </div>
-
         <form
-          className="flex flex-col gap-3"
+          className="flex flex-col justify-center gap-3"
           aria-label="Sign up for the newsletter"
         >
           <p className="font-heading text-xl tracking-wide text-[color:var(--heading)]">
             Stay in the loop
           </p>
           <p className="text-sm text-muted-foreground">
-            Invitations to events and short updates on what we&rsquo;re working
-            on. No spam.
+            Event invites and short updates. No spam.
           </p>
           <div className="flex overflow-hidden rounded-xl border border-border bg-background">
             <input
@@ -311,14 +417,11 @@ function ContactSignup() {
             />
             <button
               type="submit"
-              className="bg-primary px-6 font-heading text-sm uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-[color:var(--primary-deep)]"
+              className="bg-primary px-5 font-heading text-sm uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-[color:var(--primary-deep)]"
             >
               Sign up
             </button>
           </div>
-          <p className="text-xs text-muted-foreground">
-            We&rsquo;ll only email you about the park.
-          </p>
         </form>
       </div>
     </Section>

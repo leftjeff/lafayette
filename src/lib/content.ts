@@ -122,16 +122,44 @@ export const annualGoal = {
   title: "Make your 2026 pledge today.",
   description:
     "Our target each year is 200 neighbors contributing $100 or more. That is what funds the planting calendar, the supplies, and the small-scale projects that keep the park feeling like the neighborhood's.",
+  pledgeGoal: 200,
+  pledgeCurrent: 137,
+  pledgeUnit: "neighbors pledged",
 };
 
-export type Sponsor = { name: string; tier?: string };
+export type Sponsor = {
+  name: string;
+  short: string;
+  monogram: string;
+  tier?: "Cornerstone" | "Steward" | "Friend";
+};
 
 export const sponsors: Sponsor[] = [
-  { name: "Chevy Chase Citizens Association", tier: "Steward" },
-  { name: "Lafayette Elementary PTA", tier: "Steward" },
-  { name: "Broad Branch Market" },
-  { name: "Politics and Prose" },
-  { name: "Ward 4 Council Office" },
-  { name: "DC Parks and Recreation" },
+  {
+    name: "Chevy Chase Citizens Association",
+    short: "Chevy Chase Citizens",
+    monogram: "CC",
+    tier: "Cornerstone",
+  },
+  {
+    name: "Lafayette Elementary PTA",
+    short: "Lafayette PTA",
+    monogram: "LE",
+    tier: "Cornerstone",
+  },
+  {
+    name: "DC Parks and Recreation",
+    short: "DC Parks & Rec",
+    monogram: "DC",
+    tier: "Steward",
+  },
+  {
+    name: "Ward 4 Council Office",
+    short: "Ward 4 Council",
+    monogram: "W4",
+    tier: "Steward",
+  },
+  { name: "Broad Branch Market", short: "Broad Branch", monogram: "BB", tier: "Friend" },
+  { name: "Politics and Prose", short: "Politics & Prose", monogram: "PP", tier: "Friend" },
 ];
 

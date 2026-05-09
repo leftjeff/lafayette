@@ -51,28 +51,29 @@
 }
 
 :root {
-  /* Palette modeled on friendsofhearstpark.org:
-     primary #4D7C2B, deep #2A4A14, background #F2F5EF */
-  --background: #f2f5ef;
-  --foreground: #1c2417;
-  --heading: #2a4a14;
+  /* Lafayette-Pointer palette: cooler/bluer forest green than Hearst's
+     yellow-green so the two civic groups read distinct.
+     primary #36703F, deep #1B4528, background #F0F3EC */
+  --background: #f0f3ec;
+  --foreground: #1a2218;
+  --heading: #1b4528;
   --card: #ffffff;
-  --card-foreground: #1c2417;
+  --card-foreground: #1a2218;
   --popover: #ffffff;
-  --popover-foreground: #1c2417;
-  --primary: #4d7c2b;
+  --popover-foreground: #1a2218;
+  --primary: #36703f;
   --primary-foreground: #ffffff;
-  --primary-deep: #2a4a14;
-  --secondary: #e6ecdc;
-  --secondary-foreground: #2a4a14;
-  --muted: #ecf0e3;
-  --muted-foreground: #5a6354;
-  --accent: #d8e2c4;
-  --accent-foreground: #2a4a14;
+  --primary-deep: #1b4528;
+  --secondary: #e1ebde;
+  --secondary-foreground: #1b4528;
+  --muted: #e8eee2;
+  --muted-foreground: #555f55;
+  --accent: #d2dec9;
+  --accent-foreground: #1b4528;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #d5dcc8;
-  --input: #d5dcc8;
-  --ring: #4d7c2b;
+  --border: #d3dac9;
+  --input: #d3dac9;
+  --ring: #36703f;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
