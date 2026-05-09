@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Fraunces } from "next/font/google";
+import { PT_Serif, Forum } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 
-const geistSans = Geist({
+const ptSerif = PT_Serif({
   variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
-const fraunces = Fraunces({
+const forum = Forum({
   variable: "--font-heading",
   subsets: ["latin"],
-  axes: ["SOFT", "opsz"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -39,7 +41,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${fraunces.variable} h-full antialiased`}
+      className={`${ptSerif.variable} ${forum.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <SiteHeader />

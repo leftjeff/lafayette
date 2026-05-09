@@ -7,6 +7,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-heading: var(--heading);
+  --color-primary-deep: var(--primary-deep);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-heading);
@@ -49,24 +51,28 @@
 }
 
 :root {
-  --background: oklch(0.995 0.005 110);
-  --foreground: oklch(0.18 0.02 150);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.18 0.02 150);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.18 0.02 150);
-  --primary: oklch(0.42 0.09 150);
-  --primary-foreground: oklch(0.985 0.005 110);
-  --secondary: oklch(0.95 0.02 105);
-  --secondary-foreground: oklch(0.25 0.04 150);
-  --muted: oklch(0.96 0.012 110);
-  --muted-foreground: oklch(0.48 0.02 150);
-  --accent: oklch(0.93 0.04 95);
-  --accent-foreground: oklch(0.28 0.06 100);
+  /* Palette modeled on friendsofhearstpark.org:
+     primary #4D7C2B, deep #2A4A14, background #F2F5EF */
+  --background: #f2f5ef;
+  --foreground: #1c2417;
+  --heading: #2a4a14;
+  --card: #ffffff;
+  --card-foreground: #1c2417;
+  --popover: #ffffff;
+  --popover-foreground: #1c2417;
+  --primary: #4d7c2b;
+  --primary-foreground: #ffffff;
+  --primary-deep: #2a4a14;
+  --secondary: #e6ecdc;
+  --secondary-foreground: #2a4a14;
+  --muted: #ecf0e3;
+  --muted-foreground: #5a6354;
+  --accent: #d8e2c4;
+  --accent-foreground: #2a4a14;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.9 0.012 130);
-  --input: oklch(0.9 0.012 130);
-  --ring: oklch(0.55 0.09 150);
+  --border: #d5dcc8;
+  --input: #d5dcc8;
+  --ring: #4d7c2b;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
@@ -127,4 +133,19 @@
   html {
     @apply font-sans;
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: var(--heading);
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: var(--primary);
 }

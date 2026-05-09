@@ -10,13 +10,14 @@ export const site = {
     cityState: "Washington, DC 20015",
   },
   email: "info@thefolp.org",
+  instagram: "friendsofthefolp",
   donateUrl: "https://www.paypal.com/donate?hosted_button_id=FOLP",
   nav: [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
+    { href: "/about", label: "About Us" },
     { href: "/park", label: "The Park" },
     { href: "/events", label: "Events" },
-    { href: "/get-involved", label: "Get Involved" },
-    { href: "/contact", label: "Contact" },
+    { href: "/get-involved", label: "How you can help" },
+    { href: "/contact", label: "Contact Us" },
   ],
 } as const;

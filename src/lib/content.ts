@@ -103,3 +103,35 @@ export const boardSpotlight = {
   message:
     "We are recruiting new board members. If you love the park and want to help shape its next chapter, please reach out.",
 };
+
+export const donationAmounts = [25, 50, 100, 250, 500] as const;
+
+export const featuredCampaign = {
+  title: "Support the gardens, the gazebo, and the playgrounds.",
+  body: [
+    "Friends of Lafayette-Pointer Park supports the ongoing care of the perennial beds and pollinator gardens, the gazebo and amphitheater where neighbors gather, and the play areas that the city's maintenance schedule cannot keep up with on its own.",
+    "As an official park partner, FOLP works alongside DC Parks and Recreation. Over the past decade we have funded the resurfacing of the tennis courts, added benches and picnic tables, planted hundreds of bulbs, and stood up the amphitheater that now hosts free summer concerts.",
+    "We continue to raise money for an expanded planting program, bench replacements, and the slow work of keeping the park feeling cared for. Please support the effort and make a contribution today.",
+  ],
+  paymentNote:
+    "Donations may be mailed to our P.O. Box (preferred) or sent via PayPal. Please email us to set up a recurring gift. Donations are tax-deductible. Thank you for your support!",
+};
+
+export const annualGoal = {
+  eyebrow: "Help us hit our annual goal",
+  title: "Make your 2026 pledge today.",
+  description:
+    "Our target each year is 200 neighbors contributing $100 or more. That is what funds the planting calendar, the supplies, and the small-scale projects that keep the park feeling like the neighborhood's.",
+};
+
+export type Sponsor = { name: string; tier?: string };
+
+export const sponsors: Sponsor[] = [
+  { name: "Chevy Chase Citizens Association", tier: "Steward" },
+  { name: "Lafayette Elementary PTA", tier: "Steward" },
+  { name: "Broad Branch Market" },
+  { name: "Politics and Prose" },
+  { name: "Ward 4 Council Office" },
+  { name: "DC Parks and Recreation" },
+];
+
