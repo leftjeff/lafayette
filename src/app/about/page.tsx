@@ -18,8 +18,8 @@ export default function AboutPage() {
         title="A neighborhood looking after its park, since 1999."
         description="We are a 501(c)(3) volunteer-led nonprofit, run by neighbors, partnered with DC Parks and Recreation. Our work is the slow, steady kind: plantings, repairs, gatherings, and advocacy."
         photo={{
-          src: "/photos/azaleas-wide.jpg",
-          alt: "A tree-lined path through Lafayette-Pointer Park with blooming azaleas in spring",
+          src: "/photos/park-overview.jpg",
+          alt: "A wide view of Lafayette-Pointer Park with the tennis courts, Recreation Center, and azaleas in bloom",
         }}
       />
 

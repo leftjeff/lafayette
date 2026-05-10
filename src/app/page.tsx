@@ -148,22 +148,22 @@ const photoStripTiles: Array<PhotoTile | VignetteTile> = [
     label: "Playgrounds",
   },
   {
+    kind: "photo",
+    src: "/photos/tennis-courts.jpg",
+    alt: "Tennis courts at Lafayette-Pointer Park, framed by blooming azaleas",
+    label: "Tennis",
+  },
+  {
+    kind: "photo",
+    src: "/photos/cleanup-group.jpg",
+    alt: "Neighbors gathered for a cleanup workday under cherry trees",
+    label: "Cleanups",
+  },
+  {
     kind: "vignette",
     slug: "water-daisy",
     bg: "bg-[#dbe9f1]",
     label: "Water Daisy",
-  },
-  {
-    kind: "vignette",
-    slug: "tennis",
-    bg: "bg-[#f3dccf]",
-    label: "Tennis",
-  },
-  {
-    kind: "vignette",
-    slug: "basketball",
-    bg: "bg-[#f3dccf]",
-    label: "Basketball",
   },
 ];
 

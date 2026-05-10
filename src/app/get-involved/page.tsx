@@ -39,6 +39,15 @@ export default function GetInvolvedPage() {
             No experience needed. Bring water and sunscreen. Coffee and
             pastries near the Recreation Center.
           </p>
+          <div className="relative mt-4 aspect-[4/3] overflow-hidden rounded-xl ring-1 ring-border/60">
+            <Image
+              src="/photos/cleanup-volunteers.jpg"
+              alt="Volunteers digging and planting along a roadside bed during a cleanup workday"
+              fill
+              sizes="(min-width: 1024px) 28vw, 100vw"
+              className="object-cover"
+            />
+          </div>
           <Button asChild variant="outline" className="mt-4 w-fit">
             <Link href="/events">See upcoming workdays</Link>
           </Button>

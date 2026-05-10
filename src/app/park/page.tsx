@@ -30,9 +30,13 @@ const facilityPhoto: Record<string, { src: string; alt: string }> = {
     src: "/photos/path-to-playground.jpg",
     alt: "A path leading toward the park playground beneath tall trees",
   },
+  tennis: {
+    src: "/photos/tennis-courts.jpg",
+    alt: "The tennis courts at Lafayette-Pointer Park, framed by blooming azaleas",
+  },
   "green-spaces": {
-    src: "/photos/path-with-trees.jpg",
-    alt: "Open green space under mature trees inside Lafayette-Pointer Park",
+    src: "/photos/green-spaces-bench.jpg",
+    alt: "An open lawn at Lafayette-Pointer Park with mature trees and a park bench",
   },
   gardens: {
     src: "/photos/azaleas-wide.jpg",
@@ -75,10 +79,7 @@ export default function ParkPage() {
                   ) : (
                     <ParkVignette
                       slug={
-                        f.slug as
-                          | "water-daisy"
-                          | "tennis"
-                          | "basketball"
+                        f.slug as "water-daisy" | "basketball"
                       }
                       className="h-full w-full"
                     />

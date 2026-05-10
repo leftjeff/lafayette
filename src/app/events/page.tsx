@@ -1,7 +1,25 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, PageHeader } from "@/components/section";
 import { Badge } from "@/components/ui/badge";
 import { upcomingEvents } from "@/lib/content";
+
+const eventPhotos: Record<string, Array<{ src: string; alt: string }>> = {
+  "Spring Cleanup Day": [
+    {
+      src: "/photos/cleanup-group.jpg",
+      alt: "A large group of neighbors working together under the cherry trees during the spring cleanup",
+    },
+    {
+      src: "/photos/cleanup-planting-families.jpg",
+      alt: "Kids and parents planting in a freshly mulched bed during the spring cleanup",
+    },
+    {
+      src: "/photos/cleanup-volunteers.jpg",
+      alt: "Volunteers digging and planting along a roadside bed during the spring cleanup",
+    },
+  ],
+};
 
 export const metadata: Metadata = {
   title: "Events",
@@ -105,6 +123,7 @@ export default function EventsPage() {
             <ol className="mt-6 space-y-5">
               {past.map((e) => {
                 const d = new Date(`${e.date}T12:00:00`);
+                const photos = eventPhotos[e.title];
                 return (
                   <li
                     key={e.title}
@@ -143,6 +162,24 @@ export default function EventsPage() {
                       <p className="mt-3 text-base leading-relaxed text-muted-foreground">
                         {e.description}
                       </p>
+                      {photos ? (
+                        <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                          {photos.map((p) => (
+                            <div
+                              key={p.src}
+                              className="relative aspect-[4/3] overflow-hidden rounded-xl ring-1 ring-border/60"
+                            >
+                              <Image
+                                src={p.src}
+                                alt={p.alt}
+                                fill
+                                sizes="(min-width: 1024px) 22vw, (min-width: 640px) 33vw, 100vw"
+                                className="object-cover"
+                              />
+                            </div>
+                          ))}
+                        </div>
+                      ) : null}
                     </div>
                   </li>
                 );
