@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Section, PageHeader } from "@/components/section";
-import { boardSpotlight } from "@/lib/content";
+import { boardMembers, type BoardMember } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About",
@@ -19,7 +19,7 @@ export default function AboutPage() {
         description="We are a 501(c)(3) volunteer-led nonprofit, run by neighbors, partnered with DC Parks and Recreation. Our work is the slow, steady kind: plantings, repairs, gatherings, and advocacy."
       />
 
-      <Section className="grid gap-16 py-16 lg:grid-cols-[1fr_2fr]">
+      <Section className="grid gap-16 py-14 lg:grid-cols-[1fr_2fr]">
         <aside className="space-y-6 text-sm text-muted-foreground lg:sticky lg:top-24 lg:h-fit">
           <Fact label="Founded" value="1999" />
           <Fact label="Status" value="501(c)(3) nonprofit" />
@@ -69,31 +69,84 @@ export default function AboutPage() {
               perennial beds, plant bulbs, mulch trees, and keep an eye on the
               things that need fixing. We raise money to replace benches,
               resurface the tennis courts, plant new trees, and put on
-              community concerts at the amphitheater.
+              community gatherings in the park.
             </p>
-          </Block>
-
-          <Block title="Board of directors">
-            <p>
-              FOLP is governed by a small volunteer board that meets several
-              times a year and steers the organization&apos;s priorities. We
-              actively recruit new board members from the neighborhood.
-            </p>
-            <p className="rounded-xl border border-primary/20 bg-secondary/50 p-5 text-foreground">
-              <strong className="font-semibold">
-                Currently recruiting.
-              </strong>{" "}
-              <span className="text-muted-foreground">
-                {boardSpotlight.message}
-              </span>
-            </p>
-            <Button asChild>
-              <Link href="/contact">Get in touch</Link>
-            </Button>
           </Block>
         </article>
       </Section>
+
+      <BoardSection />
     </div>
+  );
+}
+
+function BoardSection() {
+  return (
+    <section className="border-t border-border bg-secondary/40">
+      <Section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="eyebrow">Board of directors</p>
+          <h2 className="mt-3 font-heading text-3xl tracking-tight sm:text-4xl">
+            The neighbors steering FOLP.
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+            FOLP is governed by a small volunteer board that meets several
+            times a year and steers the organization&apos;s priorities.
+          </p>
+        </div>
+
+        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {boardMembers.map((m) => (
+            <BoardCard key={`${m.role}-${m.name}`} member={m} />
+          ))}
+        </ul>
+
+        <div className="mx-auto mt-12 max-w-xl text-center">
+          <p className="text-sm text-muted-foreground">
+            Want to get involved with the board? We&apos;d love to hear from
+            you.
+          </p>
+          <Button asChild variant="outline" className="mt-4">
+            <Link href="/contact">Get in touch</Link>
+          </Button>
+        </div>
+      </Section>
+    </section>
+  );
+}
+
+const accentClass: Record<BoardMember["accent"], string> = {
+  moss: "bg-[color:var(--primary-deep)] text-white",
+  leaf: "bg-primary text-white",
+  clay: "bg-[#c46a3f] text-white",
+  amber: "bg-[#d99a2b] text-[color:var(--primary-deep)]",
+  sky: "bg-[#4a7a9a] text-white",
+  berry: "bg-[#8b3a62] text-white",
+};
+
+function BoardCard({ member }: { member: BoardMember }) {
+  return (
+    <li className="flex flex-col items-start gap-4 rounded-2xl border border-border/70 bg-card p-6 shadow-sm">
+      <div className="flex items-center gap-4">
+        <div
+          className={`flex size-16 items-center justify-center rounded-full font-heading text-xl tracking-wide ring-2 ring-white/60 shadow-md ${accentClass[member.accent]}`}
+          aria-hidden
+        >
+          {member.initials}
+        </div>
+        <div>
+          <p className="font-heading text-lg leading-tight text-[color:var(--heading)]">
+            {member.name}
+          </p>
+          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
+            {member.role}
+          </p>
+        </div>
+      </div>
+      <p className="text-sm leading-relaxed text-muted-foreground">
+        {member.bio}
+      </p>
+    </li>
   );
 }
 

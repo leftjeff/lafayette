@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/section";
 import { ParkIllustration } from "@/components/park-illustration";
+import { ParkVignette } from "@/components/park-vignette";
 import {
   donationAmounts,
   featuredCampaign,
@@ -15,8 +16,9 @@ import { site } from "@/lib/site";
 export default function Home() {
   return (
     <div>
-      <MissionStrip />
       <Hero />
+      <MissionStrip />
+      <PhotoStrip />
       <FeaturedProject />
       <PledgeBanner />
       <Sponsors />
@@ -28,15 +30,15 @@ export default function Home() {
 
 function MissionStrip() {
   return (
-    <Section className="py-14 text-center sm:py-16">
+    <Section className="py-10 text-center sm:py-12">
       <p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
         Friends of Lafayette-Pointer Park, Inc. is a non-profit organization
         incorporated in the District of Columbia to assist the DC Department
         of Parks and Recreation in the maintenance and improvement of
-        Lafayette-Pointer Park, including the gardens, gazebo, ball fields,
-        playgrounds, tennis courts, and the Lafayette-Pointer Recreation
-        Center. FOLP is a 501(c)(3) organization and all contributions are
-        tax-deductible.
+        Lafayette-Pointer Park, including the gardens, gazebo, playgrounds,
+        tennis and basketball courts, green spaces, and the Lafayette-Pointer
+        Recreation Center. FOLP is a 501(c)(3) organization and all
+        contributions are tax-deductible.
       </p>
     </Section>
   );
@@ -44,45 +46,102 @@ function MissionStrip() {
 
 function Hero() {
   return (
-    <Section className="pb-20 pt-4 sm:pb-24">
-      <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
-        <div>
-          <p className="eyebrow">Chevy Chase, Washington DC</p>
-          <h1 className="mt-4 font-heading text-4xl uppercase tracking-[0.16em] text-balance sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
-            Be a part of your community
-          </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Volunteer-led, neighbor-funded, plant by plant since 1999.
-            Cleanup days, replanted gardens, gazebo concerts, and benches
-            that hadn&rsquo;t been replaced in a generation — until we
-            did it.
-          </p>
-          <div className="mt-9 flex flex-wrap gap-3">
-            <Button asChild size="lg">
-              <Link href="/get-involved#donate">Donate now</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link href="/about">Learn more</Link>
-            </Button>
+    <div className="relative overflow-hidden bg-gradient-to-br from-secondary via-background to-[color:var(--cream)]">
+      <svg
+        aria-hidden
+        viewBox="0 0 200 200"
+        className="pointer-events-none absolute -right-12 -top-16 size-80 opacity-60"
+      >
+        <circle cx="100" cy="100" r="58" fill="var(--amber)" opacity="0.5" />
+        <circle cx="100" cy="100" r="86" fill="var(--amber)" opacity="0.18" />
+      </svg>
+      <Section className="relative pb-16 pt-12 sm:pt-14 lg:pb-20">
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+          <div>
+            <p className="eyebrow">Chevy Chase, Washington DC</p>
+            <h1 className="mt-4 font-heading text-4xl uppercase tracking-[0.16em] text-balance sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
+              Be a part of your community
+            </h1>
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              Volunteer-led, neighbor-funded, plant by plant since 1999.
+              Cleanup days, replanted gardens, neighborhood concerts, and
+              benches that hadn&rsquo;t been replaced in a generation —
+              until we did it.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button asChild size="lg">
+                <Link href="/get-involved#donate">Donate now</Link>
+              </Button>
+              <Button asChild size="lg" variant="outline">
+                <Link href="/about">Learn more</Link>
+              </Button>
+            </div>
           </div>
-        </div>
 
-        <div className="relative">
-          <div className="overflow-hidden rounded-2xl shadow-sm ring-1 ring-border/80 aspect-[3/4]">
-            <ParkIllustration variant="portrait" className="h-full w-full" />
+          <div className="relative">
+            <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border/80 aspect-[3/4]">
+              <ParkIllustration variant="portrait" className="h-full w-full" />
+            </div>
+            <span className="absolute -bottom-3 left-6 rounded-full bg-card px-4 py-2 font-heading text-xs uppercase tracking-[0.2em] text-[color:var(--clay)] shadow-md ring-1 ring-border/80">
+              Nine acres · since 1999
+            </span>
+            <span
+              aria-hidden
+              className="absolute -right-3 top-6 hidden h-16 w-16 rounded-full bg-[color:var(--clay)] opacity-90 shadow-md sm:block"
+            />
+            <span
+              aria-hidden
+              className="absolute -left-4 top-1/3 hidden h-10 w-10 rounded-full bg-[color:var(--amber)] opacity-90 shadow-md sm:block"
+            />
           </div>
-          <span className="absolute -bottom-4 left-6 rounded-full bg-card px-4 py-2 font-heading text-xs uppercase tracking-[0.2em] text-primary-deep shadow-md ring-1 ring-border/80">
-            Nine acres · since 1999
-          </span>
         </div>
-      </div>
+      </Section>
+    </div>
+  );
+}
+
+function PhotoStrip() {
+  const slugs: Array<{
+    slug:
+      | "gardens"
+      | "playgrounds"
+      | "water-daisy"
+      | "tennis"
+      | "basketball"
+      | "green-spaces"
+      | "recreation-center";
+    bg: string;
+    label: string;
+  }> = [
+    { slug: "gardens", bg: "bg-secondary", label: "Gardens" },
+    { slug: "water-daisy", bg: "bg-[#dbe9f1]", label: "Water Daisy" },
+    { slug: "playgrounds", bg: "bg-[color:var(--cream)]", label: "Playgrounds" },
+    { slug: "tennis", bg: "bg-[#f3dccf]", label: "Tennis" },
+    { slug: "basketball", bg: "bg-[#f3dccf]", label: "Basketball" },
+    { slug: "green-spaces", bg: "bg-secondary", label: "Green spaces" },
+  ];
+  return (
+    <Section className="pb-12">
+      <ul className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        {slugs.map((s) => (
+          <li
+            key={s.slug}
+            className={`group relative aspect-square overflow-hidden rounded-2xl ring-1 ring-border/60 ${s.bg}`}
+          >
+            <ParkVignette slug={s.slug} className="h-full w-full" />
+            <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[color:var(--primary-deep)]/85 via-[color:var(--primary-deep)]/30 to-transparent px-3 py-2 font-heading text-xs uppercase tracking-[0.2em] text-white">
+              {s.label}
+            </span>
+          </li>
+        ))}
+      </ul>
     </Section>
   );
 }
 
 function FeaturedProject() {
   return (
-    <Section className="py-20 sm:py-24">
+    <Section className="py-16 sm:py-20">
       <div className="grid gap-14 lg:grid-cols-[1.2fr_1fr]">
         <div>
           <p className="eyebrow">Featured project</p>
@@ -287,7 +346,7 @@ function Thermometer({
 function Sponsors() {
   return (
     <section className="bg-[color:var(--primary-deep)] text-white">
-      <Section className="py-20 sm:py-24">
+      <Section className="py-16 sm:py-20">
         <div className="text-center">
           <p className="font-heading uppercase tracking-[0.22em] text-white/70">
             Thanks to our supporters
@@ -321,9 +380,9 @@ function Sponsors() {
 }
 
 function UpcomingPeek() {
-  const next = upcomingEvents.slice(0, 3);
+  const next = upcomingEvents.filter((e) => e.status === "upcoming").slice(0, 3);
   return (
-    <Section className="py-20 sm:py-24">
+    <Section className="py-16 sm:py-20">
       <div className="flex flex-wrap items-end justify-between gap-6">
         <div>
           <p className="eyebrow">In the park</p>
@@ -338,20 +397,26 @@ function UpcomingPeek() {
         </Button>
       </div>
       <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {next.map((e) => {
+        {next.map((e, i) => {
           const d = new Date(`${e.date}T12:00:00`);
+          const dateStr =
+            e.dateLabel ??
+            d.toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            });
+          const accents = [
+            "border-l-4 border-l-primary",
+            "border-l-4 border-l-[color:var(--clay)]",
+            "border-l-4 border-l-[color:var(--amber)]",
+          ];
           return (
             <article
               key={e.title}
-              className="rounded-2xl border border-border bg-card p-6"
+              className={`rounded-2xl border border-border bg-card p-6 shadow-sm ${accents[i % accents.length]}`}
             >
-              <p className="eyebrow">
-                {d.toLocaleDateString("en-US", {
-                  month: "long",
-                  day: "numeric",
-                  year: "numeric",
-                })}
-              </p>
+              <p className="eyebrow">{dateStr}</p>
               <h3 className="mt-3 font-heading text-2xl tracking-tight">
                 {e.title}
               </h3>

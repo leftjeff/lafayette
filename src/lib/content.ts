@@ -36,18 +36,25 @@ export const facilities: Facility[] = [
       "Recent court upgrades funded in part by Friends of Lafayette-Pointer Park keep the courts smooth and well-lined for casual play and pickup matches.",
   },
   {
-    slug: "ball-fields",
-    name: "Ball Fields",
-    blurb: "Open diamonds and turf for baseball, softball, and pickup games.",
+    slug: "basketball",
+    name: "Basketball Court",
+    blurb: "An open court for pickup games and after-school play.",
     details:
-      "Used by little league teams in season and by the neighborhood for casual play. Backstops and benches were added through volunteer fundraising.",
+      "The basketball court is a regular gathering spot for neighborhood kids and weekend pickup games. Backboards and lines have been refreshed with help from FOLP fundraising.",
+  },
+  {
+    slug: "green-spaces",
+    name: "Green Spaces",
+    blurb: "Open lawns and shaded corners for picnics, frisbee, and quiet afternoons.",
+    details:
+      "Wide stretches of grass and mature trees give the park room to breathe. Neighbors use them for after-school play, family picnics, and the occasional stroller meet-up.",
   },
   {
     slug: "gardens",
     name: "Gardens & Gathering Spaces",
-    blurb: "Pollinator beds, an amphitheater, a gazebo, and shaded picnic areas.",
+    blurb: "Pollinator beds, a gazebo, and shaded picnic areas.",
     details:
-      "FOLP volunteers plant, weed, and mulch the perennial beds. The amphitheater and gazebo host concerts, weddings, and neighborhood meet-ups.",
+      "FOLP volunteers plant, weed, and mulch the perennial beds. The gazebo and surrounding picnic areas host concerts, classes, and neighborhood meet-ups.",
   },
 ];
 
@@ -56,36 +63,36 @@ export type EventItem = {
   title: string;
   description: string;
   type: "volunteer" | "community" | "fundraiser";
+  status: "past" | "upcoming";
+  dateLabel?: string;
 };
 
 export const upcomingEvents: EventItem[] = [
   {
-    date: "2026-05-16",
+    date: "2026-04-18",
     title: "Spring Cleanup Day",
     description:
-      "Help us rake, weed, mulch, and prune. Tools and gloves provided — bring water and sunscreen. Coffee and pastries at the gazebo from 9am.",
+      "80–90 neighbors turned out to rake, weed, mulch, and prune across the park. Thank you to everyone who came — the gardens are in great shape heading into summer.",
     type: "volunteer",
+    status: "past",
   },
   {
-    date: "2026-06-21",
-    title: "Summer Solstice Concert",
-    description:
-      "Live music at the amphitheater. Bring a blanket and a picnic. Free and open to all neighbors.",
-    type: "community",
-  },
-  {
-    date: "2026-09-12",
+    date: "2026-09-30",
     title: "Annual Fund Drive Kickoff",
     description:
-      "Meet the board, learn what's planned for the year, and renew your membership. Light refreshments at the recreation center.",
+      "Fall kickoff for our annual fund. Meet the board, hear what's planned for the year, and renew your membership. Date TBD — check back closer to fall.",
     type: "fundraiser",
+    status: "upcoming",
+    dateLabel: "Fall — date TBD",
   },
   {
-    date: "2026-10-25",
+    date: "2026-10-31",
     title: "Fall Cleanup & Bulb Planting",
     description:
-      "Plant tulip and daffodil bulbs in the perennial beds, rake leaves, and prep the gardens for winter.",
+      "Plant tulip and daffodil bulbs in the perennial beds, rake leaves, and prep the gardens for winter. Date TBD — we'll announce once the weather forecast firms up.",
     type: "volunteer",
+    status: "upcoming",
+    dateLabel: "Fall — date TBD",
   },
 ];
 
@@ -93,24 +100,18 @@ export const accomplishments = [
   "Funded the resurfacing of the tennis courts",
   "Built and maintain the perennial gardens and pollinator beds",
   "Installed benches, picnic tables, and the gazebo",
-  "Added the amphitheater for concerts and gatherings",
   "Advocated for and helped open the new recreation center (2021)",
   "Renamed the park to honor the Pointer family (2020)",
   "Run spring and fall cleanup days every year since 1999",
 ];
-
-export const boardSpotlight = {
-  message:
-    "We are recruiting new board members. If you love the park and want to help shape its next chapter, please reach out.",
-};
 
 export const donationAmounts = [25, 50, 100, 250, 500] as const;
 
 export const featuredCampaign = {
   title: "Support the gardens, the gazebo, and the playgrounds.",
   body: [
-    "Friends of Lafayette-Pointer Park supports the ongoing care of the perennial beds and pollinator gardens, the gazebo and amphitheater where neighbors gather, and the play areas that the city's maintenance schedule cannot keep up with on its own.",
-    "As an official park partner, FOLP works alongside DC Parks and Recreation. Over the past decade we have funded the resurfacing of the tennis courts, added benches and picnic tables, planted hundreds of bulbs, and stood up the amphitheater that now hosts free summer concerts.",
+    "Friends of Lafayette-Pointer Park supports the ongoing care of the perennial beds and pollinator gardens, the gazebo and picnic areas where neighbors gather, and the play areas that the city's maintenance schedule cannot keep up with on its own.",
+    "As an official park partner, FOLP works alongside DC Parks and Recreation. Over the past decade we have funded the resurfacing of the tennis courts, added benches and picnic tables, planted hundreds of bulbs, and put on community concerts in the park.",
     "We continue to raise money for an expanded planting program, bench replacements, and the slow work of keeping the park feeling cared for. Please support the effort and make a contribution today.",
   ],
   paymentNote:
@@ -121,11 +122,64 @@ export const annualGoal = {
   eyebrow: "Help us hit our annual goal",
   title: "Make your 2026 pledge today.",
   description:
-    "Our target each year is 200 neighbors contributing $100 or more. That is what funds the planting calendar, the supplies, and the small-scale projects that keep the park feeling like the neighborhood's.",
+    "Membership gifts fund the planting calendar, the supplies, and the small-scale projects that keep the park feeling like the neighborhood's. Every household helps.",
   pledgeGoal: 200,
   pledgeCurrent: 137,
   pledgeUnit: "neighbors pledged",
 };
+
+export type BoardMember = {
+  name: string;
+  role: string;
+  bio: string;
+  initials: string;
+  accent: "moss" | "leaf" | "clay" | "amber" | "sky" | "berry";
+};
+
+export const boardMembers: BoardMember[] = [
+  {
+    name: "Add a name",
+    role: "President",
+    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
+    initials: "AN",
+    accent: "moss",
+  },
+  {
+    name: "Add a name",
+    role: "Vice President",
+    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
+    initials: "AN",
+    accent: "clay",
+  },
+  {
+    name: "Add a name",
+    role: "Treasurer",
+    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
+    initials: "AN",
+    accent: "amber",
+  },
+  {
+    name: "Add a name",
+    role: "Secretary",
+    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
+    initials: "AN",
+    accent: "leaf",
+  },
+  {
+    name: "Add a name",
+    role: "Director, Gardens",
+    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
+    initials: "AN",
+    accent: "sky",
+  },
+  {
+    name: "Add a name",
+    role: "Director, Events",
+    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
+    initials: "AN",
+    accent: "berry",
+  },
+];
 
 export type Sponsor = {
   name: string;
@@ -162,4 +216,3 @@ export const sponsors: Sponsor[] = [
   { name: "Broad Branch Market", short: "Broad Branch", monogram: "BB", tier: "Friend" },
   { name: "Politics and Prose", short: "Politics & Prose", monogram: "PP", tier: "Friend" },
 ];
-

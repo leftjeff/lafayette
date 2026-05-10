@@ -9,6 +9,10 @@
   --color-foreground: var(--foreground);
   --color-heading: var(--heading);
   --color-primary-deep: var(--primary-deep);
+  --color-clay: var(--clay);
+  --color-amber: var(--amber);
+  --color-sky: var(--sky);
+  --color-cream: var(--cream);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-heading);
@@ -53,27 +57,33 @@
 :root {
   /* Lafayette-Pointer palette: cooler/bluer forest green than Hearst's
      yellow-green so the two civic groups read distinct.
-     primary #36703F, deep #1B4528, background #F0F3EC */
+     primary #2E6B36, deep #133A21, background #F0F3EC.
+     Warm complements (clay/amber/sky) introduce contrast against the
+     greens for a more vibrant, polished feel. */
   --background: #f0f3ec;
-  --foreground: #1a2218;
-  --heading: #1b4528;
+  --foreground: #16201a;
+  --heading: #133a21;
   --card: #ffffff;
-  --card-foreground: #1a2218;
+  --card-foreground: #16201a;
   --popover: #ffffff;
-  --popover-foreground: #1a2218;
-  --primary: #36703f;
+  --popover-foreground: #16201a;
+  --primary: #2e6b36;
   --primary-foreground: #ffffff;
-  --primary-deep: #1b4528;
-  --secondary: #e1ebde;
-  --secondary-foreground: #1b4528;
+  --primary-deep: #133a21;
+  --secondary: #dde9d8;
+  --secondary-foreground: #133a21;
   --muted: #e8eee2;
-  --muted-foreground: #555f55;
-  --accent: #d2dec9;
-  --accent-foreground: #1b4528;
+  --muted-foreground: #4a5550;
+  --accent: #c8d8bc;
+  --accent-foreground: #133a21;
+  --clay: #c4593b;
+  --amber: #e29b2b;
+  --sky: #4a7a9a;
+  --cream: #f7efd8;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #d3dac9;
-  --input: #d3dac9;
-  --ring: #36703f;
+  --border: #c5cfb6;
+  --input: #c5cfb6;
+  --ring: #2e6b36;
   --chart-1: oklch(0.87 0 0);
   --chart-2: oklch(0.556 0 0);
   --chart-3: oklch(0.439 0 0);
