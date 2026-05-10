@@ -1,0 +1,16 @@
+---
+id: 140
+slug: ampitheater
+title: 'Ampitheater'
+date: 2013-08-14T20:55:37
+modified: 2022-04-07T11:23:57
+source: https://thefolp.org/accomplishments/ampitheater/
+---
+
+![amphitheater](http://thefolp.org/wp-content/uploads/2013/08/amphitheater.jpg)As part of our 1999 Phase I Master Plan, the Friends of Lafayette-Pointer Park identified the hillside between the ball fields and the school playground as an area in need of attention. The short, steep hill was totally eroded and a constant source of mud on the track. We made a plea to local businesses to help us restore the park, and neighbor Ed Quinn, who grew up playing in Lafayette Park and now owns T.W. Perry Lumber answered this plea.
+
+When then FOLP President Page Kennedy and Vice President Jeff Stoiber called on T.W. Perry, Ed Quinn immediately offered to provide the amphitheater to replace the muddy hill. He enlisted fellow neighbor Jimmy Johnson, owner of Johnson’s Landscaping, and one of his vendors, York Stone, to provide and install the synthetic stone amphitheater. Since its installation in 2001 the amphitheater has not only stabalized the hillside but provided a play space and viewing stand for field events. Not long after it was completed, it was the site of a neighborhood vigil following the 9-11 tragedy. The neighborhood and the Friends of Lafayette-Pointer Park owe a great debt to Ed Quinn and T.W. Perry for their commitment to the community.
+
+## Extensive Repairs Completed in 2011
+
+The amphitheater underwent extensive repairs in August 2011.The FOLP and the Lafayette Home and School Association (HSA) paid for and managed the rehabilitation project – through funds from the generous support of neighbors and Lafayette school families. The amphitheater had fallen into disrepair from heavy use. It has now regained its position as a wonderful asset for the park.

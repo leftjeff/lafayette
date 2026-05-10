@@ -1,0 +1,79 @@
+---
+id: 41
+slug: news
+title: 'News & Events'
+date: 2008-09-11T19:24:01
+modified: 2024-12-23T20:33:51
+source: https://thefolp.org/news/
+---
+
+# ****Spring & Fall Lafayette-Pointer Park Clean-Up Days ****
+
+# ****Are A Great Success****
+
+#### The FOLP has had wonderful turnouts for its Spring and Fall clean-up days, with lots of neighbor volunteers, including many children of all ages. Light work — raking, weeding, picking up litter, etc. Thank you to all who have participated. Your work is very much appreciated!
+
+####                           Link to Photos: * *
+- [Photos of Spring 2023 Clean-Up Day](http://thefolp.org/spring-clean-up-day-photos/ ‎)
+- **[Photos Clean-Up Day – Spring 2019](http://thefolp.org/folp-cleanup-spring-2019/)**
+- **[Photos of Spring 2018 Clean-Up Day](http://thefolp.org/folp-clean-up-day-spring-2018/)**
+- ***[Photos of Fall 2017 Clean-Up Day](http://thefolp.org/gallery/folp-clean-up-fall-2017/)***
+
+#### *  *  *
+
+#### **Announcement:**
+
+# **Chevy Chase, DC Neighborhood Park Groups Merge**
+
+**        Sept. 18, 2017** — The boards of the Friends of Lafayette Park, est. 1999 (FOLP), and the Friends of Lafayette Recreation Center and Park, est. 2016 (FoLRAP), voted today to merge the two non-profit community organizations.  The newly merged group invites the engagement and support of all who are interested as it works to enhance, improve and maintain Lafayette Park and Recreation Center in Chevy Chase, DC.
+
+“The missions of both our groups were the same – to work with the city to enhance Lafayette Park for the benefit of the whole community, the city, all ages, and anyone visiting the Park,” said Jeff Stoiber, president of the FOLP, and Elizabeth Engel, president of the FoLRAP, in a joint statement. “We believe this merger is a great opportunity to improve and foster strong relationships in our local community and unite to serve this important neighborhood asset.”
+
+The joint organization will operate under the name Friends of Lafayette Park (FOLP). Stoiber and Engel will become co-presidents of the FOLP and combine the boards and supporters for an efficient and strong approach to improvements and maintenance of Lafayette Park and Recreation Center.
+
+With the Park sitting at the center of the Chevy Chase, DC neighborhood and adjacent to Lafayette Elementary School, it is an integral hub for the community, and its beautiful gardens, fun play spaces, and open fields provide a unique setting for neighbors of all ages to enjoy.
+
+…
+
+FOLP welcomes all neighbors and friends. The FOLP will continue to work together with the community and city officials to help maintain the gardens, landscaping as well as promote and participate in activities and programs in the Park. The FOLP is a 501(c)3 organization that relies solely on volunteer efforts and tax-deductible donations.
+
+## **To see full text of announcement, click:**
+
+**[Announcement – Merger of FOLP and FoLRAP](http://thefolp.org/wp-content/uploads/2017/07/Announcement-Merger-of-FOLP-and-FoLRAP.pdf)**
+
+* * *
+
+# 
+
+# School Modernization:
+
+Lafayette Elementary School underwent a complete rehabilitation and modernization in 2015-2016.  FOLP monitored the completed project to ensure any punch-list needed repairs and restoration work to the park from the construction was completed.
+
+Click here for FOLP’s letter about updating the ball fields area: [FOLPBallFieldsLetter](http://thefolp.org/wp-content/uploads/2015/11/FOLPBallFieldsLetter.pdf)
+
+Click here for FOLP’s letter about improving park and school drainage: [FOLP Bioretention Letter 5-5-2015](http://thefolp.org/wp-content/uploads/2015/11/FOLP-Bioretention-Letter-5-5-2015.pdf)
+
+For updates from DC’s Department of Government Services, please visit this site: [http://dgs.dc.gov/page/lafayette-elementary-school-project](http://dgs.dc.gov/page/lafayette-elementary-school-project)
+
+Please direct any comments or questions to the Friends of Lafayette-Pointer Park at [info1@thefolp.org](mailto:info1@thefolp.org).
+
+## Volunteers Needed
+
+**Areas that need work are:**
+- Weed pulling on the berm next to the upper playground
+- Leaf raking around the rec center
+- Weed pulling in the planters on either side of the newly repaired amphitheater next to the ball fields
+- General trash and branch pick-up throughout the park
+- Clean-up of erosion on the paths throughout the park
+
+Thanks as always for the great community support and we’ll see everyone at the next clean-up. If you have any questions, please contact [info1@thefolp.org](mailto:info1@thefolp.org).
+
+![fall_leaves](http://thefolp.org/wp-content/uploads/2013/10/fall_leaves.jpg)
+
+## Park Enhancements
+
+Friends of Lafayette-Pointer Park (FOLP) will have ongoing projects at the park as part of the Phase II master plan. Currently, we have finished the pathway, please review the site [plan](http://thefolp.org/pdfs/Lafayette_road.pdf) for more details. FOLP also will continue to work with city officials to address the storm water runoff problem from the top of the hill to alleviate the serious erosion problem running down the hill onto the track around the ball field and also down the steps to 33rd Street. Please visit our [park enhancement]( http://thefolp.org/accomplishments) section frequently to find out the most recent park improvements.
+
+Phase II Master Plan
+
+Please visit our [goals](http://thefolp.org/accomplishments/goals ‎) section for more information.

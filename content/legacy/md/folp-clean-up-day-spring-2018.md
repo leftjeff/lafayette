@@ -1,0 +1,14 @@
+---
+id: 949
+slug: folp-clean-up-day-spring-2018
+title: 'FOLP Clean-Up Day – Spring 2018'
+date: 2018-05-08T22:53:11
+modified: 2018-05-08T23:00:21
+source: https://thefolp.org/folp-clean-up-day-spring-2018/
+---
+
+#### The FOLP had a great turnout for the spring clean-up day, April 28, 2018, with gorgeous spring weather and lots of volunteers, including many children of all ages, and some getting community service hours. Your participation and work were very much appreciated!
+
+#####  The FOLP would like to thank Frank Van Riper for taking the photographs. 
+
+#####                                      (c) Goodman/Van Riper Photography

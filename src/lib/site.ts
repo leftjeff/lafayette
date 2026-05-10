@@ -17,6 +17,7 @@ export const site = {
     { href: "/about", label: "About Us" },
     { href: "/park", label: "The Park" },
     { href: "/events", label: "Events" },
+    { href: "/history", label: "History" },
     { href: "/get-involved", label: "How you can help" },
     { href: "/contact", label: "Contact Us" },
   ],

@@ -1,0 +1,48 @@
+---
+id: 130
+slug: privacy-policy
+title: 'Privacy Policy'
+date: 2013-08-14T20:51:53
+modified: 2013-10-10T23:00:34
+source: https://thefolp.org/privacy-policy/
+---
+
+## Friends Of Lafayette Park Privacy Policy
+
+The following is the Privacy Policy of Friends of Lafayette Park which, for the purposes of these terms is referred to as either Friends of Lafayette Park or TheFolp.org. TheFolp.org supports a general policy of openness about personal data collection and use and so we have adopted this Privacy Policy as part of our commitment to protecting your personal information from misuse.TheFolp.org collects both personal information and aggregated information on our Web Sites.
+
+## Personal Information
+
+You are under no obligation to provide personal information in order to use any of our services. We collect personal information only when you provide it to us for example registering as a site member; registering to receive information from us; and taking part in other promotional opportunities. You may be asked to provide your contact information (such as your name, postal[http://thefolp.org/privacy-policy](http://thefolp.org/privacy-policy) address, telephone numbers and/or email address).
+
+Please note that sites to which you can link from TheFolp.org (including any affiliated, co-branded or third party sites) may have different terms and conditions or policies applicable to those sites and we urge you to check the privacy policy and terms and conditions on each such site. Please also bear in mind that TheFolp.org is not responsible for the content or the policies of any of these sites.
+
+Contact information is used to respond to your inquiries. You also may receive periodic emails from us with updates to our Web Sites or upcoming events. Whenever we request your personal information on our Web Site, we will try to explain to you how we intend to use it. We may also be required to disclose personal information pursuant to valid legal process.
+
+## Use of Cookies by thefolp.org
+
+Cookies are data that a Web site transfers to an individual’s computer for record-keeping purposes. Cookies, which are an industry standard used by most Web sites, including ours, can facilitate a user’s ongoing access to and use of a site. Cookies do not cause damage to your computer systems or files.
+
+We may use cookies to track your preferences on our website. The cookie saves you the trouble of entering information over and over again during multiple or single visits.
+
+If you do not want information collected through the use of cookies, there is a simple procedure in most browsers that allows you to decline or accept the cookie feature.
+
+## Children
+
+We do not direct any of our content specifically at children under thirteen (13) years of age. Please note that nowhere on the Site do we knowingly collect profile information from children under the age of 13.
+
+## Security
+
+We have security measures in place to protect the loss, misuse and alteration of the information under our control. Unfortunately, no data transmission over the Internet can be guaranteed to be 100% secure. As a result, while we strive to protect your personal information, we cannot ensure or warrant the security of any information you transmit to us, and you do so at your own risk. Once we receive your transmission, we make our best effort to ensure its security on our systems. We may use third parties to host and maintain our Web Sites.
+
+## Links to Third Party Sites
+
+Our Web sites may contain links to third-party Web sites. The linked sites are not under the control of TheFolp.org, and we are not responsible for the contents of any linked site or any link contained in a linked site. We are providing these links only as a convenience, and the inclusion of a link does not imply endorsement of the linked site by TheFolp.org.
+
+## Choice/Opt-Out
+
+We give you the following options for: • informing us that you wish to stop receiving future email communications from our Web Sites; or • informing us of changes to the personal information you have previously provided so we can correct or update the information we hold: 1. You can send us an email here; [http://thefolp.org/contact-us](http://thefolp.org/contact-us). Please note: We are not responsible for removing information from third-party lists or entities with which you have shared your information pursuant to this policy.
+
+## Revisions to Privacy Policy
+
+Any of the policies or procedures above may be changed at any time without prior notice. Although this Privacy Policy is not a contract and does not create any legal rights, it does serve as an expression of our commitment to protecting private personal information.

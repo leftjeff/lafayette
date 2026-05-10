@@ -1,0 +1,12 @@
+---
+id: 642
+slug: folp-clean-up-fall-2015
+title: 'FOLP Cleanup – Fall 2015'
+date: 2015-12-14T04:52:18
+modified: 2017-11-09T23:16:49
+source: https://thefolp.org/gallery/folp-clean-up-fall-2015/
+---
+
+A small but energetic group helped clean to clean up our park in November.
+
+(c) Goodman/Van Riper Photography

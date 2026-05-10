@@ -1,0 +1,62 @@
+---
+id: 124
+slug: volunteer
+title: 'Volunteer'
+date: 2013-08-14T20:50:19
+modified: 2024-12-23T20:49:54
+source: https://thefolp.org/about/volunteer/
+---
+
+#                                ![](http://thefolp.org/wp-content/uploads/2022/03/Sign-for-Merrill-300x225.jpg)
+
+# **Come Volunteer!**
+
+Would you like to help your neighbors keep Lafayette-Pointer Park beautiful and a wonderful asset for our community?
+
+We welcome one-time or ongoing volunteers. … The Friends of Lafayette-Pointer Park (FOLP) – a neighborhood volunteer organization dedicated to preserving and improving the park – depends on neighbors volunteering to help with projects around the park. If you have a little time, just a few hours a couple of times a year, we have small projects for you. Or, if you would like to be a regular FOLP volunteer for the park, we have ongoing projects
+
+We can use volunteers in the following ways.  Most tasks are seasonal.
+
+#### **     – pruning**
+
+#### **     – weeding **
+
+#### **     – mulching **
+
+#### **     – raking **
+
+#### **     – picking up and removing dead limbs**
+
+#### **     – removing weed trees**
+
+#### **     – removing invasive species**
+
+#### **     – planting/ transplanting**
+
+We welcome students looking for Community Service hours and Scout troops.  Some garden work can be done on your own, but other work would be done alongside our “Master gardener” volunteers.
+
+**To set up a time for volunteering, contact Board Member Laura Phinizy at               phinizyl@yahoo.com or 202-557-9250, or use the “Contact” Link.**
+
+Here are some additional suggestions of how you and your family members can volunteer at the park.
+
+# **Fall & Spring Clean-Up Days**
+
+![Volunteers](http://thefolp.org/wp-content/uploads/2013/10/volun1.jpg)
+
+The FOLP organizes two clean-up days a year in Lafayette-Pointer Park — spring and fall. Neighborhood residents turn out to help rake leaves, clear brush, pick up litter, clean up the playground and do other light miscellaneous projects to make the park, playgrounds and ball field look neater and more beautiful. Each clean-up day is half a day, starting about 9 a.m. and ending around noon. We often have coffee and donuts, donated by local shops, to support the volunteers. Bring your work gloves…. come out for the morning, and bring the kids. They can help too! Watch for announcements on our web site and at the park for when the clean-up day is scheduled. It is generally a Saturday morning in April/May and October/November.
+
+# **Gardening Group**
+
+Have you noticed the beautiful gardens surrounding Lafayette-Pointer Park – on the Broad Branch Road, Quesada Street and 33rd Street sides? **They are the work of FOLP volunteers, not the city.** The gardening group of FOLP is a dedicated group of volunteers who every year plant flowers and bushes, and then tend the gardens by watering, pulling weeds, pruning and other chores. Their work is admired by many in the community and enhances Lafayette Park.
+
+**Many of the flowers and plants have been donated by area residents, and FOLP purchases some plants to fill out the gardens. But nearly all the gardening work is done by volunteers**.
+
+![spring clean-up](http://thefolp.org/wp-content/uploads/2013/10/spr_cleanup.jpg)The gardening group always needs more volunteers. Donating whatever time you have to help keep the gardens beautiful would be wonderful. If you love to garden and would like to become a volunteer, the gardening group would welcome you. You could either help with just a few small gardening projects, or, if you have the time, we need regular volunteers to help with the planting, watering, pruning, weeding and other tasks. You can do as much – or as little as you have time for.
+
+We also have specific areas of the garden where volunteers can take “ownership” and be the person responsible for a small part of the garden. If you’d like to be the main volunteer for a particular area of the garden, let us know. We’d love to have you.
+
+If you are interested in helping with the Lafayette-Pointer Park gardens, please contact the gardening group at: [http://thefolp.org/contact-us/](info1@thefolp.org)
+
+# **Community Service Hours for Students**
+
+![Volunteers](http://thefolp.org/wp-content/uploads/2013/10/volun2.jpg)Do your students need community service hours for school? How about a Boy Scout or Girl Scout Troop? Why not let them volunteer at Lafayette-Pointer Park through the Friends of Lafayette-Pointer Park. The FOLP has many miscellaneous projects it could use help with on an ad-hoc basis. Projects may include raking leaves, picking up trash around the playground, watering some of the trees and gardens, and other projects to enhance the park. If you are interested in performing community service hours to benefit Lafayette-Pointer Park, please contact us at: [http://thefolp.org/contact-us/](info1@thefolp.org) if you’d like more details.

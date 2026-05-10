@@ -1,0 +1,30 @@
+---
+id: 122
+slug: board-of-directors
+title: 'Board of Directors'
+date: 2013-08-14T20:49:57
+modified: 2026-01-16T11:16:01
+source: https://thefolp.org/about/board-of-directors/
+---
+
+## Elizabeth Engel – President
+
+Elizabeth lives across from Lafayette Park and was a founding member and president of the Friends of Lafayette Recreation Center and Park (FoLRAP), established in 2016.
+
+## Dennis Smyth – Treasurer  
+
+![IMG_1377](http://thefolp.org/wp-content/uploads/2013/08/IMG_1377-201x300.jpg)Dennis Smyth has been a resident of Chevy Chase DC since 1998. He grew up in the suburbs of New York City and moved to DC in 1989.  His wife Eileen is a physician at Georgetown University Hospital and daughters Brigid and Evelyn currently attend Lafayette ES and Wilson HS.  Dennis’ family loves the many benefits of living so close to this wonderful park.  Dennis’ 37 year career in the financial services, management consulting and non-profit sectors included: seven years as a senior credit risk analyst at Merrill Lynch in New York and London; 15 years as a management consultant for PricewaterhouseCoopers Consulting and IBM Business Consulting Services, serving mainly one client, the United States Agency for International Development (USAID); and a 22-year association with the Washington, D.C. affiliate of Habitat for Humanity International that included 15 years as a board member and five years as a senior staff member.
+
+## Patty Myler 
+
+Patty lives close to Lafayette Park and was a founding member of the Friends of Lafayette Recreation Center and Park (FoLRAP), established in 2016.
+
+## Matt Gardine
+
+## Tracy Bowen
+
+ 
+
+## Jeff Stoiber – President Emeritus  
+
+![Jeff Stoiber](http://thefolp.org/wp-content/uploads/2013/10/jeff.jpg)Jeff worked with Beth Pierce to establish the Friends of Lafayette Park in 1999 and has served as vice president and now president of the organization. Jeff has lived next to the park since 1985 and along with his wife has raised their four children in the Lafayette Park neighborhood. Jeff is a professional architect and president of Stoiber + Associates PC, a firm he founded in 1983. Prior to that he worked for a local firm as well as a leading national architectural firm with a focus on preservation and adaptive reuse. He earned his Bachelor of Science in Architecture at The Ohio State University.
