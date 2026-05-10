@@ -1,3 +1,5 @@
+import { readdirSync } from "node:fs";
+import { join } from "node:path";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
@@ -8,6 +10,23 @@ import type { ReactNode } from "react";
 
 const LEGACY_HOST = /^https?:\/\/(?:www\.)?thefolp\.org/i;
 const UPLOADS = /\/wp-content\/uploads\//i;
+
+// Filenames available under public/legacy-images/ — populated once at server
+// start. Images referenced from legacy markdown are rendered only when their
+// basename is in this set; everything else falls back to a caption placeholder.
+const AVAILABLE_IMAGES: ReadonlySet<string> = (() => {
+  try {
+    const dir = join(process.cwd(), "public", "legacy-images");
+    return new Set(readdirSync(dir));
+  } catch {
+    return new Set();
+  }
+})();
+
+function legacyImageBasename(src: string): string | null {
+  const m = src.match(/\/wp-content\/uploads\/[^?#]*\/([^/?#]+)$/i);
+  return m ? m[1] : null;
+}
 
 function rewriteHref(href: string): string {
   // Strip zero-width and stray whitespace that the WP editor sometimes left
@@ -37,13 +56,27 @@ function renderInline(text: string): ReactNode[] {
       const end = open === close + 1 ? text.indexOf(")", open) : -1;
       if (end > 0) {
         const alt = text.slice(i + 2, close).trim();
-        // Legacy uploads are blocked by the WP host's hotlink rule, so render
-        // a caption placeholder instead of a broken <img>.
-        out.push(
-          <em key={key++} className="block text-xs text-muted-foreground">
-            {alt ? `[image: ${alt}]` : "[image]"}
-          </em>
-        );
+        const src = text.slice(open + 1, end).trim();
+        const basename = legacyImageBasename(src);
+        if (basename && AVAILABLE_IMAGES.has(basename)) {
+          out.push(
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              key={key++}
+              src={`/legacy-images/${basename}`}
+              alt={alt}
+              className="my-3 max-w-full rounded-md border border-border/70"
+              loading="lazy"
+            />
+          );
+        } else {
+          // No local copy — show a caption placeholder rather than a broken img.
+          out.push(
+            <em key={key++} className="block text-xs text-muted-foreground">
+              {alt ? `[image: ${alt}]` : "[image]"}
+            </em>
+          );
+        }
         i = end + 1;
         continue;
       }

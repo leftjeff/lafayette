@@ -42,3 +42,6 @@ next-env.d.ts
 
 # playwright MCP scratch
 .playwright-mcp/
+
+# claude code session state
+.claude/
