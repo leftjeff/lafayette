@@ -5,6 +5,23 @@ groupings below — pick what's worth doing when there's time.
 
 ## High-impact / low-effort
 
+- **Recover the rest of the legacy WP content before the cutover.** 26
+  page-referenced images and ~30 PDFs (board minutes 2013-2019,
+  `FOLP-BY-LAWS.pdf`, awards certificates, the Phase II walkway plan
+  `Lafayette_road.pdf`) are still on the live WordPress host but blocked
+  by its hotlink-prevention rule. Wayback is tapped out. Easiest path:
+  log into `thefolp.org/wp-admin` or the hosting panel, disable hotlink
+  protection (Wordfence / All In One WP Security / cPanel /
+  `.htaccess`), then re-run the scrape; alternatively, get an SFTP
+  backup of `wp-content/uploads/`. **Time-sensitive** — once the new
+  site cuts over to thefolp.org, the live WP install goes away with
+  it, and everything that's not already in this repo is lost. Test URL
+  to confirm hotlink is off:
+  `https://thefolp.org/wp-content/uploads/2018/06/Lafayette-Park-Stormwater-Assessment-3-22-18.pdf`
+  should download (it's currently 403). Renderer in
+  `src/components/markdown.tsx` already auto-detects local images, so
+  dropped files just appear.
+
 - **Wire up the newsletter and contact forms.** Both currently submit
   nowhere; the contact button is `disabled` with "coming soon". Options:
   Resend / Buttondown / Mailchimp, or a Server Action that emails
