@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Heart, Sprout, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, PageHeader } from "@/components/section";
-import { ParkVignette } from "@/components/park-vignette";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -114,8 +114,14 @@ export default function GetInvolvedPage() {
               <Link href="/contact">Tell us you&apos;re interested</Link>
             </Button>
           </div>
-          <div className="relative min-h-[220px] bg-gradient-to-br from-secondary via-[color:var(--cream)] to-[#f3dccf]">
-            <ParkVignette slug="green-spaces" className="absolute inset-0" />
+          <div className="relative min-h-[220px]">
+            <Image
+              src="/photos/path-with-azaleas.jpg"
+              alt="Springtime path through Lafayette-Pointer Park with blooming azaleas"
+              fill
+              sizes="(min-width: 1024px) 35vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </Section>

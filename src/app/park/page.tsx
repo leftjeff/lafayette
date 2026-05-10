@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, PageHeader } from "@/components/section";
 import { ParkVignette } from "@/components/park-vignette";
 import { facilities } from "@/lib/content";
@@ -20,6 +21,25 @@ const slugAccentBg: Record<string, string> = {
   gardens: "bg-secondary",
 };
 
+const facilityPhoto: Record<string, { src: string; alt: string }> = {
+  "recreation-center": {
+    src: "/photos/rec-center.jpg",
+    alt: "The stone exterior of the Lafayette-Pointer Recreation Center",
+  },
+  playgrounds: {
+    src: "/photos/path-to-playground.jpg",
+    alt: "A path leading toward the park playground beneath tall trees",
+  },
+  "green-spaces": {
+    src: "/photos/path-with-trees.jpg",
+    alt: "Open green space under mature trees inside Lafayette-Pointer Park",
+  },
+  gardens: {
+    src: "/photos/azaleas-wide.jpg",
+    alt: "Blooming azaleas along a tree-lined path in the park",
+  },
+};
+
 export default function ParkPage() {
   return (
     <div>
@@ -32,44 +52,53 @@ export default function ParkPage() {
 
       <Section className="py-14">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {facilities.map((f) => (
-            <article
-              key={f.slug}
-              className="group overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
-            >
-              <div
-                className={`relative aspect-[5/3] w-full overflow-hidden ${
-                  slugAccentBg[f.slug] ?? "bg-secondary"
-                }`}
+          {facilities.map((f) => {
+            const photo = facilityPhoto[f.slug];
+            return (
+              <article
+                key={f.slug}
+                className="group overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
               >
-                <ParkVignette
-                  slug={
-                    f.slug as
-                      | "recreation-center"
-                      | "playgrounds"
-                      | "water-daisy"
-                      | "tennis"
-                      | "basketball"
-                      | "green-spaces"
-                      | "gardens"
-                  }
-                  className="h-full w-full"
-                />
-              </div>
-              <div className="p-6">
-                <p className="font-heading text-xl font-semibold tracking-tight">
-                  {f.name}
-                </p>
-                <p className="mt-2 text-sm font-medium text-primary">{f.blurb}</p>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {f.details}
-                </p>
-              </div>
-            </article>
-          ))}
+                <div
+                  className={`relative aspect-[5/3] w-full overflow-hidden ${
+                    slugAccentBg[f.slug] ?? "bg-secondary"
+                  }`}
+                >
+                  {photo ? (
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  ) : (
+                    <ParkVignette
+                      slug={
+                        f.slug as
+                          | "water-daisy"
+                          | "tennis"
+                          | "basketball"
+                      }
+                      className="h-full w-full"
+                    />
+                  )}
+                </div>
+                <div className="p-6">
+                  <p className="font-heading text-xl font-semibold tracking-tight">
+                    {f.name}
+                  </p>
+                  <p className="mt-2 text-sm font-medium text-primary">{f.blurb}</p>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {f.details}
+                  </p>
+                </div>
+              </article>
+            );
+          })}
         </div>
 
-        <div className="mt-14 grid gap-8 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm sm:grid-cols-[1.4fr_1fr]">
+        <div className="mt-14 grid gap-0 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm sm:grid-cols-[1.4fr_1fr]">
           <div className="px-8 py-10 sm:px-10 sm:py-12">
             <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
               Visit
@@ -96,8 +125,14 @@ export default function ParkPage() {
               </p>
             </address>
           </div>
-          <div className="relative min-h-[220px] bg-gradient-to-br from-secondary via-[color:var(--cream)] to-[#f3dccf]">
-            <ParkVignette slug="gardens" className="absolute inset-0" />
+          <div className="relative min-h-[260px]">
+            <Image
+              src="/photos/entrance-sign.jpg"
+              alt="The Lafayette-Pointer Park entrance sign with surrounding greenery"
+              fill
+              sizes="(min-width: 640px) 40vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </Section>

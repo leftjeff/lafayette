@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/section";
-import { ParkIllustration } from "@/components/park-illustration";
 import { ParkVignette } from "@/components/park-vignette";
 import {
   donationAmounts,
@@ -80,7 +80,14 @@ function Hero() {
 
           <div className="relative">
             <div className="overflow-hidden rounded-2xl shadow-md ring-1 ring-border/80 aspect-[3/4]">
-              <ParkIllustration variant="portrait" className="h-full w-full" />
+              <Image
+                src="/photos/sign-portrait.jpg"
+                alt="The Lafayette-Pointer Park entrance sign with the stone Recreation Center behind"
+                width={795}
+                height={1059}
+                priority
+                className="h-full w-full object-cover"
+              />
             </div>
             <span className="absolute -bottom-3 left-6 rounded-full bg-card px-4 py-2 font-heading text-xs uppercase tracking-[0.2em] text-[color:var(--clay)] shadow-md ring-1 ring-border/80">
               Nine acres · since 1999
@@ -100,37 +107,90 @@ function Hero() {
   );
 }
 
+type PhotoTile = {
+  kind: "photo";
+  src: string;
+  alt: string;
+  label: string;
+};
+
+type VignetteTile = {
+  kind: "vignette";
+  slug:
+    | "gardens"
+    | "playgrounds"
+    | "water-daisy"
+    | "tennis"
+    | "basketball"
+    | "green-spaces"
+    | "recreation-center";
+  bg: string;
+  label: string;
+};
+
+const photoStripTiles: Array<PhotoTile | VignetteTile> = [
+  {
+    kind: "photo",
+    src: "/photos/rec-center.jpg",
+    alt: "Lafayette-Pointer Recreation Center stone exterior with a flowering tree",
+    label: "Rec Center",
+  },
+  {
+    kind: "photo",
+    src: "/photos/path-with-azaleas.jpg",
+    alt: "A path through the park with blooming azaleas in the foreground",
+    label: "Gardens",
+  },
+  {
+    kind: "photo",
+    src: "/photos/path-to-playground.jpg",
+    alt: "Path through trees toward the park playground",
+    label: "Playgrounds",
+  },
+  {
+    kind: "vignette",
+    slug: "water-daisy",
+    bg: "bg-[#dbe9f1]",
+    label: "Water Daisy",
+  },
+  {
+    kind: "vignette",
+    slug: "tennis",
+    bg: "bg-[#f3dccf]",
+    label: "Tennis",
+  },
+  {
+    kind: "vignette",
+    slug: "basketball",
+    bg: "bg-[#f3dccf]",
+    label: "Basketball",
+  },
+];
+
 function PhotoStrip() {
-  const slugs: Array<{
-    slug:
-      | "gardens"
-      | "playgrounds"
-      | "water-daisy"
-      | "tennis"
-      | "basketball"
-      | "green-spaces"
-      | "recreation-center";
-    bg: string;
-    label: string;
-  }> = [
-    { slug: "gardens", bg: "bg-secondary", label: "Gardens" },
-    { slug: "water-daisy", bg: "bg-[#dbe9f1]", label: "Water Daisy" },
-    { slug: "playgrounds", bg: "bg-[color:var(--cream)]", label: "Playgrounds" },
-    { slug: "tennis", bg: "bg-[#f3dccf]", label: "Tennis" },
-    { slug: "basketball", bg: "bg-[#f3dccf]", label: "Basketball" },
-    { slug: "green-spaces", bg: "bg-secondary", label: "Green spaces" },
-  ];
   return (
     <Section className="pb-12">
       <ul className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
-        {slugs.map((s) => (
+        {photoStripTiles.map((t, i) => (
           <li
-            key={s.slug}
-            className={`group relative aspect-square overflow-hidden rounded-2xl ring-1 ring-border/60 ${s.bg}`}
+            key={i}
+            className={`group relative aspect-square overflow-hidden rounded-2xl ring-1 ring-border/60 ${
+              t.kind === "vignette" ? t.bg : "bg-secondary"
+            }`}
           >
-            <ParkVignette slug={s.slug} className="h-full w-full" />
+            {t.kind === "photo" ? (
+              <Image
+                src={t.src}
+                alt={t.alt}
+                fill
+                sizes="(min-width: 1024px) 16vw, (min-width: 640px) 33vw, 100vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            ) : (
+              <ParkVignette slug={t.slug} className="h-full w-full" />
+            )}
             <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-[color:var(--primary-deep)]/85 via-[color:var(--primary-deep)]/30 to-transparent px-3 py-2 font-heading text-xs uppercase tracking-[0.2em] text-white">
-              {s.label}
+              {t.label}
             </span>
           </li>
         ))}
@@ -435,8 +495,14 @@ function ContactSignup() {
   return (
     <Section className="pb-24">
       <div className="grid items-stretch gap-8 rounded-2xl border border-border bg-card p-8 shadow-sm sm:p-10 lg:grid-cols-[1fr_1.05fr_0.85fr]">
-        <div className="overflow-hidden rounded-2xl bg-secondary aspect-[4/5] lg:aspect-auto lg:min-h-[260px]">
-          <ParkIllustration variant="portrait" className="h-full w-full" />
+        <div className="relative overflow-hidden rounded-2xl bg-secondary aspect-[4/5] lg:aspect-auto lg:min-h-[260px]">
+          <Image
+            src="/photos/path-with-azaleas.jpg"
+            alt="A path through Lafayette-Pointer Park with blooming azaleas"
+            fill
+            sizes="(min-width: 1024px) 32vw, 100vw"
+            className="object-cover"
+          />
         </div>
         <div className="flex flex-col justify-center">
           <p className="eyebrow">Contact us</p>

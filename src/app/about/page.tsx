@@ -17,6 +17,10 @@ export default function AboutPage() {
         eyebrow="About"
         title="A neighborhood looking after its park, since 1999."
         description="We are a 501(c)(3) volunteer-led nonprofit, run by neighbors, partnered with DC Parks and Recreation. Our work is the slow, steady kind: plantings, repairs, gatherings, and advocacy."
+        photo={{
+          src: "/photos/azaleas-wide.jpg",
+          alt: "A tree-lined path through Lafayette-Pointer Park with blooming azaleas in spring",
+        }}
       />
 
       <Section className="grid gap-16 py-14 lg:grid-cols-[1fr_2fr]">

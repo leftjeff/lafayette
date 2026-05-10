@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 export function Section({
@@ -46,11 +47,13 @@ export function PageHeader({
   title,
   description,
   accent = "leaves",
+  photo,
 }: {
   eyebrow?: string;
   title: string;
   description?: string;
   accent?: "leaves" | "blooms" | "sun" | "court";
+  photo?: { src: string; alt: string };
 }) {
   return (
     <div className="relative overflow-hidden border-b border-border bg-gradient-to-br from-secondary via-background to-[color:var(--cream)]">
@@ -64,6 +67,18 @@ export function PageHeader({
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             {description}
           </p>
+        ) : null}
+        {photo ? (
+          <div className="relative mx-auto mt-10 aspect-[5/2] max-w-5xl overflow-hidden rounded-2xl shadow-md ring-1 ring-border/70">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              sizes="(min-width: 1024px) 64rem, 100vw"
+              priority
+              className="object-cover"
+            />
+          </div>
         ) : null}
       </div>
     </div>
