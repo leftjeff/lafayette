@@ -9,6 +9,48 @@ export const metadata: Metadata = {
   title: "The Park",
   description:
     "Lafayette-Pointer Park covers nine acres in Chevy Chase DC and is home to playgrounds, tennis and basketball courts, the Water Daisy, gardens, green spaces, and the Lafayette-Pointer Recreation Center.",
+  alternates: { canonical: "/park" },
+  openGraph: {
+    title: "The Park — Lafayette-Pointer Park",
+    description:
+      "Nine acres in Chevy Chase DC: playgrounds, tennis and basketball courts, the Water Daisy, gardens, and the Recreation Center.",
+    url: "/park",
+    type: "website",
+  },
+};
+
+const placeJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Park",
+  name: "Lafayette-Pointer Park",
+  description:
+    "A nine-acre public park in Chevy Chase, Washington DC, with playgrounds, tennis and basketball courts, gardens, the Water Daisy sprayground, green spaces, and the Lafayette-Pointer Recreation Center.",
+  url: "https://lafayetteparkfriends.org/park",
+  image: "https://lafayetteparkfriends.org/photos/park-overview.jpg",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "5900 33rd St NW",
+    addressLocality: "Washington",
+    addressRegion: "DC",
+    postalCode: "20015",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 38.9676,
+    longitude: -77.066,
+  },
+  openingHours: "Mo-Su 06:00-21:00",
+  isAccessibleForFree: true,
+  publicAccess: true,
+  amenityFeature: [
+    { "@type": "LocationFeatureSpecification", name: "Playgrounds", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Tennis courts", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Basketball court", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Sprayground (Water Daisy)", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Gardens", value: true },
+    { "@type": "LocationFeatureSpecification", name: "Recreation Center", value: true },
+  ],
 };
 
 const slugAccentBg: Record<string, string> = {
@@ -47,6 +89,11 @@ const facilityPhoto: Record<string, { src: string; alt: string }> = {
 export default function ParkPage() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD is a static constant
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(placeJsonLd) }}
+      />
       <PageHeader
         eyebrow="The park"
         title="Nine acres, dozens of corners worth visiting."

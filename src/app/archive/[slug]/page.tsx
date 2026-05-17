@@ -10,6 +10,19 @@ export async function generateStaticParams() {
   return pages.map((p) => ({ slug: p.slug }));
 }
 
+function excerpt(body: string, max = 160): string {
+  const stripped = body
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, "")
+    .replace(/\[([^\]]+)\]\([^)]*\)/g, "$1")
+    .replace(/[*_`>#-]+/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (stripped.length <= max) return stripped;
+  const truncated = stripped.slice(0, max);
+  const lastSpace = truncated.lastIndexOf(" ");
+  return `${truncated.slice(0, lastSpace > 80 ? lastSpace : max).trim()}…`;
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -18,9 +31,20 @@ export async function generateMetadata({
   const { slug } = await params;
   const page = await getLegacyPage(slug);
   if (!page) return { title: "Archive" };
+  const description =
+    excerpt(page.body) ||
+    `Archived from the previous FOLP website (${page.date.slice(0, 10)}).`;
+  const canonical = `/archive/${slug}`;
   return {
     title: page.title,
-    description: `Archived from the previous FOLP website (${page.date.slice(0, 10)}).`,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title: `${page.title} — Archive`,
+      description,
+      url: canonical,
+      type: "article",
+    },
   };
 }
 

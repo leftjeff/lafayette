@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   title: "History",
   description:
     "More than two decades of work by neighbors to preserve and improve Lafayette-Pointer Park — founding goals, master plans, projects, and people.",
+  alternates: { canonical: "/history" },
+  openGraph: {
+    title: "History — Friends of Lafayette-Pointer Park",
+    description:
+      "Founding goals, master plans, capital projects, and the people who have shaped Lafayette-Pointer Park since 1999.",
+    url: "/history",
+    type: "article",
+  },
 };
 
 export default async function HistoryPage() {

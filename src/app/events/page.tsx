@@ -25,7 +25,56 @@ export const metadata: Metadata = {
   title: "Events",
   description:
     "Cleanup days, fundraisers, and community events at Lafayette-Pointer Park.",
+  alternates: { canonical: "/events" },
+  openGraph: {
+    title: "Events at Lafayette-Pointer Park",
+    description:
+      "Spring and fall cleanup days, the annual fund drive kickoff, and community gatherings throughout the year.",
+    url: "/events",
+    type: "website",
+  },
 };
+
+function buildEventsJsonLd() {
+  const items = upcomingEvents
+    .filter((e) => e.status === "upcoming")
+    .map((e) => ({
+      "@type": "Event",
+      name: e.title,
+      description: e.description,
+      startDate: e.date,
+      eventStatus: "https://schema.org/EventScheduled",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: {
+        "@type": "Place",
+        name: "Lafayette-Pointer Park",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "5900 33rd St NW",
+          addressLocality: "Washington",
+          addressRegion: "DC",
+          postalCode: "20015",
+          addressCountry: "US",
+        },
+      },
+      organizer: {
+        "@type": "NGO",
+        name: "Friends of Lafayette-Pointer Park",
+        url: "https://lafayetteparkfriends.org",
+      },
+      url: "https://lafayetteparkfriends.org/events",
+      isAccessibleForFree: true,
+    }));
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((event, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: event,
+    })),
+  };
+}
 
 const typeLabel: Record<(typeof upcomingEvents)[number]["type"], string> = {
   volunteer: "Volunteer",
@@ -44,6 +93,15 @@ export default function EventsPage() {
   const upcoming = upcomingEvents.filter((e) => e.status === "upcoming");
   return (
     <div>
+      {upcoming.length > 0 ? (
+        <script
+          type="application/ld+json"
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD is a static constant
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildEventsJsonLd()),
+          }}
+        />
+      ) : null}
       <PageHeader
         eyebrow="Events"
         title="What's coming up at the park."

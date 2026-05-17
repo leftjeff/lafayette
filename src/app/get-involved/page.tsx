@@ -10,6 +10,14 @@ export const metadata: Metadata = {
   title: "Get Involved",
   description:
     "Volunteer, become a member, or donate to support Lafayette-Pointer Park.",
+  alternates: { canonical: "/get-involved" },
+  openGraph: {
+    title: "Get Involved — Friends of Lafayette-Pointer Park",
+    description:
+      "Three ways to help the park thrive: volunteer at a cleanup day, become a member, or make a tax-deductible donation.",
+    url: "/get-involved",
+    type: "website",
+  },
 };
 
 export default function GetInvolvedPage() {

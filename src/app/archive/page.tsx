@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: "Archive",
   description:
     "Source pages from the previous Friends of Lafayette-Pointer Park website, preserved for reference.",
+  alternates: { canonical: "/archive" },
+  openGraph: {
+    title: "Archive — Friends of Lafayette-Pointer Park",
+    description:
+      "Source pages, photos, and PDFs from the previous FOLP website, preserved for reference.",
+    url: "/archive",
+    type: "website",
+  },
 };
 
 export default async function ArchiveIndex() {

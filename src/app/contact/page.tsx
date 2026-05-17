@@ -7,6 +7,14 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Reach Friends of Lafayette-Pointer Park — by email or by mail.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact — Friends of Lafayette-Pointer Park",
+    description:
+      "Reach Friends of Lafayette-Pointer Park — by email, by mail, or on Instagram.",
+    url: "/contact",
+    type: "website",
+  },
 };
 
 export default function ContactPage() {

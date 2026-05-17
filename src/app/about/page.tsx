@@ -8,6 +8,14 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Founded in 1999, Friends of Lafayette-Pointer Park is a 501(c)(3) nonprofit caring for nine acres of green space in Chevy Chase, DC.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About — Friends of Lafayette-Pointer Park",
+    description:
+      "A 501(c)(3) volunteer-led nonprofit caring for nine acres of green space in Chevy Chase, DC since 1999.",
+    url: "/about",
+    type: "website",
+  },
 };
 
 export default function AboutPage() {
