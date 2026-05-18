@@ -21,7 +21,7 @@ const forum = Forum({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://lafayetteparkfriends.org"),
+  metadataBase: new URL(site.url),
   title: {
     default: "Friends of Lafayette-Pointer Park",
     template: "%s — Friends of Lafayette-Pointer Park",
@@ -79,9 +79,9 @@ const organizationJsonLd = {
   "@type": "NGO",
   name: site.name,
   alternateName: site.shortName,
-  url: "https://lafayetteparkfriends.org",
-  logo: "https://lafayetteparkfriends.org/icon",
-  image: "https://lafayetteparkfriends.org/opengraph-image",
+  url: site.url,
+  logo: `${site.url}/icon`,
+  image: `${site.url}/opengraph-image`,
   description:
     "Volunteer-led 501(c)(3) nonprofit caring for Lafayette-Pointer Park, nine acres of green space in Chevy Chase, Washington DC.",
   foundingDate: String(site.founded),

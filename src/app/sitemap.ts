@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { getLegacyPages } from "@/lib/legacy";
+import { site } from "@/lib/site";
 
-const BASE = "https://lafayetteparkfriends.org";
+const BASE = site.url;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date();

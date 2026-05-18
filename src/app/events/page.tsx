@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Section, PageHeader } from "@/components/section";
 import { Badge } from "@/components/ui/badge";
 import { upcomingEvents } from "@/lib/content";
+import { site } from "@/lib/site";
 
 const eventPhotos: Record<string, Array<{ src: string; alt: string }>> = {
   "Spring Cleanup Day": [
@@ -60,9 +61,9 @@ function buildEventsJsonLd() {
       organizer: {
         "@type": "NGO",
         name: "Friends of Lafayette-Pointer Park",
-        url: "https://lafayetteparkfriends.org",
+        url: site.url,
       },
-      url: "https://lafayetteparkfriends.org/events",
+      url: `${site.url}/events`,
       isAccessibleForFree: true,
     }));
   return {

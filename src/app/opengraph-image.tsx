@@ -85,7 +85,7 @@ export default function OpengraphImage() {
           opacity: 0.75,
         }}
       >
-        <span>lafayetteparkfriends.org</span>
+        <span>lafayettepointerpark.com</span>
         <span>501(c)(3) nonprofit</span>
       </div>
     </div>,

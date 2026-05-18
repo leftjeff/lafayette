@@ -2,6 +2,7 @@ export const site = {
   name: "Friends of Lafayette-Pointer Park",
   shortName: "FOLP",
   tagline: "Nine acres of green space in Chevy Chase, DC.",
+  url: "https://lafayettepointerpark.com",
   founded: 1999,
   parkAddress: "5900 33rd St NW, Washington, DC 20015",
   mailingAddress: {

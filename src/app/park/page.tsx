@@ -25,8 +25,8 @@ const placeJsonLd = {
   name: "Lafayette-Pointer Park",
   description:
     "A nine-acre public park in Chevy Chase, Washington DC, with playgrounds, tennis and basketball courts, gardens, the Water Daisy sprayground, green spaces, and the Lafayette-Pointer Recreation Center.",
-  url: "https://lafayetteparkfriends.org/park",
-  image: "https://lafayetteparkfriends.org/photos/park-overview.jpg",
+  url: `${site.url}/park`,
+  image: `${site.url}/photos/park-overview.jpg`,
   address: {
     "@type": "PostalAddress",
     streetAddress: "5900 33rd St NW",
