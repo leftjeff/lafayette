@@ -39,6 +39,11 @@ export default function GetInvolvedPage() {
           accent="leaf"
         >
           <p>
+            You can volunteer at the park anytime throughout the year, helping
+            in the gardens or on other projects. Students can also earn
+            service hours.
+          </p>
+          <p>
             Our biggest workdays are spring and fall cleanups, when 80–90
             neighbors show up to rake, weed, mulch, and prune. Smaller groups
             tend the gardens through the season.

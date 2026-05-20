@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Section, PageHeader } from "@/components/section";
-import { boardMembers, type BoardMember } from "@/lib/content";
+import { boardMembers } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "About",
@@ -24,7 +24,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About"
         title="A neighborhood looking after its park, since 1999."
-        description="We are a 501(c)(3) volunteer-led nonprofit, run by neighbors, partnered with DC Parks and Recreation. Our work is the slow, steady kind: plantings, repairs, gatherings, and advocacy."
+        description="We are a 501(c)(3) volunteer-led nonprofit, run by neighbors, partnered with DC Parks and Recreation. We organize plantings, repairs, gatherings, and advocacy to protect and improve this important neighborhood space."
         photo={{
           src: "/photos/park-overview.jpg",
           alt: "A wide view of Lafayette-Pointer Park with the tennis courts, Recreation Center, and azaleas in bloom",
@@ -107,16 +107,23 @@ function BoardSection() {
           </p>
         </div>
 
-        <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mx-auto mt-10 max-w-md space-y-2 text-center">
           {boardMembers.map((m) => (
-            <BoardCard key={`${m.role}-${m.name}`} member={m} />
+            <li
+              key={m.name}
+              className="font-heading text-lg tracking-wide text-[color:var(--heading)]"
+            >
+              {m.name}
+              {m.role ? (
+                <span className="text-muted-foreground">, {m.role}</span>
+              ) : null}
+            </li>
           ))}
         </ul>
 
         <div className="mx-auto mt-12 max-w-xl text-center">
           <p className="text-sm text-muted-foreground">
-            Want to get involved with the board? We&apos;d love to hear from
-            you.
+            Want to get involved? We&apos;d love to hear from you.
           </p>
           <Button asChild variant="outline" className="mt-4">
             <Link href="/contact">Get in touch</Link>
@@ -124,41 +131,6 @@ function BoardSection() {
         </div>
       </Section>
     </section>
-  );
-}
-
-const accentClass: Record<BoardMember["accent"], string> = {
-  moss: "bg-[color:var(--primary-deep)] text-white",
-  leaf: "bg-primary text-white",
-  clay: "bg-[#c46a3f] text-white",
-  amber: "bg-[#d99a2b] text-[color:var(--primary-deep)]",
-  sky: "bg-[#4a7a9a] text-white",
-  berry: "bg-[#8b3a62] text-white",
-};
-
-function BoardCard({ member }: { member: BoardMember }) {
-  return (
-    <li className="flex flex-col items-start gap-4 rounded-2xl border border-border/70 bg-card p-6 shadow-sm">
-      <div className="flex items-center gap-4">
-        <div
-          className={`flex size-16 items-center justify-center rounded-full font-heading text-xl tracking-wide ring-2 ring-white/60 shadow-md ${accentClass[member.accent]}`}
-          aria-hidden
-        >
-          {member.initials}
-        </div>
-        <div>
-          <p className="font-heading text-lg leading-tight text-[color:var(--heading)]">
-            {member.name}
-          </p>
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-primary">
-            {member.role}
-          </p>
-        </div>
-      </div>
-      <p className="text-sm leading-relaxed text-muted-foreground">
-        {member.bio}
-      </p>
-    </li>
   );
 }
 

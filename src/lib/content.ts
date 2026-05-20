@@ -33,28 +33,28 @@ export const facilities: Facility[] = [
     name: "Tennis Courts",
     blurb: "Newly resurfaced courts open to the public, first-come first-served.",
     details:
-      "Recent court upgrades funded in part by Friends of Lafayette-Pointer Park keep the courts smooth and well-lined for casual play and pickup matches.",
+      "Recent court upgrades keep the courts smooth and well-lined for casual play and pickup matches.",
   },
   {
     slug: "basketball",
     name: "Basketball Court",
     blurb: "An open court for pickup games and after-school play.",
     details:
-      "The basketball court is a regular gathering spot for neighborhood kids and weekend pickup games. Backboards and lines have been refreshed with help from FOLP fundraising.",
+      "The basketball court is a regular gathering spot for neighborhood kids and weekend pickup games.",
   },
   {
     slug: "green-spaces",
     name: "Green Spaces",
     blurb: "Open lawns and shaded corners for picnics, frisbee, and quiet afternoons.",
     details:
-      "Wide stretches of grass and mature trees give the park room to breathe. Neighbors use them for after-school play, family picnics, and the occasional stroller meet-up.",
+      "Wide stretches of grass and mature trees give the park room to breathe. These public spaces are widely used for after-school play, family picnics, and the occasional stroller meet-up.",
   },
   {
     slug: "gardens",
     name: "Gardens & Gathering Spaces",
     blurb: "Pollinator beds, a gazebo, and shaded picnic areas.",
     details:
-      "FOLP volunteers plant, weed, and mulch the perennial beds. The gazebo and surrounding picnic areas host concerts, classes, and neighborhood meet-ups.",
+      "FOLP volunteers plant, weed, and mulch the perennial beds. The gazebo and surrounding picnic areas host parties, classes, and neighborhood meet-ups.",
   },
 ];
 
@@ -108,111 +108,65 @@ export const accomplishments = [
 export const donationAmounts = [25, 50, 100, 250, 500] as const;
 
 export const featuredCampaign = {
-  title: "Support the gardens, the gazebo, and the playgrounds.",
+  title: "Support the grounds and gardens",
   body: [
-    "Friends of Lafayette-Pointer Park supports the ongoing care of the perennial beds and pollinator gardens, the gazebo and picnic areas where neighbors gather, and the play areas that the city's maintenance schedule cannot keep up with on its own.",
-    "As an official park partner, FOLP works alongside DC Parks and Recreation. Over the past decade we have funded the resurfacing of the tennis courts, added benches and picnic tables, planted hundreds of bulbs, and put on community concerts in the park.",
-    "We continue to raise money for an expanded planting program, bench replacements, and the slow work of keeping the park feeling cared for. Please support the effort and make a contribution today.",
+    "Friends of Lafayette-Pointer Park supports the ongoing care of the perennial beds and pollinator gardens, and picnic areas where neighbors gather. As an official park partner, FOLP works alongside DC Parks and Recreation. Over the past decade we have added benches and picnic tables, planted hundreds of gardens including native plants and Spring bulbs, and supported community cleanups and gatherings.",
+    "We continue to raise money for an expanded planting program, bench replacements, and the steady work of caring for the park. Please support the effort and make a contribution today.",
   ],
-  paymentNote:
-    "Donations may be mailed to our P.O. Box (preferred) or sent via PayPal. Please email us to set up a recurring gift. Donations are tax-deductible. Thank you for your support!",
 };
 
 export const annualGoal = {
   eyebrow: "Help us hit our annual goal",
-  title: "Make your 2026 pledge today.",
+  title: "Make your annual pledge today.",
   description:
-    "Membership gifts fund the planting calendar, the supplies, and the small-scale projects that keep the park feeling like the neighborhood's. Every household helps.",
-  pledgeGoal: 200,
-  pledgeCurrent: 137,
-  pledgeUnit: "neighbors pledged",
+    "Help us reach our goal of 200 pledges this year. Membership gifts fund the planting calendar, the supplies, and the small-scale projects that keep the park feeling like the neighborhood's.",
 };
 
 export type BoardMember = {
   name: string;
-  role: string;
-  bio: string;
-  initials: string;
-  accent: "moss" | "leaf" | "clay" | "amber" | "sky" | "berry";
+  role?: string;
 };
 
 export const boardMembers: BoardMember[] = [
-  {
-    name: "Add a name",
-    role: "President",
-    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
-    initials: "AN",
-    accent: "moss",
-  },
-  {
-    name: "Add a name",
-    role: "Vice President",
-    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
-    initials: "AN",
-    accent: "clay",
-  },
-  {
-    name: "Add a name",
-    role: "Treasurer",
-    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
-    initials: "AN",
-    accent: "amber",
-  },
-  {
-    name: "Add a name",
-    role: "Secretary",
-    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
-    initials: "AN",
-    accent: "leaf",
-  },
-  {
-    name: "Add a name",
-    role: "Director, Gardens",
-    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
-    initials: "AN",
-    accent: "sky",
-  },
-  {
-    name: "Add a name",
-    role: "Director, Events",
-    bio: "Short bio goes here. A sentence or two about how this person came to the park, what they care about, and what they bring to the board.",
-    initials: "AN",
-    accent: "berry",
-  },
+  { name: "Tracy Bowen", role: "Chair" },
+  { name: "Catherine Barnes-Domotor" },
+  { name: "Stephanie Cappa" },
+  { name: "Anna Knutzen" },
+  { name: "Patty Myler" },
+  { name: "Nancy Slade" },
+  { name: "Dennis Smyth" },
 ];
 
 export type Sponsor = {
   name: string;
   short: string;
   monogram: string;
-  tier?: "Cornerstone" | "Steward" | "Friend";
 };
 
 export const sponsors: Sponsor[] = [
   {
-    name: "Chevy Chase Citizens Association",
-    short: "Chevy Chase Citizens",
-    monogram: "CC",
-    tier: "Cornerstone",
-  },
-  {
-    name: "Lafayette Elementary PTA",
-    short: "Lafayette PTA",
-    monogram: "LE",
-    tier: "Cornerstone",
-  },
-  {
-    name: "DC Parks and Recreation",
+    name: "DC Department of Parks and Recreation",
     short: "DC Parks & Rec",
     monogram: "DC",
-    tier: "Steward",
+  },
+  {
+    name: "Advisory Neighborhood Commission 3/4G",
+    short: "ANC 3/4G",
+    monogram: "ANC",
+  },
+  {
+    name: "Lafayette Home School Association",
+    short: "Lafayette HSA",
+    monogram: "HSA",
   },
   {
     name: "Ward 4 Council Office",
     short: "Ward 4 Council",
     monogram: "W4",
-    tier: "Steward",
   },
-  { name: "Broad Branch Market", short: "Broad Branch", monogram: "BB", tier: "Friend" },
-  { name: "Politics and Prose", short: "Politics & Prose", monogram: "PP", tier: "Friend" },
+  {
+    name: "Lafayette Tennis Association",
+    short: "Lafayette Tennis",
+    monogram: "LTA",
+  },
 ];

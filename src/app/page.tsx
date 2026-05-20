@@ -35,10 +35,10 @@ function MissionStrip() {
         Friends of Lafayette-Pointer Park, Inc. is a non-profit organization
         incorporated in the District of Columbia to assist the DC Department
         of Parks and Recreation in the maintenance and improvement of
-        Lafayette-Pointer Park, including the gardens, gazebo, playgrounds,
-        tennis and basketball courts, green spaces, and the Lafayette-Pointer
-        Recreation Center. FOLP is a 501(c)(3) organization and all
-        contributions are tax-deductible.
+        Lafayette-Pointer Park grounds. The Park includes extensive gardens,
+        a gazebo, playgrounds, tennis and basketball courts, green spaces,
+        and the Lafayette-Pointer Recreation Center. FOLP is a 501(c)(3)
+        organization and all contributions are tax-deductible.
       </p>
     </Section>
   );
@@ -63,10 +63,11 @@ function Hero() {
               Be a part of your community
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Volunteer-led, neighbor-funded, plant by plant since 1999.
-              Cleanup days, replanted gardens, neighborhood concerts, and
-              benches that hadn&rsquo;t been replaced in a generation —
-              until we did it.
+              A community public park open to all — used every day by
+              neighbors and visitors from across the area for pickup tennis
+              and basketball, family picnics, after-school play, and
+              gatherings by the childcare community. Volunteer-led,
+              neighbor-funded, plant by plant since 1999.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg">
@@ -213,9 +214,6 @@ function FeaturedProject() {
               <p key={i}>{p}</p>
             ))}
           </div>
-          <p className="mt-6 rounded-2xl border border-border bg-card px-5 py-4 text-sm leading-relaxed text-muted-foreground">
-            {featuredCampaign.paymentNote}
-          </p>
         </div>
 
         <DonationForm />
@@ -275,131 +273,30 @@ function DonationForm() {
 }
 
 function PledgeBanner() {
-  const pct = Math.min(
-    100,
-    Math.round((annualGoal.pledgeCurrent / annualGoal.pledgeGoal) * 100),
-  );
   return (
     <section className="bg-primary text-white">
-      <div className="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-20 lg:px-8">
-        <div>
-          <p className="font-heading uppercase tracking-[0.22em] text-white/80">
-            {annualGoal.eyebrow}
-          </p>
-          <h2 className="mt-4 font-heading text-4xl tracking-tight text-balance text-white sm:text-5xl">
-            {annualGoal.title}
-          </h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-white/85 sm:text-lg">
-            {annualGoal.description}
-          </p>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="mt-8 border-white bg-transparent text-white hover:bg-white hover:text-[color:var(--primary-deep)]"
-          >
-            <Link href="/get-involved#membership">Make your 2026 pledge</Link>
-          </Button>
-        </div>
-
-        <Thermometer
-          percent={pct}
-          current={annualGoal.pledgeCurrent}
-          goal={annualGoal.pledgeGoal}
-          unit={annualGoal.pledgeUnit}
-        />
+      <div className="mx-auto max-w-4xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8 text-center">
+        <p className="font-heading uppercase tracking-[0.22em] text-white/80">
+          {annualGoal.eyebrow}
+        </p>
+        <h2 className="mt-4 font-heading text-4xl tracking-tight text-balance text-white sm:text-5xl">
+          {annualGoal.title}
+        </h2>
+        <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">
+          {annualGoal.description}
+        </p>
+        <Button
+          asChild
+          size="lg"
+          variant="outline"
+          className="mt-8 border-white bg-transparent text-white hover:bg-white hover:text-[color:var(--primary-deep)]"
+        >
+          <a href={site.donateUrl} target="_blank" rel="noreferrer">
+            Make your annual pledge
+          </a>
+        </Button>
       </div>
     </section>
-  );
-}
-
-function Thermometer({
-  percent,
-  current,
-  goal,
-  unit,
-}: {
-  percent: number;
-  current: number;
-  goal: number;
-  unit: string;
-}) {
-  // Vertical thermometer with bulb at the bottom
-  const trackTop = 24;
-  const trackBottom = 360;
-  const trackHeight = trackBottom - trackTop;
-  const fillHeight = Math.round((percent / 100) * trackHeight);
-  const fillTop = trackBottom - fillHeight;
-  return (
-    <div className="mx-auto flex items-center gap-6 lg:mx-0">
-      <svg
-        viewBox="0 0 110 440"
-        className="h-72 w-auto sm:h-80"
-        aria-label={`${current} of ${goal} ${unit}`}
-        role="img"
-      >
-        {/* outer tube */}
-        <rect
-          x="35"
-          y={trackTop - 8}
-          width="40"
-          height={trackHeight + 16}
-          rx="20"
-          fill="rgba(255,255,255,0.18)"
-          stroke="rgba(255,255,255,0.4)"
-          strokeWidth="2"
-        />
-        {/* fill */}
-        <rect
-          x="42"
-          y={fillTop}
-          width="26"
-          height={fillHeight + 30}
-          rx="13"
-          fill="white"
-        />
-        {/* bulb */}
-        <circle cx="55" cy="395" r="32" fill="white" />
-        <circle cx="55" cy="395" r="32" stroke="rgba(255,255,255,0.4)" strokeWidth="2" fill="none" />
-        {/* tick marks */}
-        {[0, 25, 50, 75, 100].map((m) => {
-          const y = trackBottom - (m / 100) * trackHeight;
-          return (
-            <g key={m}>
-              <line
-                x1="78"
-                x2="92"
-                y1={y}
-                y2={y}
-                stroke="rgba(255,255,255,0.55)"
-                strokeWidth="2"
-              />
-              <text
-                x="96"
-                y={y + 4}
-                fill="rgba(255,255,255,0.85)"
-                fontSize="13"
-                fontFamily="var(--font-heading)"
-              >
-                {m}%
-              </text>
-            </g>
-          );
-        })}
-      </svg>
-      <div>
-        <p className="font-heading text-5xl tracking-tight text-white sm:text-6xl">
-          {current}
-          <span className="text-white/60">/{goal}</span>
-        </p>
-        <p className="mt-1 font-heading uppercase tracking-[0.2em] text-white/70 text-xs">
-          {unit}
-        </p>
-        <p className="mt-3 max-w-[16ch] text-sm text-white/80">
-          {goal - current} more pledges to reach our 2026 goal.
-        </p>
-      </div>
-    </div>
   );
 }
 
@@ -409,13 +306,10 @@ function Sponsors() {
       <Section className="py-16 sm:py-20">
         <div className="text-center">
           <p className="font-heading uppercase tracking-[0.22em] text-white/70">
-            Thanks to our supporters
+            Partners who help keep our park thriving
           </p>
-          <h2 className="mx-auto mt-3 max-w-2xl font-heading text-3xl tracking-tight text-white sm:text-4xl">
-            Neighbors and partners who help keep the park thriving.
-          </h2>
         </div>
-        <ul className="mt-14 grid gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-6">
+        <ul className="mt-14 grid gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
           {sponsors.map((s) => (
             <li key={s.name} className="flex flex-col items-center text-center">
               <div className="flex size-24 items-center justify-center rounded-full bg-white/95 text-[color:var(--primary-deep)] shadow-md ring-1 ring-white/30">
@@ -426,11 +320,6 @@ function Sponsors() {
               <p className="mt-4 font-heading text-base leading-tight text-white">
                 {s.short}
               </p>
-              {s.tier ? (
-                <p className="mt-1 font-heading text-[0.7rem] uppercase tracking-[0.22em] text-white/60">
-                  {s.tier}
-                </p>
-              ) : null}
             </li>
           ))}
         </ul>
