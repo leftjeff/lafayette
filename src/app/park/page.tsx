@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { Section, PageHeader } from "@/components/section";
 import { ParkVignette } from "@/components/park-vignette";
 import { facilities } from "@/lib/content";
@@ -144,6 +146,40 @@ export default function ParkPage() {
               </article>
             );
           })}
+
+          <Link
+            href="/park/nature"
+            className="group overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
+          >
+            <div className="relative aspect-[5/3] w-full overflow-hidden bg-secondary">
+              <Image
+                src="/photos/azaleas-wide.jpg"
+                alt="Blooming azaleas along a path in the park — native plants supporting pollinators"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <div className="p-6">
+              <p className="font-heading text-xl font-semibold tracking-tight">
+                Nature in the Park
+              </p>
+              <p className="mt-2 text-sm font-medium text-primary">
+                Over 200 species of native plants.
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                Did you know there are over 200 species of native plants in the
+                park? Butterflies, birds, fireflies and a wide range of
+                pollinators seek them out for their nectar, seeds, and fruits.
+                Learn more about the park&rsquo;s flora and fauna, and what
+                you can do to help them.
+              </p>
+              <p className="mt-4 inline-flex items-center text-sm font-medium text-primary">
+                Explore flora and fauna
+                <ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-1" />
+              </p>
+            </div>
+          </Link>
         </div>
 
         <div className="mt-14 grid gap-0 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm sm:grid-cols-[1.4fr_1fr]">
