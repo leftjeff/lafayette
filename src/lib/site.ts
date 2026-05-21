@@ -10,7 +10,7 @@ export const site = {
     line1: "P.O. Box 6221",
     cityState: "Washington, DC 20015",
   },
-  email: "info@thefolp.org",
+  email: "info@lafayettepointerpark.com",
   instagram: "friendsofthefolp",
   donateUrl:
     "https://www.paypal.com/donate?token=XwA6favgYrEfPkNRRurO_FcYkRc-KGtFQZWrxrvjpPeoTOWwvC5mpT0PJsqZPhSUOkZFcL-C9lK_6jNH",
