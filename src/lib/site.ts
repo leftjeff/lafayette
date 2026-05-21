@@ -12,7 +12,8 @@ export const site = {
   },
   email: "info@thefolp.org",
   instagram: "friendsofthefolp",
-  donateUrl: "https://www.paypal.com/donate?hosted_button_id=FOLP",
+  donateUrl:
+    "https://www.paypal.com/donate?token=XwA6favgYrEfPkNRRurO_FcYkRc-KGtFQZWrxrvjpPeoTOWwvC5mpT0PJsqZPhSUOkZFcL-C9lK_6jNH",
   nav: [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },

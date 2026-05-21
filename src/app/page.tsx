@@ -373,7 +373,8 @@ function DonationForm() {
         Donation amount
       </p>
       <p className="mt-2 text-sm text-muted-foreground">
-        All gifts are tax-deductible. PayPal and check accepted.
+        Venmo, PayPal, Credit Card, or mailed check. All gifts are
+        tax-deductible.
       </p>
 
       <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3">
