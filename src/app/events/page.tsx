@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Section, PageHeader } from "@/components/section";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { upcomingEvents } from "@/lib/content";
 import { site } from "@/lib/site";
 
@@ -127,7 +128,8 @@ export default function EventsPage() {
                 return (
                   <li
                     key={e.title}
-                    className="grid gap-6 overflow-hidden rounded-2xl border border-border/70 bg-card p-6 shadow-sm sm:grid-cols-[160px_1fr] sm:p-8"
+                    id={e.slug}
+                    className="grid scroll-mt-24 gap-6 overflow-hidden rounded-2xl border border-border/70 bg-card p-6 shadow-sm sm:grid-cols-[160px_1fr] sm:p-8"
                   >
                     <div className="flex flex-col items-start gap-1 border-l-4 border-primary pl-4 sm:border-l-0 sm:border-t-0 sm:pl-0">
                       {e.dateLabel ? (
@@ -163,9 +165,28 @@ export default function EventsPage() {
                       <h3 className="mt-2 font-heading text-2xl font-semibold tracking-tight">
                         {e.title}
                       </h3>
-                      <p className="mt-3 text-base leading-relaxed text-muted-foreground">
-                        {e.description}
-                      </p>
+                      {e.body ? (
+                        <div className="mt-3 space-y-3 text-base leading-relaxed text-muted-foreground">
+                          {e.body.map((p, i) => (
+                            <p key={i}>{p}</p>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="mt-3 text-base leading-relaxed text-muted-foreground">
+                          {e.description}
+                        </p>
+                      )}
+                      {e.cta ? (
+                        <Button asChild size="lg" className="mt-5 text-base">
+                          <a
+                            href={e.cta.href}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            {e.cta.label}
+                          </a>
+                        </Button>
+                      ) : null}
                     </div>
                   </li>
                 );

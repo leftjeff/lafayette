@@ -1,3 +1,5 @@
+import { site } from "./site";
+
 export type Facility = {
   slug: string;
   name: string;
@@ -65,9 +67,30 @@ export type EventItem = {
   type: "volunteer" | "community" | "fundraiser";
   status: "past" | "upcoming";
   dateLabel?: string;
+  slug?: string;
+  body?: string[];
+  cta?: { label: string; href: string };
 };
 
 export const upcomingEvents: EventItem[] = [
+  {
+    date: "2026-06-15",
+    slug: "bear-carving",
+    title: "Tree Stump Bear Carving This Summer!",
+    description:
+      "Watch artist Paul Walco transform a 250-year-old oak stump into a bear sculpture — three to four days of live carving in the park this June.",
+    type: "community",
+    status: "upcoming",
+    dateLabel: "June 2026 — date TBA",
+    body: [
+      "One of Lafayette-Pointer Park's beloved 250-year-old oaks fell in last summer's windstorm — and our community has a beautiful plan for what comes next.",
+      "Rather than remove the stump, Friends of Lafayette-Pointer Park (FOLP), through the leadership of Scott Afzul, is working with the DC Department of Parks and Recreation to transform it into a sculpture of a bear — the longtime mascot of Lafayette Elementary School. The project has earned broad community support, including enthusiastic backing from the local ANC.",
+      "FOLP selected Paul Walco, a York, Pennsylvania-based artist with extensive experience in large-scale tree-stump sculpture, to bring the bear to life. You can see his work at chainsawcarvingbypaul.com. With formal approvals now in hand from both DC DPR and DC Department of General Services, Paul is scheduled to spend three to four days sculpting this June — and community members and students will have the chance to watch the carving in progress during the day.",
+      "The total project cost is $11,500, which covers the artist's fee and signage honoring the tree's history. We've raised $2,000 and need $9,500 more to make this happen. FOLP is a 501(c)(3) nonprofit, so your donation is fully tax-deductible.",
+      "Would you consider making a gift to help bring this piece of community history to life?",
+    ],
+    cta: { label: "Donate to the bear project", href: site.donateUrl },
+  },
   {
     date: "2026-04-18",
     title: "Spring Cleanup Day",
@@ -106,6 +129,16 @@ export const accomplishments = [
 ];
 
 export const donationAmounts = [25, 50, 100, 250, 500] as const;
+
+export const bearCampaign = {
+  title: "Tree Stump Bear Carving This Summer!",
+  body: [
+    "One of Lafayette-Pointer Park's beloved 250-year-old oaks fell in last summer's windstorm — and our community has a beautiful plan for what comes next. Rather than remove the stump, FOLP is working with DC Parks and Recreation to transform it into a sculpture of a bear, the longtime mascot of Lafayette Elementary School.",
+    "The total project cost is $11,500, which covers the artist's fee and signage honoring the tree's history. We've raised $2,000 and need $9,500 more to make this happen. FOLP is a 501(c)(3) nonprofit, so your donation is fully tax-deductible.",
+  ],
+  raised: 2000,
+  goal: 11500,
+} as const;
 
 export const featuredCampaign = {
   title: "Support the grounds and gardens",

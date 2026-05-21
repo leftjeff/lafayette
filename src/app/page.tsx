@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Section } from "@/components/section";
 import { ParkVignette } from "@/components/park-vignette";
 import {
+  bearCampaign,
   donationAmounts,
   featuredCampaign,
   annualGoal,
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <MissionStrip />
       <PhotoStrip />
+      <BearProject />
       <FeaturedProject />
       <PledgeBanner />
       <Sponsors />
@@ -185,12 +187,163 @@ function PhotoStrip() {
   );
 }
 
+function BearProject() {
+  const pct = Math.min(
+    100,
+    Math.round((bearCampaign.raised / bearCampaign.goal) * 100),
+  );
+  return (
+    <section className="border-y border-[color:var(--clay)]/20 bg-[color:var(--cream)]/60">
+      <Section className="py-16 sm:py-20">
+        <div className="grid gap-14 lg:grid-cols-[1.2fr_1fr]">
+          <div>
+            <p className="eyebrow text-[color:var(--clay)]">
+              Featured project · summer 2026
+            </p>
+            <h2 className="mt-3 font-heading text-3xl tracking-tight text-balance sm:text-4xl">
+              {bearCampaign.title}
+            </h2>
+            <div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+              {bearCampaign.body.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
+            <p className="mt-6 text-base leading-relaxed text-muted-foreground">
+              Read the{" "}
+              <Link
+                href="/events#bear-carving"
+                className="text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+              >
+                full event story
+              </Link>{" "}
+              for project history, artist details, and what to expect when
+              the carving happens.
+            </p>
+          </div>
+
+          <BearDonationBox
+            raised={bearCampaign.raised}
+            goal={bearCampaign.goal}
+            percent={pct}
+          />
+        </div>
+      </Section>
+    </section>
+  );
+}
+
+function BearDonationBox({
+  raised,
+  goal,
+  percent,
+}: {
+  raised: number;
+  goal: number;
+  percent: number;
+}) {
+  const fmt = (n: number) =>
+    n.toLocaleString("en-US", {
+      style: "currency",
+      currency: "USD",
+      maximumFractionDigits: 0,
+    });
+  return (
+    <div className="h-fit rounded-2xl border border-border bg-card p-7 shadow-sm sm:p-8">
+      <p className="font-heading text-2xl tracking-wide text-[color:var(--heading)]">
+        Help fund the bear
+      </p>
+      <p className="mt-2 text-sm text-muted-foreground">
+        Donations are tax-deductible — FOLP is a 501(c)(3).
+      </p>
+
+      <div className="mt-6 flex items-end justify-center gap-6">
+        <Thermometer
+          percent={percent}
+          ariaLabel={`${fmt(raised)} raised of ${fmt(goal)} goal`}
+        />
+        <div className="text-left">
+          <p className="font-heading text-3xl tracking-tight text-[color:var(--heading)] sm:text-4xl">
+            {fmt(raised)}
+          </p>
+          <p className="mt-1 font-heading uppercase tracking-[0.2em] text-muted-foreground text-xs">
+            raised of {fmt(goal)}
+          </p>
+          <p className="mt-3 max-w-[18ch] text-sm text-muted-foreground">
+            {fmt(goal - raised)} to go to fund the artist and signage.
+          </p>
+        </div>
+      </div>
+
+      <Button asChild size="lg" className="mt-7 w-full text-base">
+        <a href={site.donateUrl} target="_blank" rel="noreferrer">
+          Donate to the bear project
+        </a>
+      </Button>
+
+      <p className="mt-4 text-center text-xs text-muted-foreground">
+        Or mail a check payable to {site.shortName} to{" "}
+        {site.mailingAddress.line1}, {site.mailingAddress.cityState}.
+      </p>
+    </div>
+  );
+}
+
+function Thermometer({
+  percent,
+  ariaLabel,
+}: {
+  percent: number;
+  ariaLabel: string;
+}) {
+  const trackTop = 24;
+  const trackBottom = 360;
+  const trackHeight = trackBottom - trackTop;
+  const fillHeight = Math.round((percent / 100) * trackHeight);
+  const fillTop = trackBottom - fillHeight;
+  return (
+    <svg
+      viewBox="0 0 70 440"
+      className="h-56 w-auto sm:h-64"
+      aria-label={ariaLabel}
+      role="img"
+    >
+      <rect
+        x="20"
+        y={trackTop - 8}
+        width="30"
+        height={trackHeight + 16}
+        rx="15"
+        fill="rgba(196,106,63,0.10)"
+        stroke="rgba(196,106,63,0.35)"
+        strokeWidth="2"
+      />
+      <rect
+        x="25"
+        y={fillTop}
+        width="20"
+        height={fillHeight + 30}
+        rx="10"
+        fill="var(--clay)"
+      />
+      <circle cx="35" cy="395" r="26" fill="var(--clay)" />
+      <circle
+        cx="35"
+        cy="395"
+        r="26"
+        stroke="rgba(196,106,63,0.35)"
+        strokeWidth="2"
+        fill="none"
+      />
+    </svg>
+  );
+}
+
 function FeaturedProject() {
   return (
     <Section className="py-16 sm:py-20">
       <div className="grid gap-14 lg:grid-cols-[1.2fr_1fr]">
         <div>
-          <p className="eyebrow">Featured project</p>
+          <p className="eyebrow">Ongoing support</p>
           <h2 className="mt-3 font-heading text-3xl tracking-tight text-balance sm:text-4xl">
             {featuredCampaign.title}
           </h2>
