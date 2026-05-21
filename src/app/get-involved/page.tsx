@@ -82,7 +82,7 @@ export default function GetInvolvedPage() {
             Members get the newsletter, event reminders, and the warm
             satisfaction of having helped pay for the next round of bulbs.
           </p>
-          <Button asChild className="mt-4 w-fit">
+          <Button asChild size="lg" className="mt-6 w-full text-base">
             <a href={site.donateUrl} target="_blank" rel="noreferrer">
               Join via PayPal
             </a>
@@ -108,44 +108,12 @@ export default function GetInvolvedPage() {
             <p>{site.mailingAddress.line1}</p>
             <p>{site.mailingAddress.cityState}</p>
           </div>
-          <Button asChild className="mt-4 w-fit">
+          <Button asChild size="lg" className="mt-6 w-full text-base">
             <a href={site.donateUrl} target="_blank" rel="noreferrer">
               Donate via PayPal
             </a>
           </Button>
         </Pillar>
-      </Section>
-
-      <Section className="pb-20">
-        <div className="grid items-stretch gap-0 overflow-hidden rounded-3xl border border-border/60 bg-card shadow-sm lg:grid-cols-[1.4fr_1fr]">
-          <div className="px-8 py-10 sm:px-12 sm:py-12">
-            <p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-              Help shape the next chapter
-            </p>
-            <h2 className="mt-2 font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
-              Lend your time on the board.
-            </h2>
-            <p className="mt-4 max-w-prose text-muted-foreground">
-              The board meets a handful of times a year and steers the
-              organization&apos;s priorities — fundraising, communications,
-              programming, and hands-on garden work. If you&apos;d like to
-              learn more about getting involved, we&apos;d love to hear from
-              you.
-            </p>
-            <Button asChild size="lg" className="mt-6">
-              <Link href="/contact">Tell us you&apos;re interested</Link>
-            </Button>
-          </div>
-          <div className="relative min-h-[220px]">
-            <Image
-              src="/photos/path-with-azaleas.jpg"
-              alt="Springtime path through Lafayette-Pointer Park with blooming azaleas"
-              fill
-              sizes="(min-width: 1024px) 35vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-        </div>
       </Section>
     </div>
   );

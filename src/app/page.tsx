@@ -47,14 +47,6 @@ function MissionStrip() {
 function Hero() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-secondary via-background to-[color:var(--cream)]">
-      <svg
-        aria-hidden
-        viewBox="0 0 200 200"
-        className="pointer-events-none absolute -right-12 -top-16 size-80 opacity-60"
-      >
-        <circle cx="100" cy="100" r="58" fill="var(--amber)" opacity="0.5" />
-        <circle cx="100" cy="100" r="86" fill="var(--amber)" opacity="0.18" />
-      </svg>
       <Section className="relative pb-16 pt-12 sm:pt-14 lg:pb-20">
         <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
           <div>
@@ -62,6 +54,7 @@ function Hero() {
             <h1 className="mt-4 font-heading text-4xl uppercase tracking-[0.16em] text-balance sm:text-5xl lg:text-[3.5rem] lg:leading-[1.05]">
               Be a part of your community
             </h1>
+            <div className="mt-5 h-px w-24 bg-[color:var(--clay)]/60" aria-hidden />
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
               A community public park open to all — used every day by
               neighbors and visitors from across the area for pickup tennis
@@ -93,14 +86,6 @@ function Hero() {
             <span className="absolute -bottom-3 left-6 rounded-full bg-card px-4 py-2 font-heading text-xs uppercase tracking-[0.2em] text-[color:var(--clay)] shadow-md ring-1 ring-border/80">
               Nine acres · since 1999
             </span>
-            <span
-              aria-hidden
-              className="absolute -right-3 top-6 hidden h-16 w-16 rounded-full bg-[color:var(--clay)] opacity-90 shadow-md sm:block"
-            />
-            <span
-              aria-hidden
-              className="absolute -left-4 top-1/3 hidden h-10 w-10 rounded-full bg-[color:var(--amber)] opacity-90 shadow-md sm:block"
-            />
           </div>
         </div>
       </Section>
