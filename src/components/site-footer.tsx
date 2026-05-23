@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Camera, Mail } from "lucide-react";
+import { Camera, Mail, MailPlus } from "lucide-react";
 import { site } from "@/lib/site";
 
 export function SiteFooter() {
@@ -38,6 +38,14 @@ export function SiteFooter() {
               </a>
             </p>
           </div>
+
+          <Link
+            href="/signup"
+            className="mt-6 inline-flex items-center gap-2 rounded-md border border-white/40 bg-white/10 px-4 py-2 font-heading text-sm uppercase tracking-[0.18em] text-white transition-colors hover:bg-white hover:text-[color:var(--primary-deep)]"
+          >
+            <MailPlus className="size-4" />
+            Sign up for news
+          </Link>
         </div>
 
         <div>

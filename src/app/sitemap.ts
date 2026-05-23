@@ -16,6 +16,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     "/archive",
     "/get-involved",
     "/contact",
+    "/signup",
   ];
   const main = routes.map((path) => ({
     url: `${BASE}${path}`,

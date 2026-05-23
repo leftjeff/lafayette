@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Mail, MapPin } from "lucide-react";
+import Link from "next/link";
+import { Mail, MapPin, MailPlus } from "lucide-react";
 import { Section, PageHeader } from "@/components/section";
+import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
+import { ContactForm } from "./contact-form";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -55,50 +58,23 @@ export default function ContactPage() {
             }
             note="Preferred for membership checks and tax-deductible donations."
           />
+          <ContactBlock
+            icon={MailPlus}
+            title="Sign up for news"
+            body={
+              <p>
+                Get periodic updates about cleanup days, events, and ways to
+                help.
+              </p>
+            }
+          >
+            <Button asChild size="lg" className="mt-4 w-full text-base">
+              <Link href="/signup">Sign up for news</Link>
+            </Button>
+          </ContactBlock>
         </div>
 
-        <form
-          className="space-y-4 rounded-3xl border border-border/60 bg-card p-8"
-          aria-label="Send us a message"
-        >
-          <p className="font-heading text-xl font-semibold tracking-tight">
-            Send us a note
-          </p>
-          <p className="text-sm text-muted-foreground">
-            We&apos;ll get back to you at the email you provide.
-          </p>
-          <Field id="name" label="Name" />
-          <Field id="email" label="Email" type="email" />
-          <Field id="zip" label="Zip code" />
-          <div>
-            <label
-              htmlFor="message"
-              className="text-sm font-medium text-foreground"
-            >
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={5}
-              className="mt-1 block w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40"
-            />
-          </div>
-          <button
-            type="submit"
-            disabled
-            className="inline-flex h-10 w-full items-center justify-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow-sm transition-colors disabled:opacity-50"
-          >
-            Send (coming soon)
-          </button>
-          <p className="text-xs text-muted-foreground">
-            For now, please email{" "}
-            <a className="text-primary underline" href={`mailto:${site.email}`}>
-              {site.email}
-            </a>{" "}
-            directly.
-          </p>
-        </form>
+        <ContactForm />
       </Section>
     </div>
   );
@@ -109,11 +85,13 @@ function ContactBlock({
   title,
   body,
   note,
+  children,
 }: {
   icon: React.ComponentType<{ className?: string }>;
   title: string;
   body: React.ReactNode;
   note?: string;
+  children?: React.ReactNode;
 }) {
   return (
     <div className="rounded-3xl border border-border/60 bg-card p-8">
@@ -123,30 +101,7 @@ function ContactBlock({
       </p>
       <div className="mt-2 text-base text-foreground">{body}</div>
       {note ? <p className="mt-3 text-sm text-muted-foreground">{note}</p> : null}
-    </div>
-  );
-}
-
-function Field({
-  id,
-  label,
-  type = "text",
-}: {
-  id: string;
-  label: string;
-  type?: string;
-}) {
-  return (
-    <div>
-      <label htmlFor={id} className="text-sm font-medium text-foreground">
-        {label}
-      </label>
-      <input
-        id={id}
-        name={id}
-        type={type}
-        className="mt-1 block w-full rounded-md border border-input bg-background px-3 py-2 text-sm shadow-sm focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40"
-      />
+      {children}
     </div>
   );
 }
