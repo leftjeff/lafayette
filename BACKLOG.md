@@ -1,78 +1,66 @@
 # FOLP site backlog
 
-Suggested improvements, captured 2026-05-10. Not prioritized beyond the
-groupings below — pick what's worth doing when there's time.
+Open work items and suggested improvements. Items from the 2026-05-18
+board requirements doc are marked with their phase number.
 
-## High-impact / low-effort
+## From the 2026-05-18 requirements (remaining)
 
-- **Recover the rest of the legacy WP content before the cutover.** 26
-  page-referenced images and ~30 PDFs (board minutes 2013-2019,
-  `FOLP-BY-LAWS.pdf`, awards certificates, the Phase II walkway plan
-  `Lafayette_road.pdf`) are still on the live WordPress host but blocked
-  by its hotlink-prevention rule. Wayback is tapped out. Easiest path:
-  log into `thefolp.org/wp-admin` or the hosting panel, disable hotlink
-  protection (Wordfence / All In One WP Security / cPanel /
-  `.htaccess`), then re-run the scrape; alternatively, get an SFTP
-  backup of `wp-content/uploads/`. **Time-sensitive** — once the new
-  site cuts over to thefolp.org, the live WP install goes away with
-  it, and everything that's not already in this repo is lost. Test URL
-  to confirm hotlink is off:
-  `https://thefolp.org/wp-content/uploads/2018/06/Lafayette-Park-Stormwater-Assessment-3-22-18.pdf`
-  should download (it's currently 403). Renderer in
-  `src/components/markdown.tsx` already auto-detects local images, so
-  dropped files just appear.
+- **Nature page species lists (Phase 6).** `/park/nature` has placeholder
+  species lists (native plants, pollinators, birds). Replace with the
+  board's curated lists when available — drop them into
+  `src/app/park/nature/page.tsx`'s `sections` array.
 
-- **Wire up the newsletter and contact forms.** Both currently submit
-  nowhere; the contact button is `disabled` with "coming soon". Options:
-  Resend / Buttondown / Mailchimp, or a Server Action that emails
-  `info@thefolp.org`.
-  - Files: `src/app/page.tsx` (ContactSignup), `src/app/contact/page.tsx`.
+- **Venmo QR code (Phase 4, deferred).** Add FOLP's Venmo QR image to
+  donation widgets on the home and get-involved pages once the handle
+  is confirmed.
 
-- **Pass the donation amount to PayPal.** Hosted-button URLs ignore the
-  form-posted `amount` radio, so `$25/$50/$100` is cosmetic today. Switch
-  to PayPal Donate's `business=` URL with `amount=`, or move to Stripe
-  Checkout / Donorbox / Givebutter (also unlocks recurring gifts).
+- **Pointer historical text.** Eminent domain / African-American
+  landowners 1830-1928 section — pending Stephanie/Dennis review per
+  the requirements doc. Hold until they sign off.
+
+- **Social media links (IG / FB).** Listed as "not yet provided" in the
+  requirements doc — add to footer and contact page when handles exist.
+
+## Previously captured
+
+- **Recover legacy WP content.** 26 page-referenced images and ~30 PDFs
+  (board minutes 2013-2019, `FOLP-BY-LAWS.pdf`, awards certificates,
+  Phase II walkway plan) still on the live WordPress host, blocked by
+  hotlink-prevention. Get an SFTP backup of `wp-content/uploads/` or
+  disable hotlink protection and re-scrape. **Time-sensitive** — once
+  the WP install goes away, unrecovered content is lost.
+
+- **Pass donation amount to PayPal.** The `$25/$50/$100` radio on the
+  donation widget is cosmetic — hosted-button URLs ignore the posted
+  amount. Switch to PayPal Donate's `business=` URL with `amount=`, or
+  move to Stripe Checkout / Donorbox / Givebutter.
   - Files: `src/app/page.tsx` (DonationForm), `src/lib/site.ts` (donateUrl).
 
 - **Replace board placeholders with real names/bios.** All six cards on
-  `/about` show "Add a name" with "AN" initials. Either populate or hide
-  the section until ready.
+  `/about` show "Add a name" with "AN" initials.
   - Files: `src/lib/content.ts` (boardMembers), `src/app/about/page.tsx`.
 
-- **Decide what the pledge thermometer represents.** "137 / 200 neighbors
-  pledged" needs to be real and maintained, or swap for a generic
-  "join your neighbors" CTA without the counter.
-  - Files: `src/lib/content.ts` (annualGoal), `src/app/page.tsx` (Thermometer).
-
-## Medium-impact
-
-- **Add a location/map.** Embed a small map (or static image + directions
-  link) on `/park` and `/contact` so first-time visitors can find the
-  entrance, parking, and the gazebo.
+- **Add a location/map.** Embed a small map or static image + directions
+  link on `/park` and `/contact`.
 
 - **"Add to calendar" / .ics on events.** One-click `.ics` download or
-  Google Calendar link per event — biggest lift for cleanup-day turnout.
+  Google Calendar link per event.
   - File: `src/app/events/page.tsx`.
 
-- **Park diagram with facilities placed.** Extend the existing vignette
-  components into a labeled SVG map of the 9 acres (rec center,
-  playgrounds, Water Daisy, courts, gardens) on `/park`.
-  - Files: `src/app/park/page.tsx`, `src/components/park-vignette.tsx`,
-    `src/components/park-illustration.tsx`.
+- **Park diagram with facilities.** Labeled SVG map of the 9 acres on
+  `/park`.
 
-## Lower-impact / nice-to-have
+- **501(c)(3) trust signals.** EIN, link to most recent 990, and
+  "tax-deductible" line.
 
-- **501(c)(3) trust signals.** EIN, link to most recent 990 (or a
-  one-page annual summary), and "tax-deductible — letter on request" line.
-  Helps larger donors.
+- **Press / coverage strip.** Section for neighborhood media mentions.
 
-- **Press / coverage strip.** Small section for Northwest Current /
-  DCist / neighborhood blog mentions, if any exist.
+## Completed (2026-05-18 requirements)
 
-- **Verify analytics are mounted.** Per the standard stack,
-  `@vercel/analytics` and `@vercel/speed-insights` should be in the root
-  layout.
-  - File: `src/app/layout.tsx`.
-
-- **Custom OG image.** Confirm there's a 1200×630 social-share image so
-  links posted in neighborhood Slacks / Facebook don't look generic.
+- Phase 1: content edits (mission, about hero, park cards, partners, pledges)
+- Phase 2: layout cleanups (circles removed, mailed-donation callout removed)
+- Phase 3: bear-carving fundraiser (featured project + thermometer + event)
+- Phase 4: donation overhaul (PayPal/Venmo/CC wording, new donate link)
+- Phase 5: news signup flow (/signup page, footer + contact buttons, Resend notifications)
+- Phase 6: Nature in the Park page (placeholder species lists)
+- Phase 7: contact + email infra (Cloudflare Email Routing, Resend contact form delivery)
