@@ -1,20 +1,21 @@
-import { Resend } from "resend";
+import { createHash } from "crypto";
 import { site } from "./site";
 
-const FROM = `Friends of Lafayette-Pointer Park <noreply@lafayettepointerpark.com>`;
-const TO = site.email;
+const FROM_EMAIL = "noreply@lafayettepointerpark.com";
+const FROM_NAME = "Friends of Lafayette-Pointer Park";
 
-let resendClient: Resend | null = null;
+function getMailchimpConfig() {
+  const apiKey = process.env.MAILCHIMP_API_KEY;
+  if (!apiKey) throw new Error("MAILCHIMP_API_KEY is not set");
+  const server = apiKey.split("-").pop();
+  if (!server) throw new Error("Invalid MAILCHIMP_API_KEY format (expected key-usXX)");
+  return { apiKey, server };
+}
 
-function getResend(): Resend {
-  const key = process.env.RESEND_API_KEY;
-  if (!key) {
-    throw new Error("RESEND_API_KEY is not set");
-  }
-  if (!resendClient) {
-    resendClient = new Resend(key);
-  }
-  return resendClient;
+function getMandrillKey() {
+  const key = process.env.MAILCHIMP_TRANSACTIONAL_API_KEY;
+  if (!key) throw new Error("MAILCHIMP_TRANSACTIONAL_API_KEY is not set");
+  return key;
 }
 
 export type ContactPayload = {
@@ -25,6 +26,7 @@ export type ContactPayload = {
 };
 
 export async function sendContactMessage(payload: ContactPayload) {
+  const key = getMandrillKey();
   const lines = [
     `Name:  ${payload.name}`,
     `Email: ${payload.email}`,
@@ -32,15 +34,34 @@ export async function sendContactMessage(payload: ContactPayload) {
     "",
     payload.message,
   ].filter(Boolean);
-  const { error } = await getResend().emails.send({
-    from: FROM,
-    to: TO,
-    replyTo: payload.email,
-    subject: `Contact form: ${payload.name}`,
-    text: lines.join("\n"),
+
+  const res = await fetch("https://mandrillapp.com/api/1.0/messages/send", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      key,
+      message: {
+        from_email: FROM_EMAIL,
+        from_name: FROM_NAME,
+        to: [{ email: site.email, type: "to" }],
+        subject: `Contact form: ${payload.name}`,
+        text: lines.join("\n"),
+        headers: { "Reply-To": payload.email },
+      },
+    }),
   });
-  if (error) {
-    throw new Error(error.message ?? "Resend send failed");
+
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`Email send failed: ${body}`);
+  }
+
+  const data: unknown = await res.json();
+  if (
+    Array.isArray(data) &&
+    data[0]?.status === "rejected"
+  ) {
+    throw new Error(data[0].reject_reason ?? "Email send failed");
   }
 }
 
@@ -52,19 +73,35 @@ export type SignupPayload = {
 };
 
 export async function sendSignupNotification(payload: SignupPayload) {
-  const lines = [
-    `Name:  ${payload.firstName} ${payload.lastName}`,
-    `Email: ${payload.email}`,
-    payload.notes ? `Notes: ${payload.notes}` : null,
-  ].filter(Boolean);
-  const { error } = await getResend().emails.send({
-    from: FROM,
-    to: TO,
-    replyTo: payload.email,
-    subject: `News signup: ${payload.firstName} ${payload.lastName}`,
-    text: lines.join("\n"),
-  });
-  if (error) {
-    throw new Error(error.message ?? "Resend send failed");
+  const audienceId = process.env.MAILCHIMP_AUDIENCE_ID;
+  if (!audienceId) throw new Error("MAILCHIMP_AUDIENCE_ID is not set");
+
+  const { apiKey, server } = getMailchimpConfig();
+  const subscriberHash = createHash("md5")
+    .update(payload.email.toLowerCase())
+    .digest("hex");
+
+  const res = await fetch(
+    `https://${server}.api.mailchimp.com/3.0/lists/${audienceId}/members/${subscriberHash}`,
+    {
+      method: "PUT",
+      headers: {
+        Authorization: `apikey ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email_address: payload.email,
+        status_if_new: "subscribed",
+        merge_fields: {
+          FNAME: payload.firstName,
+          LNAME: payload.lastName,
+        },
+      }),
+    },
+  );
+
+  if (!res.ok) {
+    const body: { detail?: string } = await res.json().catch(() => ({}));
+    throw new Error(body.detail ?? "Mailchimp subscribe failed");
   }
 }
