@@ -21,11 +21,9 @@ export default async function ArchiveIndex() {
   const pages = await getLegacyPages();
   const pdfs = await getArchivedPdfs();
 
-  // Skip pages whose only purpose was administrative on the WP site.
   const SKIP = new Set(["contact-us", "privacy-policy", "terms-of-use", "home"]);
   const visible = pages.filter((p) => !SKIP.has(p.slug));
 
-  // Group by simple topic.
   const groups: Record<string, typeof visible> = {
     "Org & history": [],
     "Park & facilities": [],
@@ -52,12 +50,15 @@ export default async function ArchiveIndex() {
     }
   }
 
+  const minutes = pdfs.filter((p) => p.category === "minutes");
+  const documents = pdfs.filter((p) => p.category === "document");
+
   return (
     <div>
       <PageHeader
         eyebrow="Archive"
         title="Pages from the previous FOLP website."
-        description="Saved here for reference: every text page from the WordPress site that ran at thefolp.org for many years. Some images haven't been re-uploaded yet — captions are preserved where they appeared."
+        description="Saved here for reference: every text page and document from the WordPress site that ran at thefolp.org for many years."
       />
       <Section className="space-y-12 py-14">
         {Object.entries(groups)
@@ -91,19 +92,48 @@ export default async function ArchiveIndex() {
             </section>
           ))}
 
-        {pdfs.length > 0 ? (
+        {minutes.length > 0 ? (
+          <section className="space-y-4">
+            <h2 className="font-heading text-2xl font-semibold tracking-tight">
+              Board meeting minutes
+            </h2>
+            <p className="text-sm text-muted-foreground">
+              {minutes.length} sets of minutes spanning{" "}
+              {minutes[minutes.length - 1].date.slice(0, 4)}–
+              {minutes[0].date.slice(0, 4)}.
+            </p>
+            <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {minutes.map((p) => (
+                <li key={p.file}>
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="block rounded-lg border border-border/70 bg-card p-4 transition hover:border-primary hover:shadow-sm"
+                  >
+                    <p className="font-heading font-semibold text-foreground">
+                      {p.date}
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                      PDF
+                    </p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        {documents.length > 0 ? (
           <section className="space-y-4">
             <h2 className="font-heading text-2xl font-semibold tracking-tight">
               Documents
             </h2>
             <p className="text-sm text-muted-foreground">
-              Letters, surveys, and other PDFs preserved from the previous site.
-              Many board minutes and additional documents were on the WordPress
-              host but could not be retrieved automatically — see the note at
-              the bottom of this page.
+              Letters, by-laws, surveys, mailers, and other PDFs.
             </p>
             <ul className="grid gap-3 sm:grid-cols-2">
-              {pdfs.map((p) => (
+              {documents.map((p) => (
                 <li key={p.file}>
                   <a
                     href={p.url}
@@ -135,21 +165,15 @@ export default async function ArchiveIndex() {
             About this archive
           </p>
           <p className="mt-2">
-            These pages are imported from the WordPress site that lived at{" "}
+            These pages and documents are imported from the WordPress site that
+            lived at{" "}
             <code className="rounded bg-background px-1 py-0.5">
               thefolp.org
             </code>{" "}
-            for many years. Text content was retrieved cleanly via the WP REST
-            API. Images and most PDFs are blocked by the host&apos;s
-            hotlink-prevention rules and were not downloadable; image captions
-            are preserved where they appeared, and a number of historical PDFs
-            (board minutes 2013–2019, by-laws, awards certificates, the
-            Phase II walkway plan) still need to be recovered. The simplest
-            path is a backup of the host&apos;s{" "}
-            <code className="rounded bg-background px-1 py-0.5">
-              wp-content/uploads/
-            </code>{" "}
-            directory.
+            for many years. Text content was retrieved via the WP REST API. All
+            PDFs — board minutes from 2013 through 2019, by-laws, letters to
+            DPR, stormwater assessments, annual mailers, and more — have been
+            recovered from the media library and are available above.
           </p>
         </section>
       </Section>

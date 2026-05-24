@@ -39,7 +39,7 @@ FOLP welcomes all neighbors and friends. The FOLP will continue to work together
 
 ## **To see full text of announcement, click:**
 
-**[Announcement – Merger of FOLP and FoLRAP](http://thefolp.org/wp-content/uploads/2017/07/Announcement-Merger-of-FOLP-and-FoLRAP.pdf)**
+**[Announcement – Merger of FOLP and FoLRAP](/legacy-pdfs/Announcement-Merger-of-FOLP-and-FoLRAP.pdf)**
 
 * * *
 
@@ -49,9 +49,9 @@ FOLP welcomes all neighbors and friends. The FOLP will continue to work together
 
 Lafayette Elementary School underwent a complete rehabilitation and modernization in 2015-2016.  FOLP monitored the completed project to ensure any punch-list needed repairs and restoration work to the park from the construction was completed.
 
-Click here for FOLP’s letter about updating the ball fields area: [FOLPBallFieldsLetter](http://thefolp.org/wp-content/uploads/2015/11/FOLPBallFieldsLetter.pdf)
+Click here for FOLP’s letter about updating the ball fields area: [FOLPBallFieldsLetter](/legacy-pdfs/FOLPBallFieldsLetter.pdf)
 
-Click here for FOLP’s letter about improving park and school drainage: [FOLP Bioretention Letter 5-5-2015](http://thefolp.org/wp-content/uploads/2015/11/FOLP-Bioretention-Letter-5-5-2015.pdf)
+Click here for FOLP’s letter about improving park and school drainage: [FOLP Bioretention Letter 5-5-2015](/legacy-pdfs/FOLP-Bioretention-Letter-5-5-2015.pdf)
 
 For updates from DC’s Department of Government Services, please visit this site: [http://dgs.dc.gov/page/lafayette-elementary-school-project](http://dgs.dc.gov/page/lafayette-elementary-school-project)
 
@@ -68,7 +68,7 @@ Please direct any comments or questions to the Friends of Lafayette-Pointer Park
 
 Thanks as always for the great community support and we’ll see everyone at the next clean-up. If you have any questions, please contact [info1@thefolp.org](mailto:info1@thefolp.org).
 
-![fall_leaves](http://thefolp.org/wp-content/uploads/2013/10/fall_leaves.jpg)
+![fall_leaves](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2013/10/fall_leaves.jpg)
 
 ## Park Enhancements
 

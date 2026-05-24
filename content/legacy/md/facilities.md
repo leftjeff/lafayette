@@ -9,7 +9,7 @@ source: https://thefolp.org/facilities/
 
 Lafayette-Pointer Park is open daily to the public and closed after dark.
 
-## ![Boy walking](http://thefolp.org/wp-content/uploads/2013/07/moving_on.jpg)Recreational Center
+## ![Boy walking](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2013/07/moving_on.jpg)Recreational Center
 
 The Recreation Center organizes and operates an after school program. For more information, contact DC Parks & Recreation Department.
 

@@ -7,7 +7,7 @@ modified: 2024-12-28T10:22:00
 source: https://thefolp.org/
 ---
 
-#### **![](http://thefolp.org/wp-content/uploads/2022/04/Garden-Sign-Rake-2022-300x225.jpg)**
+#### **![](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2022/04/Garden-Sign-Rake-2022.jpg)**
 
 # **Thank You! To All the volunteers who participated in the **
 
@@ -61,11 +61,11 @@ ______________
 
 For more historical information, visit:  https://www.historicchevychasedc.org/news-archive/udc-black-land-loss-program-gears-up-for-summer/
 
-![](http://thefolp.org/wp-content/uploads/2021/06/Laf-Pk-Ctr-Opening-9-300x199.jpg)     ![](http://thefolp.org/wp-content/uploads/2021/06/Laf-Pk-Ctr-Opening-24-300x199.jpg)*![](http://thefolp.org/wp-content/uploads/2021/05/Rec-Center-Spring-2021-2-300x225.jpg)    ![](http://thefolp.org/wp-content/uploads/2021/05/Rec-Center-Spring-2021-1-300x225.jpg)****Photos from Spring 2021***
+![](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2021/06/Laf-Pk-Ctr-Opening-9.jpg)     ![](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2021/06/Laf-Pk-Ctr-Opening-24.jpg)*![](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2021/05/Rec-Center-Spring-2021-2.jpg)    ![](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2021/05/Rec-Center-Spring-2021-1.jpg)****Photos from Spring 2021***
 
 ***Renderings of the Completed New Rec Center:***
 
-![](http://thefolp.org/wp-content/uploads/2019/10/Rec-Center-SW-View-with-DGS-Logo-300x189.png)![](http://thefolp.org/wp-content/uploads/2019/11/Rec-Center-FLOOR-Plan-300x189.png)
+![](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2019/10/Rec-Center-SW-View-with-DGS-Logo.png)![](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2019/11/Rec-Center-FLOOR-Plan.png)
 - **Renderings:   1) view from southwest.       2****) Floor Plan**
 
 ## *** * ***
@@ -80,7 +80,7 @@ For more historical information, visit:  https://www.historicchevychasedc.org/n
 
 **Thank you to all who participated!!**
 
-![](http://thefolp.org/wp-content/uploads/2019/11/Fall-Clean-up-6-300x225.jpg)
+![](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2019/11/Fall-Clean-up-6.jpg)
 
 # *** * ***
 
@@ -92,9 +92,9 @@ For more historical information, visit:  https://www.historicchevychasedc.org/n
 
 *The FOLP was in contact with city officials regarding its feedback about the design flaws. See link to full text of the letter to the city below):*
 
-#### **                                      See Full Text:  [FOLP June 2018 Letter to City](http://thefolp.org/wp-content/uploads/2018/06/FOLP-Letter-to-DPR-Director-June-2018.pdf)**
+#### **                                      See Full Text:  [FOLP June 2018 Letter to City](/legacy-pdfs/FOLP-Letter-to-DPR-Director-June-2018.pdf)**
 
-####                                   **    See Text of: [Stormwater Assessment for Lafayette Park](http://thefolp.org/wp-content/uploads/2018/06/Lafayette-Park-Stormwater-Assessment-3-22-18.pdf)**
+####                                   **    See Text of: [Stormwater Assessment for Lafayette Park](/legacy-pdfs/Lafayette-Park-Stormwater-Assessment-3-22-18.pdf)**
 
 # * * *
 
@@ -114,7 +114,7 @@ For more historical information, visit:  https://www.historicchevychasedc.org/n
 
 The Friends of Lafayette Recreation Center and Park (FoLRAP) conducted a survey last spring seeking information from the community regarding what features of Lafayette Park the community feels are most important. The survey was conducted over 53 days and had 211 responses. The results are very interesting.
 
-Click here to read the survey results:     [Community Survey About Lafayette Park](http://thefolp.org/wp-content/uploads/2017/07/Community-Survey-About-Lafayette-Park.pdf)
+Click here to read the survey results:     [Community Survey About Lafayette Park](/legacy-pdfs/Community-Survey-About-Lafayette-Park.pdf)
 
 ---
 
@@ -124,4 +124,4 @@ Click here to read the survey results:     [Community Survey About Lafayette
 
 ##### **To see the full text of the announcement from September 2017, click: **
 
-#### [Announcement – Merger of FOLP and FoLRAP](http://thefolp.org/wp-content/uploads/2017/07/Announcement-Merger-of-FOLP-and-FoLRAP.pdf)
+#### [Announcement – Merger of FOLP and FoLRAP](/legacy-pdfs/Announcement-Merger-of-FOLP-and-FoLRAP.pdf)

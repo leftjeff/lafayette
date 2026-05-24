@@ -11,11 +11,11 @@ Lafayette-Pointer Park has four tennis courts located on the corner of the park 
 
 Over the years, the FOLP has invested in the maintenance and upkeep of the courts by purchasing trash containers, brooms and tennis court rollers to remove the debris that falls from the nearby trees and water from rain and snow.
 
-![Playing Tennis](http://thefolp.org/wp-content/uploads/2013/07/Tennis.jpg)
+![Playing Tennis](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2013/07/Tennis.jpg)
 
 When the tennis courts were upgraded in 2004, the upper court where mini-tennis courts had been located was converted to a multipurpose court and was completely fenced in. Basketball hoops were installed and a mini-tennis net was put in place. Lines were put on the green coating for basketball and volleyball. So now the multipurpose court can be used for basketball, volleyball, mini-tennis, mini-soccer and rollerblade hockey. The multipurpose court is not a full size basketball court.
 
-![Tennis](http://thefolp.org/wp-content/uploads/2013/08/tennis_courts1.jpg)The school basketball courts have lights so they can be used after sunset. A tennis practice wall is also available down at the Lafayette Elementary School. It is on the north side of the school just behind the new portable classrooms. It has lines for a net and half a court and can be used to practice shots and play wall tennis. There are no lights on the tennis courts at Lafayette Park so if you want to play at night after dark you can use nearby tennis courts at UDC on Yuma Street, NW near Connecticut Avenue, NW; at the Rock Creek Tennis Center (202 722-5949) at 16th and Kennedy Sts., NW; or at Meadowbrook Park (AKA Candy Cane City Park) on Beach Drive near East-West Highway. There are also several private tennis clubs in the area that have indoor or lighted tennis courts.
+![Tennis](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2013/08/tennis_courts1.jpg)The school basketball courts have lights so they can be used after sunset. A tennis practice wall is also available down at the Lafayette Elementary School. It is on the north side of the school just behind the new portable classrooms. It has lines for a net and half a court and can be used to practice shots and play wall tennis. There are no lights on the tennis courts at Lafayette Park so if you want to play at night after dark you can use nearby tennis courts at UDC on Yuma Street, NW near Connecticut Avenue, NW; at the Rock Creek Tennis Center (202 722-5949) at 16th and Kennedy Sts., NW; or at Meadowbrook Park (AKA Candy Cane City Park) on Beach Drive near East-West Highway. There are also several private tennis clubs in the area that have indoor or lighted tennis courts.
 
 ## Tennis Court Usage Guidelines
 - 
@@ -34,7 +34,7 @@ When the tennis courts were upgraded in 2004, the upper court where mini-tennis 
 
 ## Tennis programs
 
-![Tennis Instruction](http://thefolp.org/wp-content/uploads/2013/08/tennis_instruction.jpg)
+![Tennis Instruction](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2013/08/tennis_instruction.jpg)
 
 Afterschool Tennis Classes
 

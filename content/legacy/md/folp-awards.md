@@ -15,4 +15,4 @@ In recognition of its leadership and community service the Friends of Lafayette-
 - [District of Columbia City Council Lafayette Park FOLP 10th](http://thefolp.org/pdfs/LaFayette%20Park%20Resolution.pdf)
 - [Anniversary Resolution of 2009](http://thefolp.org/pdfs/LaFayette%20Park%20Resolution.pdf)[http://thefolp.org/pdfs/LaFayette%20Park%20Resolution.pdf](http://thefolp.org/pdfs/LaFayette%20Park%20Resolution.pdf)
 
-![award](http://thefolp.org/wp-content/uploads/2013/08/awards.jpg)
+![award](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2013/08/awards.jpg)

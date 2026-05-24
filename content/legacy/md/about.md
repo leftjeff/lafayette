@@ -13,7 +13,7 @@ The FOLP, through dedicated volunteers, maintains the beautiful gardens inside 
 
 Lafayette-Pointer Park is located in Northwest Washington DC, in Ward 4. The park is nine acres and is supervised by the Department of Parks and Recreation. It shares the site with Lafayette Elementary School, part of the DC Public School System. The site is framed by the following streets, Quesada, Broad Branch, 33rd, and Northampton on the south side of the park. The park is open daily to the public and closed after dark.
 
-![Man with dog](http://thefolp.org/wp-content/uploads/2013/10/about_park.jpg)
+![Man with dog](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2013/10/about_park.jpg)
 
 In 1928, 12 acres of rolling parkland were purchased by the District of Columbia to build Lafayette School. The area is roughly bounded by Broad Branch Road, Northampton, 33rd, and Quesada Streets. According to treasured remembrances of local residents summarized by Sharon Moran in Origins II published by Neighborhood Planning Council #2 and #3 in 1976, some of the land was a farm owned by the late Mr. Horace Jones.
 

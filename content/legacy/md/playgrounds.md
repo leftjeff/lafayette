@@ -11,17 +11,17 @@ Lafayette-Pointer Park has wonderful playgrounds for children. Pre-teens of all 
 
 ## Toddler Playground
 
-![Toddler Playground](http://thefolp.org/wp-content/uploads/2013/10/toddler_playground.jpg)A separate tot lot, at the top of the hill, along the alley behind Quesada Street, is dedicated to very young children. The playground equipment is smaller, just the size for tots. An attractive iron fence keeps the young children inside the play area so they can’t scoot off when your back is turned. Benches in the shade welcome those who are watching the children.
+![Toddler Playground](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2013/10/toddler_playground.jpg)A separate tot lot, at the top of the hill, along the alley behind Quesada Street, is dedicated to very young children. The playground equipment is smaller, just the size for tots. An attractive iron fence keeps the young children inside the play area so they can’t scoot off when your back is turned. Benches in the shade welcome those who are watching the children.
 
 ## Main Playground
 
 A second playground at the top of the hill near the middle of the park has play equipment for older children. Here they can climb, swing and jump til they run out of steam. A swing, climbing platforms, slides and other equipment give the children a variety of things to play on.
 
-![Main Playground](http://thefolp.org/wp-content/uploads/2013/10/main_playground.jpg)
+![Main Playground](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2013/10/main_playground.jpg)
 
 ## Daisy Fountain
 
-![Daisy Fountain](http://thefolp.org/wp-content/uploads/2013/10/daisy01.jpg)
+![Daisy Fountain](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2013/10/daisy01.jpg)
 
 The Water Daisy is one of the highlights of the Lafayette-Pointer Park playgrounds. Used in the summer, it sprays water as children run through the falling water to cool off. Nothing like playing in the water on a hot day.
 

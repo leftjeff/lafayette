@@ -23,12 +23,13 @@ board requirements doc are marked with their phase number.
 
 ## Previously captured
 
-- **Recover legacy WP content.** 26 page-referenced images and ~30 PDFs
-  (board minutes 2013-2019, `FOLP-BY-LAWS.pdf`, awards certificates,
-  Phase II walkway plan) still on the live WordPress host, blocked by
-  hotlink-prevention. Get an SFTP backup of `wp-content/uploads/` or
-  disable hotlink protection and re-scrape. **Time-sensitive** — once
-  the WP install goes away, unrecovered content is lost.
+- **~~Recover legacy WP content.~~** ~~DONE 2026-05-24.~~ Full WordPress
+  media library recovered via REST API: 341 files (45 PDFs, 290 images,
+  968 MB) saved to `content/legacy/wp-media/` (gitignored). Also
+  exported all 31 pages and 12 posts as JSON. Board minutes span
+  2013-01-17 through 2019-03-19, bylaws, stormwater assessment, DPR
+  letters, annual mailers, and all cleanup-day photos are now local.
+  Inventory at `content/legacy/wp-media/inventory.json`.
 
 - **Pass donation amount to PayPal.** The `$25/$50/$100` radio on the
   donation widget is cosmetic — hosted-button URLs ignore the posted

@@ -4,7 +4,6 @@ import { join } from "node:path";
 const LEGACY_DIR = join(process.cwd(), "content", "legacy", "md");
 const PDFS_DIR = join(process.cwd(), "public", "legacy-pdfs");
 
-// Human-readable labels and dates for the archived PDFs.
 const PDF_META: Record<string, { label: string; date: string }> = {
   "Announcement-Merger-of-FOLP-and-FoLRAP.pdf": {
     label: "Announcement: Merger of FOLP and FoLRAP",
@@ -34,11 +33,48 @@ const PDF_META: Record<string, { label: string; date: string }> = {
     label: "Lafayette Park stormwater assessment",
     date: "2018-03-22",
   },
-  "2015-7-23-PDF-1.pdf": {
-    label: "Board meeting minutes",
-    date: "2015-07-23",
+  "FOLP-BY-LAWS.pdf": {
+    label: "FOLP By-Laws",
+    date: "",
+  },
+  "FOLP-Donation-Form.pdf": {
+    label: "Donation form",
+    date: "",
+  },
+  "FOLP-Donation.pdf": {
+    label: "Annual donation mailer",
+    date: "2017-12",
+  },
+  "2016-FINAL-Annual-Mailing-as-Mailed.pdf": {
+    label: "Annual mailing piece",
+    date: "2016",
+  },
+  "2018-Annual-FOLP-Mailing-Piece-FINAL.pdf": {
+    label: "Annual mailing piece",
+    date: "2018",
+  },
+  "2018-1-29-Community-Meeting.pdf": {
+    label: "Community meeting notes",
+    date: "2018-01-29",
   },
 };
+
+function inferPdfMeta(file: string): { label: string; date: string } {
+  const explicit = PDF_META[file];
+  if (explicit) return explicit;
+
+  const m = file.match(/^(\d{4})-(\d{1,2})-(\d{1,2})(?:-PDF-\d+)?\.pdf$/);
+  if (m) {
+    const [, y, mo, d] = m;
+    const pad = (s: string) => s.padStart(2, "0");
+    return {
+      label: "Board meeting minutes",
+      date: `${y}-${pad(mo)}-${pad(d)}`,
+    };
+  }
+
+  return { label: file.replace(/\.pdf$/, ""), date: "" };
+}
 
 export type LegacyPage = {
   slug: string;
@@ -54,6 +90,7 @@ export type LegacyPdf = {
   url: string;
   label: string;
   date: string;
+  category: "minutes" | "document";
 };
 
 function parseFrontmatter(raw: string): {
@@ -105,19 +142,24 @@ export async function getLegacyPage(slug: string): Promise<LegacyPage | null> {
 export async function getArchivedPdfs(): Promise<LegacyPdf[]> {
   let files: string[] = [];
   try {
-    files = (await readdir(PDFS_DIR)).filter((f) => f.toLowerCase().endsWith(".pdf"));
+    files = (await readdir(PDFS_DIR)).filter((f) =>
+      f.toLowerCase().endsWith(".pdf"),
+    );
   } catch {
     return [];
   }
   return files
-    .sort()
     .map((file) => {
-      const meta = PDF_META[file] ?? { label: file, date: "" };
+      const meta = inferPdfMeta(file);
+      const isMinutes = meta.label === "Board meeting minutes";
       return {
         file,
         url: `/legacy-pdfs/${file}`,
         label: meta.label,
         date: meta.date,
+        category: (isMinutes ? "minutes" : "document") as
+          | "minutes"
+          | "document",
       };
     })
     .sort((a, b) => b.date.localeCompare(a.date));

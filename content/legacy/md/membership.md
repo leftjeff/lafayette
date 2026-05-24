@@ -9,7 +9,7 @@ source: https://thefolp.org/membership/
 
 ## The FOLP Board has a goal of having at least 200 “Friends” contribute $100 or more in annual support each year. We are working toward that goal, but need more “Friends” to support the FOLP work. The Friends of Lafayette-Pointer Park is a 501(c)(3) non-profit neighborhood organization run by volunteers. All donations are tax-deductible.  
 
-![](http://thefolp.org/wp-content/uploads/2020/09/Garden-Sign-Cropped-for-Website-286x300.jpg)
+![](https://nxqpubstzsjocyca.public.blob.vercel-storage.com/archive/2020/09/Garden-Sign-Cropped-for-Website.jpg)
 
 #### **Become a “Friend” & Supporter. You may make a *tax-deductible donation* either by using PayPal, clicking the button below, or by mailing a check to the address below. **
 
