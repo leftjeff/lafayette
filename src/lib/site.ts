@@ -13,7 +13,7 @@ export const site = {
   email: "info@lafayettepointerpark.com",
   instagram: "friendsofthefolp",
   donateUrl:
-    "https://www.paypal.com/donate?token=fhoyI9tiAH-uutbXz3KbqfCQnGlP9NeTNXPAdvr2YbZwzdqtIeL2kEwUNvLX7CEbXtCWoscNkZzz2HID",
+    "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V29WBZMS97CBQ",
   nav: [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
