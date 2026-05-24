@@ -84,7 +84,7 @@ export default function GetInvolvedPage() {
           </p>
           <Button asChild size="lg" className="mt-6 w-full text-base">
             <a href={site.donateUrl} target="_blank" rel="noreferrer">
-              Join via Venmo, PayPal, or Credit Card
+              Join via PayPal
             </a>
           </Button>
         </Pillar>
@@ -110,7 +110,7 @@ export default function GetInvolvedPage() {
           </div>
           <Button asChild size="lg" className="mt-6 w-full text-base">
             <a href={site.donateUrl} target="_blank" rel="noreferrer">
-              Donate via Venmo, PayPal, or Credit Card
+              Donate via PayPal
             </a>
           </Button>
         </Pillar>
