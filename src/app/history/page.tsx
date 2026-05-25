@@ -124,19 +124,21 @@ export default async function HistoryPage() {
 					<Block eyebrow="2020" title="Park renamed Lafayette-Pointer Park">
 						<p>
 							In 2020, after extensive advocacy and conversations with
-							descendants of George Pointer (1773–1862) — who was born enslaved,
-							gained his freedom, and worked as an engineer on the Chesapeake &
-							Ohio Canal — the District renamed the park Lafayette-Pointer Park.
-							The land had been home to African- American families descended
-							from George Pointer through the 19th and early 20th centuries
-							before the District acquired it in 1928.
+							descendants of Captain George Pointer (1773–1862) — who was born
+							enslaved, purchased his freedom at age 19, and worked as an
+							engineer on the Chesapeake & Ohio Canal — the District renamed the
+							park Lafayette-Pointer Park. The land had been home to
+							African-American families including the descendants of George
+							Pointer from the 1830s until 1928 when their homes were taken by
+							eminent domain to build Lafayette Elementary School and Lafayette
+							Park.
 						</p>
 					</Block>
 
 					<Block eyebrow="2021" title="New recreation center opens">
 						<p>
 							The new Lafayette-Pointer Recreation Center opened in 2021,
-							replacing the older school gym. FOLP provided community input to
+							replacing the older structure. FOLP provided community input to
 							the city throughout the design and construction process — work
 							that began with the Phase II master plan and continued through the
 							merger with FoLRAP.

@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -164,45 +164,54 @@ export default function ParkPage() {
 									<p className="mt-3 text-sm leading-relaxed text-muted-foreground">
 										{f.details}
 									</p>
+									{f.url && (
+										<a
+											href={f.url}
+											target="_blank"
+											rel="noreferrer"
+											className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
+										>
+											Learn more
+											<ExternalLink className="ml-1 size-3.5" />
+										</a>
+									)}
 								</div>
 							</article>
 						);
 					})}
-
-					<Link
-						href="/park/nature"
-						className="group overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md"
-					>
-						<div className="relative aspect-[5/3] w-full overflow-hidden bg-secondary">
-							<Image
-								src="/photos/azaleas-wide.jpg"
-								alt="Blooming azaleas along a path in the park — native plants supporting pollinators"
-								fill
-								sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-								className="object-cover transition-transform duration-300 group-hover:scale-105"
-							/>
-						</div>
-						<div className="p-6">
-							<p className="font-heading text-xl font-semibold tracking-tight">
-								Nature in the Park
-							</p>
-							<p className="mt-2 text-sm font-medium text-primary">
-								Over 200 species of native plants.
-							</p>
-							<p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-								Did you know there are over 200 species of native plants in the
-								park? Butterflies, birds, fireflies and a wide range of
-								pollinators seek them out for their nectar, seeds, and fruits.
-								Learn more about the park&rsquo;s flora and fauna, and what you
-								can do to help them.
-							</p>
-							<p className="mt-4 inline-flex items-center text-sm font-medium text-primary">
-								Explore flora and fauna
-								<ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-1" />
-							</p>
-						</div>
-					</Link>
 				</div>
+
+				<Link
+					href="/park/nature"
+					className="group mt-14 grid gap-0 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm transition-all hover:border-primary/40 hover:shadow-md sm:grid-cols-[1.4fr_1fr]"
+				>
+					<div className="px-8 py-10 sm:px-10 sm:py-12">
+						<p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
+							Nature in the Park
+						</p>
+						<h2 className="mt-2 font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
+							Over 200 species of native plants.
+						</h2>
+						<p className="mt-3 max-w-prose text-muted-foreground">
+							Butterflies, birds, fireflies and a wide range of pollinators seek
+							them out for their nectar, seeds, and fruits. Learn more about the
+							park&rsquo;s flora and fauna, and what you can do to help them.
+						</p>
+						<p className="mt-4 inline-flex items-center text-sm font-medium text-primary">
+							Explore flora and fauna
+							<ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-1" />
+						</p>
+					</div>
+					<div className="relative min-h-[260px]">
+						<Image
+							src="/photos/azaleas-wide.jpg"
+							alt="Blooming azaleas along a path in the park — native plants supporting pollinators"
+							fill
+							sizes="(min-width: 640px) 40vw, 100vw"
+							className="object-cover"
+						/>
+					</div>
+				</Link>
 
 				<div className="mt-14 grid gap-0 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm sm:grid-cols-[1.4fr_1fr]">
 					<div className="px-8 py-10 sm:px-10 sm:py-12">
