@@ -110,7 +110,7 @@ export default function GetInvolvedPage() {
           </div>
           <Button asChild size="lg" className="mt-6 w-full text-base">
             <a href={site.donateUrl} target="_blank" rel="noreferrer">
-              Donate via PayPal
+              Donate via PayPal / Venmo
             </a>
           </Button>
         </Pillar>
