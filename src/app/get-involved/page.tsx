@@ -84,7 +84,7 @@ export default function GetInvolvedPage() {
           </p>
           <Button asChild size="lg" className="mt-6 w-full text-base">
             <a href={site.donateUrl} target="_blank" rel="noreferrer">
-              Join via PayPal
+              Join via PayPal / Venmo
             </a>
           </Button>
         </Pillar>
