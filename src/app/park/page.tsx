@@ -253,7 +253,7 @@ export default function ParkPage() {
 					<div className="relative min-h-[260px]">
 						<iframe
 							title="Lafayette-Pointer Park map"
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.7!2d-77.068!3d38.9676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c9a3a1f1a3a3%3A0x1a2b3c4d5e6f7890!2sLafayette-Pointer+Park!5e0!3m2!1sen!2sus!4v1"
+							src="https://www.google.com/maps?q=Lafayette-Pointer+Park,+5900+33rd+St+NW,+Washington,+DC+20015&output=embed"
 							className="absolute inset-0 h-full w-full border-0"
 							loading="lazy"
 							referrerPolicy="no-referrer-when-downgrade"
