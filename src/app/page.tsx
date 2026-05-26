@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { NewsletterForm } from "@/components/newsletter-form";
 import { ParkVignette } from "@/components/park-vignette";
 import { Section } from "@/components/section";
 import { Button } from "@/components/ui/button";
@@ -519,31 +520,7 @@ function ContactSignup() {
 						</a>
 					</p>
 				</div>
-				<form
-					className="flex flex-col justify-center gap-3"
-					aria-label="Sign up for the newsletter"
-				>
-					<p className="font-heading text-xl tracking-wide text-[color:var(--heading)]">
-						Stay in the loop
-					</p>
-					<p className="text-sm text-muted-foreground">
-						Event invites and short updates. No spam.
-					</p>
-					<div className="flex overflow-hidden rounded-xl border border-border bg-background">
-						<input
-							type="email"
-							required
-							placeholder="you@neighborhood.org"
-							className="flex-1 bg-transparent px-4 py-3 text-sm focus:outline-none"
-						/>
-						<button
-							type="submit"
-							className="bg-primary px-5 font-heading text-sm uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-[color:var(--primary-deep)]"
-						>
-							Sign up
-						</button>
-					</div>
-				</form>
+				<NewsletterForm />
 			</div>
 		</Section>
 	);
