@@ -155,8 +155,6 @@ export const featuredCampaign = {
 };
 
 export const annualGoal = {
-	eyebrow: "Help us hit our annual goal",
-	title: "Make your annual pledge today.",
 	description:
 		"Help us reach our goal of 200 pledges this year. Membership gifts fund the planting calendar, the supplies, and the small-scale projects that keep the park feeling like the neighborhood's.",
 };

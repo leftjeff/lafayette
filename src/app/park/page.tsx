@@ -183,31 +183,31 @@ export default function ParkPage() {
 
 				<Link
 					href="/park/nature"
-					className="group mt-14 grid gap-0 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm transition-all hover:border-primary/40 hover:shadow-md sm:grid-cols-[1.4fr_1fr]"
+					className="group mt-14 grid gap-0 overflow-hidden rounded-2xl border-2 border-primary/30 bg-[color:var(--cream)] shadow-md transition-all hover:border-primary/50 hover:shadow-lg sm:grid-cols-[1.2fr_1fr]"
 				>
 					<div className="px-8 py-10 sm:px-10 sm:py-12">
 						<p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
 							Nature in the Park
 						</p>
-						<h2 className="mt-2 font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
+						<h2 className="mt-2 font-heading text-3xl font-semibold tracking-tight sm:text-4xl">
 							Over 200 species of native plants.
 						</h2>
-						<p className="mt-3 max-w-prose text-muted-foreground">
+						<p className="mt-4 max-w-prose text-base leading-relaxed text-muted-foreground">
 							Butterflies, birds, fireflies and a wide range of pollinators seek
 							them out for their nectar, seeds, and fruits. Learn more about the
 							park&rsquo;s flora and fauna, and what you can do to help them.
 						</p>
-						<p className="mt-4 inline-flex items-center text-sm font-medium text-primary">
+						<p className="mt-5 inline-flex items-center font-heading text-sm font-medium uppercase tracking-[0.18em] text-primary">
 							Explore flora and fauna
-							<ArrowRight className="ml-1 size-4 transition-transform group-hover:translate-x-1" />
+							<ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
 						</p>
 					</div>
-					<div className="relative min-h-[260px]">
+					<div className="relative min-h-[300px]">
 						<Image
 							src="/photos/azaleas-wide.jpg"
 							alt="Blooming azaleas along a path in the park — native plants supporting pollinators"
 							fill
-							sizes="(min-width: 640px) 40vw, 100vw"
+							sizes="(min-width: 640px) 45vw, 100vw"
 							className="object-cover"
 						/>
 					</div>
@@ -232,23 +232,32 @@ export default function ParkPage() {
 								Lafayette-Pointer Park
 							</p>
 							<p>{site.parkAddress}</p>
-							<p className="mt-2 text-sm">
+							<p className="mt-2 flex gap-3 text-sm">
 								<a
 									className="text-primary underline"
 									href="https://maps.apple.com/?q=Lafayette+Pointer+Park+Washington+DC"
 								>
-									Open in Maps
+									Apple Maps
+								</a>
+								<a
+									className="text-primary underline"
+									href="https://www.google.com/maps/dir/?api=1&destination=Lafayette+Pointer+Park+Washington+DC"
+									target="_blank"
+									rel="noreferrer"
+								>
+									Google Maps directions
 								</a>
 							</p>
 						</address>
 					</div>
 					<div className="relative min-h-[260px]">
-						<Image
-							src="/photos/entrance-sign.jpg"
-							alt="The Lafayette-Pointer Park entrance sign with surrounding greenery"
-							fill
-							sizes="(min-width: 640px) 40vw, 100vw"
-							className="object-cover"
+						<iframe
+							title="Lafayette-Pointer Park map"
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3103.7!2d-77.068!3d38.9676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7c9a3a1f1a3a3%3A0x1a2b3c4d5e6f7890!2sLafayette-Pointer+Park!5e0!3m2!1sen!2sus!4v1"
+							className="absolute inset-0 h-full w-full border-0"
+							loading="lazy"
+							referrerPolicy="no-referrer-when-downgrade"
+							allowFullScreen
 						/>
 					</div>
 				</div>

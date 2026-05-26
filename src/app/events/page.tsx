@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { AddToCalendar } from "@/components/add-to-calendar";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { PageHeader, Section } from "@/components/section";
 import { Badge } from "@/components/ui/badge";
@@ -186,6 +187,7 @@ export default function EventsPage() {
 													</a>
 												</Button>
 											) : null}
+											<AddToCalendar event={e} />
 										</div>
 									</li>
 								);
@@ -268,11 +270,11 @@ export default function EventsPage() {
 				)}
 
 				<p className="mt-12 max-w-2xl text-sm text-muted-foreground">
-					Want event reminders? Send us a note from the{" "}
-					<a className="text-primary underline" href="/contact">
-						contact page
+					Add events to your calendar above, or{" "}
+					<a className="text-primary underline" href="/signup">
+						sign up for our newsletter
 					</a>{" "}
-					and we&apos;ll add you to the neighborhood list.
+					for reminders when dates are announced.
 				</p>
 			</Section>
 		</div>
