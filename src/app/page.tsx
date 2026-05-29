@@ -247,11 +247,14 @@ function BearProject() {
 						</figure>
 					</div>
 
-					<BearDonationBox
-						raised={bearCampaign.raised}
-						goal={bearCampaign.goal}
-						percent={pct}
-					/>
+					<div className="space-y-6">
+						<BearDonationBox
+							raised={bearCampaign.raised}
+							goal={bearCampaign.goal}
+							percent={pct}
+						/>
+						<BearCampaignCard />
+					</div>
 				</div>
 			</Section>
 		</section>
@@ -301,7 +304,7 @@ function BearDonationBox({
 			</div>
 
 			<Button asChild size="lg" className="mt-7 w-full text-base">
-				<a href={site.donateUrl} target="_blank" rel="noreferrer">
+				<a href={site.bearDonateUrl} target="_blank" rel="noreferrer">
 					Donate to the bear carving
 				</a>
 			</Button>
@@ -310,6 +313,21 @@ function BearDonationBox({
 				Or mail a check payable to {site.shortName} to{" "}
 				{site.mailingAddress.line1}, {site.mailingAddress.cityState}.
 			</p>
+		</div>
+	);
+}
+
+function BearCampaignCard() {
+	return (
+		<div className="flex flex-col items-center rounded-2xl border border-border bg-card p-4 shadow-sm">
+			<iframe
+				src={`https://www.paypal.com/giving/campaigns?campaign_id=${site.bearCampaignId}`}
+				title="Donate to the bear carving — PayPal campaign card"
+				width={382}
+				height={550}
+				scrolling="no"
+				className="max-w-full rounded-lg border-0"
+			/>
 		</div>
 	);
 }

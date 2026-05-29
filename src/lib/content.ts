@@ -95,7 +95,7 @@ export const upcomingEvents: EventItem[] = [
 			"The total project cost is $11,500, which covers the artist's fee and signage honoring the tree's history. We've raised $2,000 and need $9,500 more to make this happen. FOLP is a 501(c)(3) nonprofit, so your donation is fully tax-deductible.",
 			"Would you consider making a gift to help bring this piece of community history to life?",
 		],
-		cta: { label: "Donate to the bear carving", href: site.donateUrl },
+		cta: { label: "Donate to the bear carving", href: site.bearDonateUrl },
 	},
 	{
 		date: "2026-04-18",

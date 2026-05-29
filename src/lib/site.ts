@@ -1,26 +1,29 @@
 export const site = {
-  name: "Friends of Lafayette-Pointer Park",
-  shortName: "FOLP",
-  tagline: "Nine acres of green space in Chevy Chase, DC.",
-  url: "https://lafayettepointerpark.com",
-  founded: 1999,
-  parkAddress: "5900 33rd St NW, Washington, DC 20015",
-  mailingAddress: {
-    name: "Friends of Lafayette-Pointer Park, Treasurer",
-    line1: "P.O. Box 6221",
-    cityState: "Washington, DC 20015",
-  },
-  email: "info@lafayettepointerpark.com",
-  instagram: "friendsofthefolp",
-  donateUrl:
-    "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V29WBZMS97CBQ",
-  nav: [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/park", label: "The Park" },
-    { href: "/events", label: "Events" },
-    { href: "/history", label: "History" },
-    { href: "/get-involved", label: "How you can help" },
-    { href: "/contact", label: "Contact Us" },
-  ],
+	name: "Friends of Lafayette-Pointer Park",
+	shortName: "FOLP",
+	tagline: "Nine acres of green space in Chevy Chase, DC.",
+	url: "https://lafayettepointerpark.com",
+	founded: 1999,
+	parkAddress: "5900 33rd St NW, Washington, DC 20015",
+	mailingAddress: {
+		name: "Friends of Lafayette-Pointer Park, Treasurer",
+		line1: "P.O. Box 6221",
+		cityState: "Washington, DC 20015",
+	},
+	email: "info@lafayettepointerpark.com",
+	instagram: "friendsofthefolp",
+	donateUrl:
+		"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V29WBZMS97CBQ",
+	// Dedicated PayPal Giving campaign for the bear-carving fundraiser.
+	bearDonateUrl: "https://www.paypal.com/donate?campaign_id=VP8NXPFYLTQQL",
+	bearCampaignId: "VP8NXPFYLTQQL",
+	nav: [
+		{ href: "/", label: "Home" },
+		{ href: "/about", label: "About Us" },
+		{ href: "/park", label: "The Park" },
+		{ href: "/events", label: "Events" },
+		{ href: "/history", label: "History" },
+		{ href: "/get-involved", label: "How you can help" },
+		{ href: "/contact", label: "Contact Us" },
+	],
 } as const;
