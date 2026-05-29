@@ -222,6 +222,29 @@ function BearProject() {
 							for project history, artist details, and what to expect when the
 							carving happens.
 						</p>
+						<figure className="mt-8">
+							<div className="relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-border/60">
+								<Image
+									src="/photos/bear-carving-paul-waclo.jpg"
+									alt="Sculptor Paul Waclo carving a tree trunk with a chainsaw"
+									fill
+									sizes="(min-width: 1024px) 55vw, 100vw"
+									className="object-cover"
+								/>
+							</div>
+							<figcaption className="mt-2 text-sm text-muted-foreground">
+								Artist Paul Waclo at work — see more at{" "}
+								<a
+									href="https://www.chainsawcarvingbypaul.com/"
+									target="_blank"
+									rel="noreferrer"
+									className="text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+								>
+									chainsawcarvingbypaul.com
+								</a>
+								.
+							</figcaption>
+						</figure>
 					</div>
 
 					<BearDonationBox
@@ -253,7 +276,7 @@ function BearDonationBox({
 	return (
 		<div className="h-fit rounded-2xl border border-border bg-card p-7 shadow-sm sm:p-8">
 			<p className="font-heading text-2xl tracking-wide text-[color:var(--heading)]">
-				Help fund the bear
+				Help fund the bear carving
 			</p>
 			<p className="mt-2 text-sm text-muted-foreground">
 				Donations are tax-deductible — FOLP is a 501(c)(3).
@@ -279,7 +302,7 @@ function BearDonationBox({
 
 			<Button asChild size="lg" className="mt-7 w-full text-base">
 				<a href={site.donateUrl} target="_blank" rel="noreferrer">
-					Donate to the bear project
+					Donate to the bear carving
 				</a>
 			</Button>
 
