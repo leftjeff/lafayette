@@ -29,8 +29,8 @@ export function SiteHeader() {
 					<Image
 						src="/folp-leaf.png"
 						alt=""
-						width={926}
-						height={452}
+						width={453}
+						height={448}
 						priority
 						className="h-11 w-auto"
 					/>
