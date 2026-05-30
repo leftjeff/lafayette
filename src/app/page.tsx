@@ -128,9 +128,15 @@ const photoStripTiles: Array<PhotoTile | VignetteTile> = [
 	},
 	{
 		kind: "photo",
-		src: "/photos/path-with-azaleas.jpg",
-		alt: "A path through the park with blooming azaleas in the foreground",
-		label: "Gardens",
+		src: "/photos/tennis-courts-summer.jpg",
+		alt: "The blue tennis courts at Lafayette-Pointer Park",
+		label: "Tennis",
+	},
+	{
+		kind: "photo",
+		src: "/photos/basketball-court.jpg",
+		alt: "The basketball court at Lafayette-Pointer Park",
+		label: "Basketball",
 	},
 	{
 		kind: "photo",
@@ -140,15 +146,9 @@ const photoStripTiles: Array<PhotoTile | VignetteTile> = [
 	},
 	{
 		kind: "photo",
-		src: "/photos/tennis-courts-summer.jpg",
-		alt: "The blue tennis courts at Lafayette-Pointer Park",
-		label: "Tennis",
-	},
-	{
-		kind: "photo",
-		src: "/photos/cleanup-group.jpg",
-		alt: "Neighbors gathered for a cleanup workday under cherry trees",
-		label: "Cleanups",
+		src: "/photos/gazebo.jpg",
+		alt: "The gazebo at Lafayette-Pointer Park",
+		label: "Gazebo",
 	},
 	{
 		kind: "photo",

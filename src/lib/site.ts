@@ -12,8 +12,10 @@ export const site = {
 	},
 	email: "info@lafayettepointerpark.com",
 	instagram: "friendsofthefolp",
-	donateUrl:
-		"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V29WBZMS97CBQ",
+	// Modern PayPal donation URL — surfaces Venmo as a funding option on
+	// mobile as well as desktop. The legacy cgi-bin/webscr hosted-button page
+	// only offered PayPal + card on mobile web.
+	donateUrl: "https://www.paypal.com/donate/?hosted_button_id=V29WBZMS97CBQ",
 	// Dedicated PayPal Giving campaign for the bear-carving fundraiser.
 	bearDonateUrl: "https://www.paypal.com/donate?campaign_id=VP8NXPFYLTQQL",
 	bearCampaignId: "VP8NXPFYLTQQL",
