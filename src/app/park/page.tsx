@@ -92,20 +92,28 @@ const facilityPhoto: Record<string, { src: string; alt: string }> = {
 		alt: "The stone exterior of the Lafayette-Pointer Recreation Center",
 	},
 	playgrounds: {
-		src: "/photos/path-to-playground.jpg",
-		alt: "A path leading toward the park playground beneath tall trees",
+		src: "/photos/playground.jpg",
+		alt: "The play structure and slides at the Lafayette-Pointer Park playground",
+	},
+	"water-daisy": {
+		src: "/photos/water-daisy.jpg",
+		alt: "The Water Daisy sprayground, with its flower sprinkler and frog feature running over a blue splash pad",
 	},
 	tennis: {
 		src: "/photos/tennis-courts.jpg",
 		alt: "The tennis courts at Lafayette-Pointer Park, framed by blooming azaleas",
+	},
+	basketball: {
+		src: "/photos/basketball-court.jpg",
+		alt: "The full basketball court at Lafayette-Pointer Park, ringed by mature trees",
 	},
 	"green-spaces": {
 		src: "/photos/green-spaces-bench.jpg",
 		alt: "An open lawn at Lafayette-Pointer Park with mature trees and a park bench",
 	},
 	gardens: {
-		src: "/photos/azaleas-wide.jpg",
-		alt: "Blooming azaleas along a tree-lined path in the park",
+		src: "/photos/gazebo.jpg",
+		alt: "The green-roofed gazebo and picnic area beneath shade trees at Lafayette-Pointer Park",
 	},
 };
 
