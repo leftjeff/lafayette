@@ -51,7 +51,7 @@ export function SiteFooter() {
 					</Link>
 				</div>
 
-				<div>
+				<div className="lg:pt-6">
 					<p className="font-heading text-base tracking-wide text-white/80">
 						Visit
 					</p>
@@ -75,7 +75,7 @@ export function SiteFooter() {
 					</address>
 				</div>
 
-				<nav className="flex flex-col gap-2 text-sm">
+				<nav className="flex flex-col gap-2 text-sm lg:pt-6">
 					<p className="font-heading text-base tracking-wide text-white/80">
 						Explore
 					</p>
