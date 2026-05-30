@@ -6,7 +6,7 @@ export const site = {
 	founded: 1999,
 	parkAddress: "5900 33rd St NW, Washington, DC 20015",
 	mailingAddress: {
-		name: "Friends of Lafayette-Pointer Park, Treasurer",
+		name: "Friends of Lafayette-Pointer Park",
 		line1: "P.O. Box 6221",
 		cityState: "Washington, DC 20015",
 	},

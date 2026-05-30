@@ -50,6 +50,13 @@ export const facilities: Facility[] = [
 			"The basketball court is a regular gathering spot for neighborhood kids and weekend pickup games.",
 	},
 	{
+		slug: "athletic-field",
+		name: "Athletic Field",
+		blurb: "A baseball diamond and open field for ball games and practice.",
+		details:
+			"Half of the athletic field — the side with the baseball diamond — is DC Parks and Recreation land; the other half, which recently opened, is DC Public Schools land. Together they give the neighborhood room for baseball, soccer, and pickup games.",
+	},
+	{
 		slug: "green-spaces",
 		name: "Green Spaces",
 		blurb:
@@ -92,7 +99,7 @@ export const upcomingEvents: EventItem[] = [
 			"One of Lafayette-Pointer Park's beloved 250-year-old oaks was damaged in a major windstorm last summer — and our community has a beautiful plan for what comes next.",
 			"Rather than remove the stump, Friends of Lafayette-Pointer Park (FOLP) worked with the DC Department of Parks and Recreation to transform it into a sculpture of a bear — the longtime mascot of Lafayette Elementary School. The project has earned broad community support, including enthusiastic backing from the local ANC.",
 			"FOLP selected Paul Waclo, a York, Pennsylvania-based artist with extensive experience in large-scale tree-stump sculpture, to bring the bear to life. You can see his work at chainsawcarvingbypaul.com. With formal approvals now in hand from both DC DPR and DC Department of General Services, Paul is scheduled to carve June 8–11 — and Lafayette students will have the chance to watch the carving in progress during the school day.",
-			"The total project cost is $11,500, which covers the artist's fee and signage honoring the tree's history. We've raised $2,000 and need $9,500 more to make this happen. FOLP is a 501(c)(3) nonprofit, so your donation is fully tax-deductible.",
+			"The total project cost is $11,500, which covers the artist's fee and signage honoring the tree's history. FOLP is a 501(c)(3) nonprofit, so your donation is fully tax-deductible.",
 			"Would you consider making a gift to help bring this piece of community history to life?",
 		],
 		cta: { label: "Donate to the bear carving", href: site.bearDonateUrl },
@@ -140,10 +147,8 @@ export const bearCampaign = {
 	title: "Tree Stump Bear Carving This Summer!",
 	body: [
 		"One of Lafayette-Pointer Park's beloved 250-year-old oaks was damaged in a major windstorm last summer — and our community has a beautiful plan for what comes next. Rather than remove the stump, FOLP worked with DC Parks and Recreation to transform it into a sculpture of a bear, the longtime mascot of Lafayette Elementary School.",
-		"The total project cost is $11,500, which covers the artist's fee and signage honoring the tree's history. We've raised $2,000 and need $9,500 more to make this happen. FOLP is a 501(c)(3) nonprofit, so your donation is fully tax-deductible.",
+		"The total project cost is $11,500, which covers the artist's fee and signage honoring the tree's history. FOLP is a 501(c)(3) nonprofit, so your donation is fully tax-deductible.",
 	],
-	raised: 2000,
-	goal: 11500,
 } as const;
 
 export const featuredCampaign = {

@@ -28,7 +28,7 @@ export default function ContactPage() {
 			<PageHeader
 				eyebrow="Contact"
 				title="Say hello."
-				description="We are a small volunteer organization, so replies may take a few days. For urgent park maintenance issues, contact DC Parks and Recreation directly."
+				description="We are a volunteer organization, so replies may take a few days. For urgent park maintenance issues, contact DC Parks and Recreation directly."
 			/>
 
 			<Section className="grid gap-10 py-16 lg:grid-cols-2">

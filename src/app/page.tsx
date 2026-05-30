@@ -191,10 +191,6 @@ function PhotoStrip() {
 }
 
 function BearProject() {
-	const pct = Math.min(
-		100,
-		Math.round((bearCampaign.raised / bearCampaign.goal) * 100),
-	);
 	return (
 		<section className="border-y border-[color:var(--clay)]/20 bg-[color:var(--cream)]/60">
 			<Section className="py-16 sm:py-20">
@@ -248,11 +244,7 @@ function BearProject() {
 					</div>
 
 					<div className="space-y-6">
-						<BearDonationBox
-							raised={bearCampaign.raised}
-							goal={bearCampaign.goal}
-							percent={pct}
-						/>
+						<BearDonationBox />
 						<BearCampaignCard />
 					</div>
 				</div>
@@ -261,21 +253,7 @@ function BearProject() {
 	);
 }
 
-function BearDonationBox({
-	raised,
-	goal,
-	percent,
-}: {
-	raised: number;
-	goal: number;
-	percent: number;
-}) {
-	const fmt = (n: number) =>
-		n.toLocaleString("en-US", {
-			style: "currency",
-			currency: "USD",
-			maximumFractionDigits: 0,
-		});
+function BearDonationBox() {
 	return (
 		<div className="h-fit rounded-2xl border border-border bg-card p-7 shadow-sm sm:p-8">
 			<p className="font-heading text-2xl tracking-wide text-[color:var(--heading)]">
@@ -284,24 +262,6 @@ function BearDonationBox({
 			<p className="mt-2 text-sm text-muted-foreground">
 				Donations are tax-deductible — FOLP is a 501(c)(3).
 			</p>
-
-			<div className="mt-6 flex items-end justify-center gap-6">
-				<Thermometer
-					percent={percent}
-					ariaLabel={`${fmt(raised)} raised of ${fmt(goal)} goal`}
-				/>
-				<div className="text-left">
-					<p className="font-heading text-3xl tracking-tight text-[color:var(--heading)] sm:text-4xl">
-						{fmt(raised)}
-					</p>
-					<p className="mt-1 font-heading uppercase tracking-[0.2em] text-muted-foreground text-xs">
-						raised of {fmt(goal)}
-					</p>
-					<p className="mt-3 max-w-[18ch] text-sm text-muted-foreground">
-						{fmt(goal - raised)} to go to fund the artist and signage.
-					</p>
-				</div>
-			</div>
 
 			<Button asChild size="lg" className="mt-7 w-full text-base">
 				<a href={site.bearDonateUrl} target="_blank" rel="noreferrer">
@@ -329,56 +289,6 @@ function BearCampaignCard() {
 				className="max-w-full rounded-lg border-0"
 			/>
 		</div>
-	);
-}
-
-function Thermometer({
-	percent,
-	ariaLabel,
-}: {
-	percent: number;
-	ariaLabel: string;
-}) {
-	const trackTop = 24;
-	const trackBottom = 360;
-	const trackHeight = trackBottom - trackTop;
-	const fillHeight = Math.round((percent / 100) * trackHeight);
-	const fillTop = trackBottom - fillHeight;
-	return (
-		<svg
-			viewBox="0 0 70 440"
-			className="h-56 w-auto sm:h-64"
-			aria-label={ariaLabel}
-			role="img"
-		>
-			<rect
-				x="20"
-				y={trackTop - 8}
-				width="30"
-				height={trackHeight + 16}
-				rx="15"
-				fill="rgba(196,106,63,0.10)"
-				stroke="rgba(196,106,63,0.35)"
-				strokeWidth="2"
-			/>
-			<rect
-				x="25"
-				y={fillTop}
-				width="20"
-				height={fillHeight + 30}
-				rx="10"
-				fill="var(--clay)"
-			/>
-			<circle cx="35" cy="395" r="26" fill="var(--clay)" />
-			<circle
-				cx="35"
-				cy="395"
-				r="26"
-				stroke="rgba(196,106,63,0.35)"
-				strokeWidth="2"
-				fill="none"
-			/>
-		</svg>
 	);
 }
 

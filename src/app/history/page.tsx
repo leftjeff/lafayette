@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { Markdown } from "@/components/markdown";
@@ -36,6 +37,46 @@ export default async function HistoryPage() {
 
 			<Section className="py-14">
 				<div className="mx-auto max-w-3xl space-y-12">
+					<Block
+						eyebrow="History of the park"
+						title="1928 — twelve acres become parkland"
+					>
+						<p>
+							In 1928 the District of Columbia purchased twelve acres of rolling
+							parkland — roughly bounded by Broad Branch Road, Northampton,
+							33rd, and Quesada Streets — to build Lafayette School. Part of the
+							land had been a farm owned by the late Mr. Horace Jones, whose
+							original 1859 farmhouse still stands on Quesada Street. Behind the
+							house the Jones cattle once grazed in the area where children play
+							in the tot lot today.
+						</p>
+						<p>
+							Much of the land, however, was acquired from African-American
+							families who owned several small houses and farm plots near Broad
+							Branch Road and Oliver Street. The families farmed the land for
+							nearly 80 years, until 1928, when the city acquired it to build
+							the park and Lafayette Elementary School. Many were descendants of
+							Captain George Pointer, who was born enslaved in 1773, purchased
+							his own freedom, and worked for more than 40 years as a
+							supervising engineer on what became the C&amp;O Canal. They were
+							among the first freed African-Americans to become landowners in
+							upper Northwest DC.
+						</p>
+						<p>
+							The houses were torn down to make way for the first school — a
+							collapsible frame building. When the brick school opened in 1931,
+							the land around it was woods, a barn, and just a few houses on
+							33rd Street, a farm-like setting that delighted the children.
+							During World War II, victory gardens took advantage of the sunny
+							south side.
+						</p>
+						<p>
+							These remembrances of local residents were summarized by Sharon
+							Moran in <em>Origins II</em>, published by Neighborhood Planning
+							Council #2 and #3 in 1976.
+						</p>
+					</Block>
+
 					<Block
 						eyebrow="Founding"
 						title="1999 — Friends of Lafayette Park forms"
@@ -106,6 +147,36 @@ export default async function HistoryPage() {
 						</p>
 					</Block>
 
+					<Block eyebrow="2011" title="Amphitheater repair project">
+						<p>
+							The Friends of Lafayette-Pointer Park played a vital role in
+							getting extensive repairs done to the amphitheater in August 2011,
+							with the rehabilitation completed at the start of the 2011–2012
+							school year. FOLP and the Lafayette Home and School Association
+							(HSA) paid for and managed the project, funded by the generous
+							support of neighbors and Lafayette school families.
+						</p>
+						<p>
+							The amphitheater — adjacent to the ball field and originally built
+							in 2001 — had fallen into disrepair from heavy use. The work
+							restored it to its place as a wonderful asset for the park.
+						</p>
+						<figure className="mt-6">
+							<div className="relative aspect-[2/1] overflow-hidden rounded-xl ring-1 ring-border/60">
+								<Image
+									src="/photos/amphitheater-construction.jpg"
+									alt="Workers and wheelbarrows during the 2011 reconstruction of the Lafayette-Pointer Park amphitheater retaining wall"
+									fill
+									sizes="(min-width: 768px) 48rem, 100vw"
+									className="object-cover"
+								/>
+							</div>
+							<figcaption className="mt-2 text-sm text-muted-foreground">
+								Rebuilding the amphitheater retaining wall, summer 2011.
+							</figcaption>
+						</figure>
+					</Block>
+
 					<Block
 						eyebrow="2017"
 						title="Merger with Friends of Lafayette Recreation Center and Park"
@@ -132,6 +203,24 @@ export default async function HistoryPage() {
 							Pointer from the 1830s until 1928 when their homes were taken by
 							eminent domain to build Lafayette Elementary School and Lafayette
 							Park.
+						</p>
+						<p>
+							Beginning in 2018, Historic Chevy Chase DC researched the
+							park&apos;s history, launched a petition in 2019 to rename the
+							park, and located and contacted a number of Pointer family
+							descendants. The DC Council approved the name change in late 2020.
+							A sign near the recreation center now offers additional
+							information, maps, and historic drawings.
+						</p>
+						<p>
+							<a
+								href="https://www.historicchevychasedc.org/category/lafayette-pointer-project/"
+								target="_blank"
+								rel="noreferrer"
+							>
+								Read more from Historic Chevy Chase DC
+							</a>
+							.
 						</p>
 					</Block>
 
@@ -169,6 +258,17 @@ export default async function HistoryPage() {
 						<h2 className="mt-3 font-heading text-3xl tracking-tight">
 							What the FOLP has built and rebuilt.
 						</h2>
+						<p className="mt-4 text-base leading-relaxed text-muted-foreground">
+							Over more than two decades of volunteer work, the FOLP has
+							supported the addition of gardens (particularly on the park&apos;s
+							perimeter), playgrounds, the former tot lot, the amphitheater, the
+							gazebo, upgraded tennis courts and ball fields, and added benches,
+							picnic tables, and much more. The FOLP provided input to the city
+							for the renovation of the park playground in 2015 and for the new
+							recreation center in 2021, and continues to work with the city on
+							an improved stormwater management plan to address erosion and
+							other park improvements.
+						</p>
 						<p className="mt-4 text-base leading-relaxed text-muted-foreground">
 							The original write-ups are preserved in the archive. Below is the
 							landing-page narrative of accomplishments and the gardening

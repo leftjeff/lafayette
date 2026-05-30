@@ -67,6 +67,11 @@ const placeJsonLd = {
 			name: "Sprayground (Water Daisy)",
 			value: true,
 		},
+		{
+			"@type": "LocationFeatureSpecification",
+			name: "Athletic field",
+			value: true,
+		},
 		{ "@type": "LocationFeatureSpecification", name: "Gardens", value: true },
 		{
 			"@type": "LocationFeatureSpecification",
@@ -106,6 +111,10 @@ const facilityPhoto: Record<string, { src: string; alt: string }> = {
 	basketball: {
 		src: "/photos/basketball-court.jpg",
 		alt: "The full basketball court at Lafayette-Pointer Park, ringed by mature trees",
+	},
+	"athletic-field": {
+		src: "/photos/baseball-diamond.jpg",
+		alt: "The baseball diamond and athletic field at Lafayette-Pointer Park",
 	},
 	"green-spaces": {
 		src: "/photos/green-spaces-bench.jpg",
@@ -220,6 +229,74 @@ export default function ParkPage() {
 						/>
 					</div>
 				</Link>
+
+				<div className="mt-14 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm">
+					<div className="px-8 py-10 sm:px-10 sm:py-12">
+						<p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
+							Nature and the park
+						</p>
+						<h2 className="mt-2 font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
+							Stormwater mitigation projects
+						</h2>
+						<p className="mt-4 max-w-prose text-base leading-relaxed text-muted-foreground">
+							Lafayette-Pointer Park sits on rolling terrain that has long
+							struggled with stormwater runoff and erosion. FOLP works with the
+							DC Department of General Services (DGS) on projects to stabilize
+							the land, protect the field and gardens, and improve the
+							park&apos;s ecological health.
+						</p>
+						<div className="mt-8 grid gap-8 sm:grid-cols-2">
+							<div>
+								<h3 className="font-heading text-lg font-semibold tracking-tight">
+									Lafayette-Pointer Erosion Control
+								</h3>
+								<p className="mt-1 text-sm font-medium text-primary">
+									Planned for 2026
+								</p>
+								<p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+									This project will stabilize the park using passive and active
+									stormwater management systems: repairing erosion damage,
+									stabilizing the existing field for recreational use, adding
+									supplemental vegetation to improve ecological health,
+									coordinating new stormwater systems with existing DCPS
+									infrastructure, and enhancing access and amenities through new
+									paths, benches, and landscaping.
+								</p>
+								<a
+									href="https://dgs.dc.gov/page/lafayette-pointer-park-erosion-control"
+									target="_blank"
+									rel="noreferrer"
+									className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
+								>
+									Learn more
+									<ExternalLink className="ml-1 size-3.5" />
+								</a>
+							</div>
+							<div>
+								<h3 className="font-heading text-lg font-semibold tracking-tight">
+									Lafayette-Pointer Water Mitigation
+								</h3>
+								<p className="mt-1 text-sm font-medium text-primary">
+									Completed 2024
+								</p>
+								<p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+									A DC DGS project that addressed water and drainage problems in
+									the park, laying groundwork for the erosion-control work to
+									come.
+								</p>
+								<a
+									href="https://dgs.dc.gov/page/lafayette-pointer-water-mitigation"
+									target="_blank"
+									rel="noreferrer"
+									className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
+								>
+									Learn more
+									<ExternalLink className="ml-1 size-3.5" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
 				<div className="mt-14 grid gap-0 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm sm:grid-cols-[1.4fr_1fr]">
 					<div className="px-8 py-10 sm:px-10 sm:py-12">

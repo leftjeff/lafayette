@@ -103,8 +103,8 @@ function BoardSection() {
 						The neighbors steering FOLP.
 					</h2>
 					<p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
-						FOLP is governed by a small volunteer board that meets several times
-						a year and steers the organization&apos;s priorities.
+						FOLP is governed by a volunteer board that meets regularly and
+						steers the organization&apos;s priorities.
 					</p>
 				</div>
 
