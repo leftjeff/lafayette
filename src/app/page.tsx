@@ -244,36 +244,11 @@ function BearProject() {
 					</div>
 
 					<div className="space-y-6">
-						<BearDonationBox />
 						<BearCampaignCard />
 					</div>
 				</div>
 			</Section>
 		</section>
-	);
-}
-
-function BearDonationBox() {
-	return (
-		<div className="h-fit rounded-2xl border border-border bg-card p-7 shadow-sm sm:p-8">
-			<p className="font-heading text-2xl tracking-wide text-[color:var(--heading)]">
-				Help fund the bear carving
-			</p>
-			<p className="mt-2 text-sm text-muted-foreground">
-				Donations are tax-deductible — FOLP is a 501(c)(3).
-			</p>
-
-			<Button asChild size="lg" className="mt-7 w-full text-base">
-				<a href={site.bearDonateUrl} target="_blank" rel="noreferrer">
-					Donate to the bear carving
-				</a>
-			</Button>
-
-			<p className="mt-4 text-center text-xs text-muted-foreground">
-				Or mail a check payable to {site.shortName} to{" "}
-				{site.mailingAddress.line1}, {site.mailingAddress.cityState}.
-			</p>
-		</div>
 	);
 }
 

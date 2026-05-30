@@ -233,7 +233,7 @@ export default function ParkPage() {
 				<div className="mt-14 overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm">
 					<div className="px-8 py-10 sm:px-10 sm:py-12">
 						<p className="text-sm font-medium uppercase tracking-[0.18em] text-primary">
-							Nature and the park
+							City Projects and the park
 						</p>
 						<h2 className="mt-2 font-heading text-2xl font-semibold tracking-tight sm:text-3xl">
 							Stormwater mitigation projects
@@ -241,9 +241,8 @@ export default function ParkPage() {
 						<p className="mt-4 max-w-prose text-base leading-relaxed text-muted-foreground">
 							Lafayette-Pointer Park sits on rolling terrain that has long
 							struggled with stormwater runoff and erosion. FOLP works with the
-							DC Department of General Services (DGS) on projects to stabilize
-							the land, protect the field and gardens, and improve the
-							park&apos;s ecological health.
+							DC Government on projects to stabilize the land, protect the field
+							and gardens, and improve the park&apos;s ecological health.
 						</p>
 						<div className="mt-8 grid gap-8 sm:grid-cols-2">
 							<div>
