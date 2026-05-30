@@ -140,8 +140,8 @@ const photoStripTiles: Array<PhotoTile | VignetteTile> = [
 	},
 	{
 		kind: "photo",
-		src: "/photos/tennis-courts.jpg",
-		alt: "Tennis courts at Lafayette-Pointer Park, framed by blooming azaleas",
+		src: "/photos/tennis-courts-summer.jpg",
+		alt: "The blue tennis courts at Lafayette-Pointer Park",
 		label: "Tennis",
 	},
 	{
