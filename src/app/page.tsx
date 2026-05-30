@@ -134,8 +134,8 @@ const photoStripTiles: Array<PhotoTile | VignetteTile> = [
 	},
 	{
 		kind: "photo",
-		src: "/photos/path-to-playground.jpg",
-		alt: "Path through trees toward the park playground",
+		src: "/photos/playground.jpg",
+		alt: "Children's play structure at Lafayette-Pointer Park",
 		label: "Playgrounds",
 	},
 	{
@@ -151,9 +151,9 @@ const photoStripTiles: Array<PhotoTile | VignetteTile> = [
 		label: "Cleanups",
 	},
 	{
-		kind: "vignette",
-		slug: "water-daisy",
-		bg: "bg-[#dbe9f1]",
+		kind: "photo",
+		src: "/photos/water-daisy.jpg",
+		alt: "The Water Daisy splash pad at Lafayette-Pointer Park",
 		label: "Water Daisy",
 	},
 ];
