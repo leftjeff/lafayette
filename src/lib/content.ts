@@ -93,8 +93,10 @@ export const upcomingEvents: EventItem[] = [
 		type: "community",
 		status: "past",
 		body: [
-			"We did it! Thanks to an outpouring of community support, FOLP reached its fundraising goal, and artist Paul Waclo completed the bear carving the week of June 8–12, 2026. One of Lafayette-Pointer Park's beloved 250-year-old oaks — damaged in a major windstorm last summer — has been transformed into a sculpture of a bear, the longtime mascot of Lafayette Elementary School.",
+			"We did it! Thanks to an outpouring of community support, FOLP reached its fundraising goal, and artist Paul Waclo completed the bear carving the week of June 8–12, 2026. One of Lafayette-Pointer Park's beloved 250-year-old oaks was damaged in a major windstorm last summer — and rather than remove the stump, Friends of Lafayette-Pointer Park (FOLP) worked with the DC Department of Parks and Recreation to transform it into a sculpture of a bear, the longtime mascot of Lafayette Elementary School. The project earned broad community support, including enthusiastic backing from the local ANC.",
+			"FOLP selected Paul Waclo, a York, Pennsylvania-based artist with extensive experience in large-scale tree-stump sculpture, to bring the bear to life — you can see his work at chainsawcarvingbypaul.com. With formal approvals in hand from both DC DPR and the DC Department of General Services, Paul carved June 8–11.",
 			"FOLP and organizers worked with Lafayette Elementary School to arrange field trips so every class could visit Paul at work during the school day. And on Tuesday, June 9th, FOLP and supporters gathered for a community celebration — a Honey Strawberry Shortcake and Lemonade party at the carving site, from 4 to 6 pm.",
+			"The total project cost was $11,500, which covered the artist's fee and signage honoring the tree's history. FOLP is a 501(c)(3) nonprofit, so your donation is fully tax-deductible.",
 			"Thank you to everyone who gave, volunteered, and came out to cheer the bear to life. This is what our community can do together.",
 		],
 	},
