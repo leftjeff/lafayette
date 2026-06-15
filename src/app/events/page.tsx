@@ -5,7 +5,12 @@ import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
 import { PageHeader, Section } from "@/components/section";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { upcomingEvents } from "@/lib/content";
+import {
+	bearDonorAnonymousCount,
+	bearDonors,
+	bearDonorTotalCount,
+	upcomingEvents,
+} from "@/lib/content";
 import { site } from "@/lib/site";
 
 const eventPhotos: Record<string, Array<{ src: string; alt: string }>> = {
@@ -92,6 +97,34 @@ const typeBadgeClass: Record<(typeof upcomingEvents)[number]["type"], string> =
 		community: "bg-[color:var(--sky)] text-white",
 		fundraiser: "bg-[color:var(--clay)] text-white",
 	};
+
+function BearDonorRoll() {
+	return (
+		<div className="mt-6 rounded-2xl border border-border/70 bg-card p-6 sm:p-8">
+			<p className="eyebrow">With gratitude</p>
+			<h4 className="mt-2 font-heading text-xl tracking-tight text-[color:var(--heading)]">
+				Thank you to our {bearDonorTotalCount} donors
+			</h4>
+			<p className="mt-3 text-base leading-relaxed text-muted-foreground">
+				The bear carving was made possible by the generosity of these neighbors
+				and friends.
+			</p>
+			<ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2 text-base text-[color:var(--heading)]">
+				{bearDonors.map((name) => (
+					<li
+						key={name}
+						className="after:ml-3 after:text-border after:content-['·'] last:after:hidden"
+					>
+						{name}
+					</li>
+				))}
+			</ul>
+			<p className="mt-4 text-sm text-muted-foreground">
+				…and {bearDonorAnonymousCount} anonymous donors.
+			</p>
+		</div>
+	);
+}
 
 export default function EventsPage() {
 	const past = upcomingEvents.filter((e) => e.status === "past");
@@ -208,7 +241,8 @@ export default function EventsPage() {
 								return (
 									<li
 										key={e.title}
-										className="grid gap-6 overflow-hidden rounded-2xl border border-border/60 bg-secondary/30 p-6 sm:grid-cols-[160px_1fr] sm:p-8"
+										id={e.slug}
+										className="grid scroll-mt-24 gap-6 overflow-hidden rounded-2xl border border-border/60 bg-secondary/30 p-6 sm:grid-cols-[160px_1fr] sm:p-8"
 									>
 										<div className="flex flex-col items-start gap-1">
 											<span className="text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--clay)]">
@@ -269,6 +303,7 @@ export default function EventsPage() {
 													))}
 												</div>
 											) : null}
+											{e.slug === "bear-carving" ? <BearDonorRoll /> : null}
 										</div>
 									</li>
 								);
