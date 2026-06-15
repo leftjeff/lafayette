@@ -197,7 +197,7 @@ function BearProject() {
 				<div className="grid gap-14 lg:grid-cols-[1.2fr_1fr]">
 					<div>
 						<p className="eyebrow text-[color:var(--clay)]">
-							Featured project · summer 2026
+							Completed · summer 2026
 						</p>
 						<h2 className="mt-3 font-heading text-3xl tracking-tight text-balance sm:text-4xl">
 							{bearCampaign.title}
@@ -213,10 +213,10 @@ function BearProject() {
 								href="/events#bear-carving"
 								className="text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
 							>
-								full event story
+								full story
 							</Link>{" "}
-							for project history, artist details, and what to expect when the
-							carving happens.
+							for project history, artist details, and how the carving came
+							together.
 						</p>
 						<figure className="mt-8">
 							<div className="relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-border/60">

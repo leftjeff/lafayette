@@ -240,9 +240,17 @@ export default function EventsPage() {
 											<h3 className="mt-2 font-heading text-2xl font-semibold tracking-tight">
 												{e.title}
 											</h3>
-											<p className="mt-3 text-base leading-relaxed text-muted-foreground">
-												{e.description}
-											</p>
+											{e.body ? (
+												<div className="mt-3 space-y-3 text-base leading-relaxed text-muted-foreground">
+													{e.body.map((p) => (
+														<p key={p}>{p}</p>
+													))}
+												</div>
+											) : (
+												<p className="mt-3 text-base leading-relaxed text-muted-foreground">
+													{e.description}
+												</p>
+											)}
 											{photos ? (
 												<div className="mt-5 grid gap-3 sm:grid-cols-3">
 													{photos.map((p) => (
