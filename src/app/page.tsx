@@ -160,7 +160,7 @@ const photoStripTiles: Array<PhotoTile | VignetteTile> = [
 
 function PhotoStrip() {
 	return (
-		<Section className="pb-12">
+		<Section id="photos" className="scroll-mt-24 pb-12">
 			<ul className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
 				{photoStripTiles.map((t) => (
 					<li
