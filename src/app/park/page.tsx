@@ -294,6 +294,68 @@ export default function ParkPage() {
 								</a>
 							</div>
 						</div>
+
+						<div className="mt-10 border-t border-border/60 pt-8">
+							<h3 className="font-heading text-lg font-semibold tracking-tight">
+								FOLP requested adjustments to the DC plan
+							</h3>
+							<p className="mt-3 max-w-prose text-sm leading-relaxed text-muted-foreground">
+								The Friends of Lafayette-Pointer Park have provided a written
+								summary, as well as a narrated PowerPoint presentation and
+								video, explaining community concerns:
+							</p>
+							<ul className="mt-5 space-y-5">
+								<li>
+									<a
+										href="https://www.dropbox.com/scl/fi/4cmqgukwv2cmoon6thw0u/FOLP-Summary-Slide-Recommendation-to-Park-Stormwater-and-Erosion-Control-Schematic-Plan.jpg.pdf?rlkey=3xdi4jg42rgbw2kofnwq8rl7y&st=4w62cljp&dl=0"
+										target="_blank"
+										rel="noreferrer"
+										className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+									>
+										Alternative plan developed by Friends of Lafayette-Pointer
+										<ExternalLink className="ml-1 size-3.5" />
+									</a>
+								</li>
+								<li>
+									<p className="text-sm leading-relaxed text-muted-foreground">
+										A review of the Concept Plan presented at the 01/08/26
+										Community Meeting and the Schematic Design presented at the
+										04/07/26 Community Meeting by Sandy Wiggins. Mr. Wiggins is
+										a community member, development and construction
+										professional, former Chair of the U.S. Green Building
+										Council, and long-time member of Mayor Bowser&apos;s Green
+										Building Advisory Board.
+									</p>
+									<a
+										href="https://www.dropbox.com/scl/fi/bv8bn94g6vhe1j46c6msg/FOLP-Recorded-Response-to-Park-Stormwater-and-Erosion-Control-Schematic-Plan-Sandy-Wiggins.mp4?rlkey=y7tbx36ffqccztbsqwvuw7syy&st=cwtodl0r&dl=0"
+										target="_blank"
+										rel="noreferrer"
+										className="mt-2 inline-flex items-center text-sm font-medium text-primary hover:underline"
+									>
+										Watch the recorded review
+										<ExternalLink className="ml-1 size-3.5" />
+									</a>
+								</li>
+								<li>
+									<p className="text-sm leading-relaxed text-muted-foreground">
+										A four-minute narrated video filmed during a rain event of
+										5/23/26 that clearly documents that the stormwater problems
+										are at the top of the hill and demonstrates the need for the
+										Erosion Control project to focus on the upper field, vs. the
+										lower NW corner.
+									</p>
+									<a
+										href="https://www.dropbox.com/scl/fi/wyryl3i64pgvgku9r0lcd/FOLP-Rain-Event-Video-on-5-23-26-by-Tracy-Bowen-SD-480p.mov?rlkey=8y8677nzj7ai1juxofpf2x178&st=dk1rw5c8&dl=0"
+										target="_blank"
+										rel="noreferrer"
+										className="mt-2 inline-flex items-center text-sm font-medium text-primary hover:underline"
+									>
+										Watch the rain-event video (large file)
+										<ExternalLink className="ml-1 size-3.5" />
+									</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 
