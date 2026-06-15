@@ -244,67 +244,44 @@ export default function ParkPage() {
 							DC Government on projects to stabilize the land, protect the field
 							and gardens, and improve the park&apos;s ecological health.
 						</p>
-						<div className="mt-8 grid gap-8 sm:grid-cols-2">
-							<div>
-								<h3 className="font-heading text-lg font-semibold tracking-tight">
-									Lafayette-Pointer Erosion Control
-								</h3>
-								<p className="mt-1 text-sm font-medium text-primary">
-									Planned for 2026
-								</p>
-								<p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-									This project will stabilize the park using passive and active
-									stormwater management systems: repairing erosion damage,
-									stabilizing the existing field for recreational use, adding
-									supplemental vegetation to improve ecological health,
-									coordinating new stormwater systems with existing DCPS
-									infrastructure, and enhancing access and amenities through new
-									paths, benches, and landscaping.
-								</p>
-								<a
-									href="https://dgs.dc.gov/page/lafayette-pointer-park-erosion-control"
-									target="_blank"
-									rel="noreferrer"
-									className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
-								>
-									Learn more
-									<ExternalLink className="ml-1 size-3.5" />
-								</a>
-							</div>
-							<div>
-								<h3 className="font-heading text-lg font-semibold tracking-tight">
-									Lafayette-Pointer Water Mitigation
-								</h3>
-								<p className="mt-1 text-sm font-medium text-primary">
-									Completed 2024
-								</p>
-								<p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-									A DC DGS project that addressed water and drainage problems in
-									the park, laying groundwork for the erosion-control work to
-									come.
-								</p>
-								<a
-									href="https://dgs.dc.gov/page/lafayette-pointer-water-mitigation"
-									target="_blank"
-									rel="noreferrer"
-									className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
-								>
-									Learn more
-									<ExternalLink className="ml-1 size-3.5" />
-								</a>
-							</div>
+						<div className="mt-8">
+							<h3 className="font-heading text-lg font-semibold tracking-tight">
+								Lafayette-Pointer Erosion Control
+							</h3>
+							<p className="mt-1 text-sm font-medium text-primary">
+								Planned for 2026
+							</p>
+							<p className="mt-3 max-w-prose text-sm leading-relaxed text-muted-foreground">
+								This project will stabilize the park using passive and active
+								stormwater management systems: repairing erosion damage,
+								stabilizing the existing field for recreational use, adding
+								supplemental vegetation to improve ecological health,
+								coordinating new stormwater systems with existing DCPS
+								infrastructure, and enhancing access and amenities through new
+								paths, benches, and landscaping.
+							</p>
+							<a
+								href="https://dgs.dc.gov/page/lafayette-pointer-park-erosion-control"
+								target="_blank"
+								rel="noreferrer"
+								className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
+							>
+								Learn more
+								<ExternalLink className="ml-1 size-3.5" />
+							</a>
 						</div>
 
 						<div className="mt-10 border-t border-border/60 pt-8">
 							<h3 className="font-heading text-lg font-semibold tracking-tight">
-								FOLP requested adjustments to the DC plan
+								FOLP requested adjustments to the 2026 Erosion Control plan
 							</h3>
 							<p className="mt-3 max-w-prose text-sm leading-relaxed text-muted-foreground">
-								The Friends of Lafayette-Pointer Park have provided a written
+								In response to the 2026 Erosion Control project above, the
+								Friends of Lafayette-Pointer Park have provided a written
 								summary, as well as a narrated PowerPoint presentation and
 								video, explaining community concerns:
 							</p>
-							<ul className="mt-5 space-y-5">
+							<ul className="mt-5 list-disc space-y-5 pl-5 marker:text-primary">
 								<li>
 									<a
 										href="https://www.dropbox.com/scl/fi/4cmqgukwv2cmoon6thw0u/FOLP-Summary-Slide-Recommendation-to-Park-Stormwater-and-Erosion-Control-Schematic-Plan.jpg.pdf?rlkey=3xdi4jg42rgbw2kofnwq8rl7y&st=4w62cljp&dl=0"
@@ -355,6 +332,32 @@ export default function ParkPage() {
 									</a>
 								</li>
 							</ul>
+						</div>
+
+						<div className="mt-10 border-t border-border/60 pt-8">
+							<p className="text-sm font-medium uppercase tracking-[0.18em] text-muted-foreground">
+								Completed
+							</p>
+							<h3 className="mt-2 font-heading text-lg font-semibold tracking-tight">
+								Lafayette-Pointer Water Mitigation
+							</h3>
+							<p className="mt-1 text-sm font-medium text-primary">
+								Completed 2024
+							</p>
+							<p className="mt-3 max-w-prose text-sm leading-relaxed text-muted-foreground">
+								A DC DGS project, finished in 2024, that addressed water and
+								drainage problems in the park, laying the groundwork for the
+								erosion-control work to come.
+							</p>
+							<a
+								href="https://dgs.dc.gov/page/lafayette-pointer-water-mitigation"
+								target="_blank"
+								rel="noreferrer"
+								className="mt-3 inline-flex items-center text-sm font-medium text-primary hover:underline"
+							>
+								Learn more
+								<ExternalLink className="ml-1 size-3.5" />
+							</a>
 						</div>
 					</div>
 				</div>
