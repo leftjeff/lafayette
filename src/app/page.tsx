@@ -33,7 +33,7 @@ export default function Home() {
 function MissionStrip() {
 	return (
 		<Section className="py-10 text-center sm:py-12">
-			<p className="mx-auto max-w-3xl text-pretty text-center text-base leading-relaxed text-muted-foreground sm:text-lg sm:text-justify">
+			<p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
 				Friends of Lafayette-Pointer Park, Inc. is a non-profit organization
 				incorporated in the District of Columbia to assist the DC Department of
 				Parks and Recreation in the maintenance and improvement of
@@ -60,7 +60,7 @@ function Hero() {
 							className="mt-5 h-px w-24 bg-[color:var(--clay)]/60"
 							aria-hidden
 						/>
-						<p className="mt-6 max-w-xl text-pretty text-lg leading-relaxed text-muted-foreground sm:text-justify">
+						<p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
 							A community public park open to all — used every day by neighbors
 							and visitors from across the area for pickup tennis and
 							basketball, family picnics, after-school play, and gatherings by
@@ -202,12 +202,12 @@ function BearProject() {
 						<h2 className="mt-3 font-heading text-3xl tracking-tight text-balance sm:text-4xl">
 							{bearCampaign.title}
 						</h2>
-						<div className="mt-6 space-y-4 text-pretty text-base leading-relaxed text-muted-foreground sm:text-justify">
+						<div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
 							{bearCampaign.body.map((p) => (
 								<p key={p.slice(0, 40)}>{p}</p>
 							))}
 						</div>
-						<p className="mt-6 text-pretty text-base leading-relaxed text-muted-foreground sm:text-justify">
+						<p className="mt-6 text-base leading-relaxed text-muted-foreground">
 							Read the{" "}
 							<Link
 								href="/events#bear-carving"
@@ -276,7 +276,7 @@ function FeaturedProject() {
 					<h2 className="mt-3 font-heading text-3xl tracking-tight text-balance sm:text-4xl">
 						{featuredCampaign.title}
 					</h2>
-					<div className="mt-6 space-y-4 text-pretty text-base leading-relaxed text-muted-foreground sm:text-justify">
+					<div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
 						{featuredCampaign.body.map((p) => (
 							<p key={p.slice(0, 40)}>{p}</p>
 						))}
