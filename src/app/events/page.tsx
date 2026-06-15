@@ -14,6 +14,24 @@ import {
 import { site } from "@/lib/site";
 
 const eventPhotos: Record<string, Array<{ src: string; alt: string }>> = {
+	"The Bear Carving Is Complete!": [
+		{
+			src: "/photos/bear-carving-progress-trunk.jpg",
+			alt: "The storm-damaged 250-year-old oak stump before carving, with a “Donate to the Bear” sign",
+		},
+		{
+			src: "/photos/bear-carving-progress-form.jpg",
+			alt: "The bear’s shape beginning to emerge from the oak as the carving gets underway",
+		},
+		{
+			src: "/photos/bear-carving-finished-kids.jpg",
+			alt: "Two children looking up at the nearly finished bear carving",
+		},
+		{
+			src: "/photos/bear-carving-finished.jpg",
+			alt: "The finished “Be Kind” bear carving on the old oak stump, with families and a dog gathered at the bench beneath it",
+		},
+	],
 	"Spring Cleanup Day": [
 		{
 			src: "/photos/cleanup-group.jpg",
