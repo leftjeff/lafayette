@@ -8,6 +8,9 @@ import { Button } from "@/components/ui/button";
 import {
 	annualGoal,
 	bearCampaign,
+	bearDonorAnonymousCount,
+	bearDonors,
+	bearDonorTotalCount,
 	donationAmounts,
 	featuredCampaign,
 	sponsors,
@@ -241,6 +244,7 @@ function BearProject() {
 								.
 							</figcaption>
 						</figure>
+						<BearDonorRoll />
 					</div>
 
 					<div className="space-y-6">
@@ -249,6 +253,34 @@ function BearProject() {
 				</div>
 			</Section>
 		</section>
+	);
+}
+
+function BearDonorRoll() {
+	return (
+		<div className="mt-10 rounded-2xl border border-border/70 bg-secondary/30 p-6 sm:p-8">
+			<p className="eyebrow">With gratitude</p>
+			<h3 className="mt-2 font-heading text-2xl tracking-tight text-[color:var(--heading)]">
+				Thank you to our {bearDonorTotalCount} donors
+			</h3>
+			<p className="mt-3 text-base leading-relaxed text-muted-foreground">
+				The bear carving was made possible by the generosity of these neighbors
+				and friends.
+			</p>
+			<ul className="mt-5 flex flex-wrap gap-x-3 gap-y-2 text-base text-[color:var(--heading)]">
+				{bearDonors.map((name) => (
+					<li
+						key={name}
+						className="after:ml-3 after:text-border after:content-['·'] last:after:hidden"
+					>
+						{name}
+					</li>
+				))}
+			</ul>
+			<p className="mt-4 text-sm text-muted-foreground">
+				…and {bearDonorAnonymousCount} anonymous donors.
+			</p>
+		</div>
 	);
 }
 

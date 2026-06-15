@@ -145,6 +145,59 @@ export const bearCampaign = {
 	],
 } as const;
 
+// Donors who gave to the bear carving campaign, recognized by name only
+// (no amounts or dates), alphabetical by first name. Anonymous gifts are
+// counted rather than listed.
+export const bearDonors = [
+	"Adam Reisman",
+	"Adam Singleton",
+	"Alexander Kullar",
+	"Andrea Rosen",
+	"Beth Van Hanswyk",
+	"Catherine Hannan",
+	"Cynthia Hamilton",
+	"Dennis Smyth",
+	"Donna Fabiani",
+	"Elizabeth Clark",
+	"Elizabeth Critchley",
+	"Elizabeth Scanlon",
+	"Elizabeth T Burden",
+	"Eric Karian",
+	"Erin Lindsay",
+	"Eva Dömötör",
+	"Frank Van Riper",
+	"Greg Kats",
+	"Gregory Campbell",
+	"Ian Meyers",
+	"James Smith",
+	"Jeanie Teare",
+	"Jessica Deahl",
+	"Jessica Leinwand",
+	"Joanne Barrett",
+	"Julie Roberts Home Team",
+	"Lauren Ross",
+	"Madhura Bhat",
+	"Mary Reed",
+	"Meghan Browne",
+	"Niall Brennan",
+	"Patricia Myler",
+	"Paul Laporte",
+	"Pauline Crane",
+	"Rebecca Richardson",
+	"Robin Lloyd",
+	"Roy Assido",
+	"Sally D'Amato",
+	"Samuel Hall",
+	"Stephanie Cappa",
+	"Susan Okun",
+	"Terrell Ussing",
+	"Tracy Bowen",
+	"Vikas Raj",
+] as const;
+
+export const bearDonorAnonymousCount = 17;
+export const bearDonorTotalCount = bearDonors.length + bearDonorAnonymousCount;
+
 export const featuredCampaign = {
 	title: "Support the grounds and gardens",
 	body: [
