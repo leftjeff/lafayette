@@ -255,13 +255,10 @@ export default function ParkPage() {
 								Planned for 2026
 							</p>
 							<p className="mt-3 max-w-prose text-sm leading-relaxed text-muted-foreground">
-								This project will stabilize the park using passive and active
-								stormwater management systems: repairing erosion damage,
-								stabilizing the existing field for recreational use, adding
-								supplemental vegetation to improve ecological health,
-								coordinating new stormwater systems with existing DCPS
-								infrastructure, and enhancing access and amenities through new
-								paths, benches, and landscaping.
+								A DC project to stabilize the park with passive and active
+								stormwater systems — repairing erosion, firming up the playing
+								field, adding vegetation, and improving paths, benches, and
+								landscaping.
 							</p>
 							<a
 								href="https://dgs.dc.gov/page/lafayette-pointer-park-erosion-control"
@@ -274,67 +271,69 @@ export default function ParkPage() {
 							</a>
 						</div>
 
-						<div className="mt-10 border-t border-border/60 pt-8">
-							<h3 className="font-heading text-lg font-semibold tracking-tight">
-								FOLP requested adjustments to the 2026 Erosion Control plan
-							</h3>
-							<p className="mt-3 max-w-prose text-sm leading-relaxed text-muted-foreground">
-								In response to the 2026 Erosion Control project above, the
-								Friends of Lafayette-Pointer Park have provided a written
-								summary, as well as a narrated PowerPoint presentation and
-								video, explaining community concerns:
+						<div className="mt-10 rounded-2xl border-2 border-primary/30 bg-primary/5 p-6 sm:p-8">
+							<p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+								What FOLP has contributed
 							</p>
-							<ul className="mt-5 list-disc space-y-5 pl-5 marker:text-primary">
-								<li>
+							<h3 className="mt-2 font-heading text-xl font-semibold tracking-tight sm:text-2xl">
+								Our recommendations for the 2026 plan
+							</h3>
+							<p className="mt-2 max-w-prose text-sm leading-relaxed text-muted-foreground">
+								In response to the City&apos;s plan, the Friends of
+								Lafayette-Pointer Park submitted a written summary, an expert
+								review, and on-site documentation of where the erosion really
+								begins:
+							</p>
+							<div className="mt-6 space-y-3">
+								<div className="rounded-xl bg-card p-4 ring-1 ring-border/60">
 									<a
 										href="https://www.dropbox.com/scl/fi/4cmqgukwv2cmoon6thw0u/FOLP-Summary-Slide-Recommendation-to-Park-Stormwater-and-Erosion-Control-Schematic-Plan.jpg.pdf?rlkey=3xdi4jg42rgbw2kofnwq8rl7y&st=4w62cljp&dl=0"
 										target="_blank"
 										rel="noreferrer"
-										className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+										className="inline-flex items-center font-heading text-base font-semibold text-primary hover:underline"
 									>
-										Alternative plan developed by Friends of Lafayette-Pointer
+										Alternative plan developed by FOLP
 										<ExternalLink className="ml-1 size-3.5" />
 									</a>
-								</li>
-								<li>
-									<p className="text-sm leading-relaxed text-muted-foreground">
-										A review of the Concept Plan presented at the 01/08/26
-										Community Meeting and the Schematic Design presented at the
-										04/07/26 Community Meeting by Sandy Wiggins. Mr. Wiggins is
-										a community member, development and construction
-										professional, former Chair of the U.S. Green Building
-										Council, and long-time member of Mayor Bowser&apos;s Green
-										Building Advisory Board.
+									<p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+										Our recommended approach to stabilizing the park.
 									</p>
+								</div>
+								<div className="rounded-xl bg-card p-4 ring-1 ring-border/60">
 									<a
 										href="https://www.dropbox.com/scl/fi/bv8bn94g6vhe1j46c6msg/FOLP-Recorded-Response-to-Park-Stormwater-and-Erosion-Control-Schematic-Plan-Sandy-Wiggins.mp4?rlkey=y7tbx36ffqccztbsqwvuw7syy&st=cwtodl0r&dl=0"
 										target="_blank"
 										rel="noreferrer"
-										className="mt-2 inline-flex items-center text-sm font-medium text-primary hover:underline"
+										className="inline-flex items-center font-heading text-base font-semibold text-primary hover:underline"
 									>
-										Watch the recorded review
+										Expert review by Sandy Wiggins
 										<ExternalLink className="ml-1 size-3.5" />
 									</a>
-								</li>
-								<li>
-									<p className="text-sm leading-relaxed text-muted-foreground">
-										A four-minute narrated video filmed during a rain event of
-										5/23/26 that clearly documents that the stormwater problems
-										are at the top of the hill and demonstrates the need for the
-										Erosion Control project to focus on the upper field, vs. the
-										lower NW corner.
+									<p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+										An independent review of the City&apos;s concept and
+										schematic designs by Sandy Wiggins — community member,
+										construction professional, and former Chair of the U.S.
+										Green Building Council.
 									</p>
+								</div>
+								<div className="rounded-xl bg-card p-4 ring-1 ring-border/60">
 									<a
 										href="https://www.dropbox.com/scl/fi/wyryl3i64pgvgku9r0lcd/FOLP-Rain-Event-Video-on-5-23-26-by-Tracy-Bowen-SD-480p.mov?rlkey=8y8677nzj7ai1juxofpf2x178&st=dk1rw5c8&dl=0"
 										target="_blank"
 										rel="noreferrer"
-										className="mt-2 inline-flex items-center text-sm font-medium text-primary hover:underline"
+										className="inline-flex items-center font-heading text-base font-semibold text-primary hover:underline"
 									>
-										Watch the rain-event video (large file)
+										Rain-event video, 5/23/26
 										<ExternalLink className="ml-1 size-3.5" />
 									</a>
-								</li>
-							</ul>
+									<p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+										A four-minute video filmed during a rainstorm showing the
+										stormwater problems start at the top of the hill — making
+										the case to focus the project on the upper field, not the
+										lower NW corner. (Large file.)
+									</p>
+								</div>
+							</div>
 						</div>
 
 						<div className="mt-10 border-t border-border/60 pt-8">

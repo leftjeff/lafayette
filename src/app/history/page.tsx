@@ -276,6 +276,37 @@ export default async function HistoryPage() {
 						</p>
 					</div>
 
+					<div className="overflow-hidden rounded-2xl border border-border/60 bg-card shadow-sm sm:grid sm:grid-cols-[1fr_1.1fr]">
+						<div className="relative aspect-[4/3] sm:aspect-auto">
+							<Image
+								src="/photos/bear-carving-paul-waclo.jpg"
+								alt="Artist Paul Waclo carving a bear from a storm-damaged oak stump at Lafayette-Pointer Park, June 2026"
+								fill
+								sizes="(min-width: 640px) 24rem, 100vw"
+								className="object-cover"
+							/>
+						</div>
+						<div className="p-6 sm:p-8">
+							<p className="eyebrow text-primary">June 2026 — most recent</p>
+							<h3 className="mt-2 font-heading text-2xl font-semibold tracking-tight">
+								The bear carving
+							</h3>
+							<p className="mt-3 text-base leading-relaxed text-muted-foreground">
+								Thanks to generous community members, FOLP reached its
+								fundraising goal and commissioned artist Paul Waclo to transform
+								a storm-damaged 250-year-old oak into a sculpture of a bear —
+								the longtime mascot of Lafayette Elementary School — the week of
+								June 8–12, 2026.
+							</p>
+							<Link
+								href="/events#bear-carving"
+								className="mt-4 inline-block text-primary underline"
+							>
+								Read the story →
+							</Link>
+						</div>
+					</div>
+
 					{accomplishments ? (
 						<details className="rounded-lg border border-border/70 bg-card p-4">
 							<summary className="cursor-pointer font-heading text-lg font-semibold">
