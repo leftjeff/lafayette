@@ -111,14 +111,14 @@ export const upcomingEvents: EventItem[] = [
 	{
 		date: "2026-09-15",
 		slug: "lafayette-field",
-		title: "Volunteer Opportunity: Help Lafayette Field 🌱",
+		title: "Volunteer Opportunity: Help Lafayette Athletic Field 🌱",
 		description:
-			"The Lafayette Field has been getting some summer TLC, but a few areas of new grass that dried out are now susceptible to weeds. FOLP is looking for volunteers to help give the field some care — every bit of help makes a difference.",
+			"The Lafayette Athletic Field has been getting some summer TLC, but a few areas of new grass that dried out are now susceptible to weeds. FOLP is looking for volunteers to help give the field some care — every bit of help makes a difference.",
 		type: "volunteer",
 		status: "upcoming",
 		dateLabel: "Fall 2026",
 		body: [
-			"The Lafayette Field has been getting some summer TLC, but a few areas of new grass that dried out are now susceptible to weeds. FOLP is looking for volunteers to help give the field some care and keep it healthy and looking its best. Whether you can help for one session or come out regularly, every bit of help makes a difference.",
+			"The Lafayette Athletic Field has been getting some summer TLC, but a few areas of new grass that dried out are now susceptible to weeds. FOLP is looking for volunteers to help give the field some care and keep it healthy and looking its best. Whether you can help for one session or come out regularly, every bit of help makes a difference.",
 			"The coolest times to work are before 9:30 a.m. or after 5 p.m., and a forked weeding tool is helpful. All neighbors are invited, and middle and high school students can earn community service hours. Interested in helping? Contact Laura Phinizy at 202-557-9250 or 3G04@anc.dc.gov to get started!",
 		],
 		cta: { label: "Email to volunteer", href: "mailto:3G04@anc.dc.gov" },
