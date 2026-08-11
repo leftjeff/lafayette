@@ -110,6 +110,7 @@ export const upcomingEvents: EventItem[] = [
 	},
 	{
 		date: "2026-09-15",
+		slug: "lafayette-field",
 		title: "Volunteer Opportunity: Help Lafayette Field 🌱",
 		description:
 			"The Lafayette Field has been getting some summer TLC, but a few areas of new grass that dried out are now susceptible to weeds. FOLP is looking for volunteers to help give the field some care — every bit of help makes a difference.",

@@ -21,6 +21,7 @@ export default function Home() {
 			<Hero />
 			<MissionStrip />
 			<PhotoStrip />
+			<FieldVolunteerCallout />
 			<BearProject />
 			<FeaturedProject />
 			<Sponsors />
@@ -187,6 +188,40 @@ function PhotoStrip() {
 				))}
 			</ul>
 		</Section>
+	);
+}
+
+function FieldVolunteerCallout() {
+	const event = upcomingEvents.find((e) => e.slug === "lafayette-field");
+	if (!event) return null;
+	return (
+		<section className="border-y border-primary/20 bg-secondary/50">
+			<Section className="py-14 sm:py-16">
+				<div className="mx-auto max-w-3xl text-center">
+					<p className="eyebrow">
+						{event.dateLabel ? `${event.dateLabel} · ` : ""}In the park
+					</p>
+					<h2 className="mt-3 font-heading text-3xl tracking-tight text-balance sm:text-4xl">
+						{event.title}
+					</h2>
+					<p className="mt-5 text-base leading-relaxed text-muted-foreground">
+						{event.description}
+					</p>
+					<div className="mt-7 flex flex-wrap justify-center gap-3">
+						{event.cta ? (
+							<Button asChild size="lg">
+								<a href={event.cta.href} target="_blank" rel="noreferrer">
+									{event.cta.label}
+								</a>
+							</Button>
+						) : null}
+						<Button asChild size="lg" variant="outline">
+							<Link href={`/events#${event.slug}`}>Event details</Link>
+						</Button>
+					</div>
+				</div>
+			</Section>
+		</section>
 	);
 }
 
