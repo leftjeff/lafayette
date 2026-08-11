@@ -194,7 +194,7 @@ function BearProject() {
 	return (
 		<section className="border-y border-[color:var(--clay)]/20 bg-[color:var(--cream)]/60">
 			<Section className="py-16 sm:py-20">
-				<div className="grid gap-14 lg:grid-cols-[1.2fr_1fr]">
+				<div className="mx-auto max-w-3xl">
 					<div>
 						<p className="eyebrow text-[color:var(--clay)]">
 							Completed · summer 2026
@@ -272,28 +272,9 @@ function BearProject() {
 							</figcaption>
 						</figure>
 					</div>
-
-					<div className="space-y-6">
-						<BearCampaignCard />
-					</div>
 				</div>
 			</Section>
 		</section>
-	);
-}
-
-function BearCampaignCard() {
-	return (
-		<div className="flex flex-col items-center rounded-2xl border border-border bg-card p-4 shadow-sm">
-			<iframe
-				src={`https://www.paypal.com/giving/campaigns?campaign_id=${site.bearCampaignId}`}
-				title="Donate to the bear carving — PayPal campaign card"
-				width={382}
-				height={550}
-				scrolling="no"
-				className="max-w-full rounded-lg border-0"
-			/>
-		</div>
 	);
 }
 
