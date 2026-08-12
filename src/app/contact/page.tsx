@@ -44,7 +44,7 @@ export default function ContactPage() {
 								{site.email}
 							</a>
 						}
-						note="Best for general questions, board interest, and event coordination."
+						note="Best for general questions and event coordination."
 					/>
 					<ContactBlock
 						icon={MapPin}
