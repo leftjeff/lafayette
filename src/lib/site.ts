@@ -10,7 +10,9 @@ export const site = {
 		line1: "P.O. Box 6221",
 		cityState: "Washington, DC 20015",
 	},
-	email: "info@lafayettepointerpark.org",
+	// Keep .com here until mail forwarding exists for info@lafayettepointerpark.org.
+	// The .com domain has Cloudflare Email Routing configured; the .org does not.
+	email: "info@lafayettepointerpark.com",
 	instagram: "friendsofthefolp",
 	// Modern PayPal donation URL — surfaces Venmo as a funding option on
 	// mobile as well as desktop. The legacy cgi-bin/webscr hosted-button page
