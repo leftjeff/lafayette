@@ -10,7 +10,7 @@ export const site = {
 		line1: "P.O. Box 6221",
 		cityState: "Washington, DC 20015",
 	},
-	email: "info@lafayettepointerpark.com",
+	email: "info@lafayettepointerpark.org",
 	instagram: "friendsofthefolp",
 	// Modern PayPal donation URL — surfaces Venmo as a funding option on
 	// mobile as well as desktop. The legacy cgi-bin/webscr hosted-button page
