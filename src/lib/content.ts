@@ -133,13 +133,22 @@ export const upcomingEvents: EventItem[] = [
 		dateLabel: "Fall — date TBD",
 	},
 	{
-		date: "2026-10-31",
-		title: "Fall Cleanup & Bulb Planting",
+		date: "2026-10-17",
+		slug: "fall-cleanup",
+		title: "Annual Fall Clean-Up",
 		description:
-			"Plant tulip and daffodil bulbs in the perennial beds, rake leaves, and prep the gardens for winter. Date TBD — we'll announce once the weather forecast firms up.",
+			"Join friends and neighbors Saturday, October 17th from 10 a.m. to 1 p.m. for our Annual Fall Clean-Up in Lafayette-Pointer Park. Grab your gardening gloves and come on out — any time you can spend is a big help, and kids are very welcome.",
 		type: "volunteer",
 		status: "upcoming",
-		dateLabel: "Fall — date TBD",
+		body: [
+			"Join friends and neighbors Saturday, October 17th from 10 a.m. to 1 p.m. for our Annual Fall Clean-Up in Lafayette-Pointer Park. Sign up for a spot below, grab your gardening gloves, and come on out! We'll start at 10 a.m. and end at 1 p.m. — any time you can spend is a big help. Kids are very welcome.",
+			"Refreshments, donuts, and service hours available!",
+			"Feel free to bring friends and help us spread the word. Thank you!",
+		],
+		cta: {
+			label: "Sign up to volunteer",
+			href: "https://www.signupgenius.com/go/10C0B4CADAC2CA6F58-65873667-lafayettepointer#/",
+		},
 	},
 ];
 
