@@ -144,6 +144,57 @@ function BearDonorRoll() {
 	);
 }
 
+function FeaturedVolunteerEvent({
+	event,
+}: {
+	event: (typeof upcomingEvents)[number];
+}) {
+	return (
+		<li
+			id={event.slug}
+			className="flex scroll-mt-24 flex-col overflow-hidden rounded-2xl bg-[color:var(--primary-deep)] text-white shadow-xl ring-4 ring-[color:var(--amber)] lg:flex-row"
+		>
+			<div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[420px] lg:w-2/5">
+				<Image
+					src="/photos/cleanup-planting-families.jpg"
+					alt="Kids and parents planting a garden bed together at a park clean-up day"
+					fill
+					sizes="(min-width: 1024px) 40vw, 100vw"
+					className="object-cover"
+				/>
+				<span className="absolute left-4 top-4 rounded-full bg-[color:var(--amber)] px-3 py-1 font-heading text-xs uppercase tracking-[0.18em] text-[color:var(--primary-deep)] shadow-md">
+					Volunteers needed!
+				</span>
+			</div>
+			<div className="flex flex-1 flex-col p-6 sm:p-8 lg:p-10">
+				<p className="font-heading text-sm uppercase tracking-[0.18em] text-[color:var(--amber)]">
+					Saturday, Oct 17 · 10 a.m.–1 p.m.
+				</p>
+				<h3 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+					{event.title}
+				</h3>
+				<div className="mt-4 space-y-3 text-base leading-relaxed text-white/85">
+					{(event.body ?? [event.description]).map((p) => (
+						<p key={p}>{p}</p>
+					))}
+				</div>
+				{event.cta ? (
+					<Button
+						asChild
+						size="lg"
+						className="mt-6 w-full bg-[color:var(--amber)] text-base font-semibold text-[color:var(--primary-deep)] hover:bg-[color:var(--amber)]/90 sm:w-auto sm:self-start sm:px-10"
+					>
+						<a href={event.cta.href} target="_blank" rel="noreferrer">
+							{event.cta.label}
+						</a>
+					</Button>
+				) : null}
+				<AddToCalendar event={event} />
+			</div>
+		</li>
+	);
+}
+
 export default function EventsPage() {
 	const past = upcomingEvents.filter((e) => e.status === "past");
 	const upcoming = upcomingEvents.filter((e) => e.status === "upcoming");
@@ -180,6 +231,9 @@ export default function EventsPage() {
 						<ol className="mt-6 space-y-5">
 							{upcoming.map((e) => {
 								const d = new Date(`${e.date}T12:00:00`);
+								if (e.slug === "fall-cleanup") {
+									return <FeaturedVolunteerEvent key={e.title} event={e} />;
+								}
 								return (
 									<li
 										key={e.title}
