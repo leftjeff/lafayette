@@ -368,7 +368,10 @@ function Sponsors() {
 function UpcomingPeek() {
 	const next = upcomingEvents
 		.filter(
-			(e) => e.status === "upcoming" && e.title !== "Annual Fund Drive Kickoff",
+			(e) =>
+				e.status === "upcoming" &&
+				e.title !== "Annual Fund Drive Kickoff" &&
+				e.slug !== "lafayette-field",
 		)
 		.slice(0, 3);
 	return (
@@ -386,7 +389,9 @@ function UpcomingPeek() {
 					</Link>
 				</Button>
 			</div>
-			<div className="mt-10 grid gap-6 sm:grid-cols-2">
+			<div
+				className={`mt-10 grid gap-6 ${next.length > 1 ? "sm:grid-cols-2" : ""}`}
+			>
 				{next.map((e, i) => {
 					const d = new Date(`${e.date}T12:00:00`);
 					const dateStr =
@@ -444,20 +449,20 @@ function FallCleanupCard({
 	event: (typeof upcomingEvents)[number];
 }) {
 	return (
-		<article className="relative flex flex-col overflow-hidden rounded-2xl bg-[color:var(--primary-deep)] text-white shadow-xl ring-4 ring-[color:var(--amber)] lg:-my-3">
-			<div className="relative aspect-[16/10]">
+		<article className="relative flex flex-col overflow-hidden rounded-2xl bg-[color:var(--primary-deep)] text-white shadow-xl ring-4 ring-[color:var(--amber)] lg:flex-row">
+			<div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[380px] lg:w-1/2">
 				<Image
 					src="/photos/cleanup-planting-families.jpg"
 					alt="Kids and parents planting a garden bed together at a park clean-up day"
 					fill
-					sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+					sizes="(min-width: 1024px) 50vw, 100vw"
 					className="object-cover"
 				/>
 				<span className="absolute left-4 top-4 rounded-full bg-[color:var(--amber)] px-3 py-1 font-heading text-xs uppercase tracking-[0.18em] text-[color:var(--primary-deep)] shadow-md">
 					Volunteers needed!
 				</span>
 			</div>
-			<div className="flex flex-1 flex-col p-6">
+			<div className="flex flex-1 flex-col p-6 sm:p-8 lg:p-10">
 				<p className="font-heading text-sm uppercase tracking-[0.18em] text-[color:var(--amber)]">
 					Saturday, Oct 17 · 10 a.m.–1 p.m.
 				</p>
