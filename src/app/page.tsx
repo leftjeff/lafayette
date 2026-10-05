@@ -367,7 +367,9 @@ function Sponsors() {
 
 function UpcomingPeek() {
 	const next = upcomingEvents
-		.filter((e) => e.status === "upcoming")
+		.filter(
+			(e) => e.status === "upcoming" && e.title !== "Annual Fund Drive Kickoff",
+		)
 		.slice(0, 3);
 	return (
 		<Section className="py-16 sm:py-20">
@@ -384,7 +386,7 @@ function UpcomingPeek() {
 					</Link>
 				</Button>
 			</div>
-			<div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+			<div className="mt-10 grid gap-6 sm:grid-cols-2">
 				{next.map((e, i) => {
 					const d = new Date(`${e.date}T12:00:00`);
 					const dateStr =
