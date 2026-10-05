@@ -399,6 +399,9 @@ function UpcomingPeek() {
 						"border-l-4 border-l-[color:var(--clay)]",
 						"border-l-4 border-l-[color:var(--amber)]",
 					];
+					if (e.slug === "fall-cleanup") {
+						return <FallCleanupCard key={e.title} event={e} />;
+					}
 					return (
 						<article
 							key={e.title}
@@ -430,6 +433,63 @@ function UpcomingPeek() {
 				})}
 			</div>
 		</Section>
+	);
+}
+
+function FallCleanupCard({
+	event,
+}: {
+	event: (typeof upcomingEvents)[number];
+}) {
+	return (
+		<article className="relative flex flex-col overflow-hidden rounded-2xl bg-[color:var(--primary-deep)] text-white shadow-xl ring-4 ring-[color:var(--amber)] lg:-my-3">
+			<div className="relative aspect-[16/10]">
+				<Image
+					src="/photos/cleanup-planting-families.jpg"
+					alt="Kids and parents planting a garden bed together at a park clean-up day"
+					fill
+					sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+					className="object-cover"
+				/>
+				<span className="absolute left-4 top-4 rounded-full bg-[color:var(--amber)] px-3 py-1 font-heading text-xs uppercase tracking-[0.18em] text-[color:var(--primary-deep)] shadow-md">
+					Volunteers needed!
+				</span>
+			</div>
+			<div className="flex flex-1 flex-col p-6">
+				<p className="font-heading text-sm uppercase tracking-[0.18em] text-[color:var(--amber)]">
+					Saturday, Oct 17 · 10 a.m.–1 p.m.
+				</p>
+				<h3 className="mt-2 font-heading text-3xl tracking-tight text-white">
+					{event.title}
+				</h3>
+				<p className="mt-3 text-sm leading-relaxed text-white/85">
+					Grab your gardening gloves and help get the park ready for winter.
+					Come for an hour or stay all morning — kids are very welcome!
+				</p>
+				<p className="mt-3 text-sm font-medium text-white">
+					🍩 Donuts · ☕ Refreshments · ✅ Service hours
+				</p>
+				<div className="mt-auto flex flex-col gap-2 pt-6">
+					{event.cta ? (
+						<Button
+							asChild
+							size="lg"
+							className="w-full bg-[color:var(--amber)] text-base font-semibold text-[color:var(--primary-deep)] hover:bg-[color:var(--amber)]/90"
+						>
+							<a href={event.cta.href} target="_blank" rel="noreferrer">
+								{event.cta.label}
+							</a>
+						</Button>
+					) : null}
+					<Link
+						href={`/events#${event.slug}`}
+						className="text-center text-sm text-white/80 underline decoration-white/40 underline-offset-4 hover:text-white"
+					>
+						Event details
+					</Link>
+				</div>
+			</div>
+		</article>
 	);
 }
 
