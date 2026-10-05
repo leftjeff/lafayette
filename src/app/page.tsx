@@ -22,10 +22,10 @@ export default function Home() {
 			<MissionStrip />
 			<PhotoStrip />
 			<FieldVolunteerCallout />
+			<UpcomingPeek />
 			<BearProject />
 			<FeaturedProject />
 			<Sponsors />
-			<UpcomingPeek />
 			<ContactSignup />
 		</div>
 	);

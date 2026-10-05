@@ -109,30 +109,6 @@ export const upcomingEvents: EventItem[] = [
 		status: "past",
 	},
 	{
-		date: "2026-09-15",
-		slug: "lafayette-field",
-		title: "Volunteer Opportunity: Help Lafayette Athletic Field 🌱",
-		description:
-			"The Lafayette Athletic Field has been getting some summer TLC, but a few areas of new grass that dried out are now susceptible to weeds. FOLP is looking for volunteers to help give the field some care — every bit of help makes a difference.",
-		type: "volunteer",
-		status: "upcoming",
-		dateLabel: "Fall 2026",
-		body: [
-			"The Lafayette Athletic Field has been getting some summer TLC, but a few areas of new grass that dried out are now susceptible to weeds. FOLP is looking for volunteers to help give the field some care and keep it healthy and looking its best. Whether you can help for one session or come out regularly, every bit of help makes a difference.",
-			"The coolest times to work are before 9:30 a.m. or after 5 p.m., and a forked weeding tool is helpful. All neighbors are invited, and middle and high school students can earn community service hours. Interested in helping? Contact Laura Phinizy at 202-557-9250 or 3G04@anc.dc.gov to get started!",
-		],
-		cta: { label: "Email to volunteer", href: "mailto:3G04@anc.dc.gov" },
-	},
-	{
-		date: "2026-09-30",
-		title: "Annual Fund Drive Kickoff",
-		description:
-			"Fall kickoff for our annual fund. Meet the board, hear what's planned for the year, and renew your membership. Date TBD — check back closer to fall.",
-		type: "fundraiser",
-		status: "upcoming",
-		dateLabel: "Fall — date TBD",
-	},
-	{
 		date: "2026-10-17",
 		slug: "fall-cleanup",
 		title: "Annual Fall Clean-Up",
@@ -149,6 +125,30 @@ export const upcomingEvents: EventItem[] = [
 			label: "Sign up to volunteer",
 			href: "https://www.signupgenius.com/go/10C0B4CADAC2CA6F58-65873667-lafayettepointer#/",
 		},
+	},
+	{
+		date: "2026-09-15",
+		slug: "lafayette-field",
+		title: "Volunteer Opportunity: Help Lafayette Athletic Field 🌱",
+		description:
+			"The Lafayette Athletic Field has been getting some summer TLC, but a few areas of new grass that dried out are now susceptible to weeds. FOLP is looking for volunteers to help give the field some care — every bit of help makes a difference.",
+		type: "volunteer",
+		status: "upcoming",
+		dateLabel: "Fall 2026",
+		body: [
+			"The Lafayette Athletic Field has been getting some summer TLC, but a few areas of new grass that dried out are now susceptible to weeds. FOLP is looking for volunteers to help give the field some care and keep it healthy and looking its best. Whether you can help for one session or come out regularly, every bit of help makes a difference.",
+			"The coolest times to work are before 9:30 a.m. or after 5 p.m., and a forked weeding tool is helpful. All neighbors are invited, and middle and high school students can earn community service hours. Interested in helping? Contact Laura Phinizy at 202-557-9250 or 3G04@anc.dc.gov to get started!",
+		],
+		cta: { label: "Email to volunteer", href: "mailto:3G04@anc.dc.gov" },
+	},
+	{
+		date: "2026-12-21",
+		title: "Annual Fund Drive Kickoff",
+		description:
+			"Winter kickoff for our annual fund. Meet the board, hear what's planned for the year, and renew your membership. Date TBD — check back closer to winter.",
+		type: "fundraiser",
+		status: "upcoming",
+		dateLabel: "Winter",
 	},
 ];
 
