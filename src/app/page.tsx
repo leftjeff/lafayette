@@ -402,7 +402,7 @@ function UpcomingPeek() {
 					return (
 						<article
 							key={e.title}
-							className={`rounded-2xl border border-border bg-card p-6 shadow-sm ${accents[i % accents.length]}`}
+							className={`flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm ${accents[i % accents.length]}`}
 						>
 							<p className="eyebrow">{dateStr}</p>
 							<h3 className="mt-3 font-heading text-2xl tracking-tight">
@@ -411,6 +411,20 @@ function UpcomingPeek() {
 							<p className="mt-3 text-sm leading-relaxed text-muted-foreground">
 								{e.description}
 							</p>
+							{e.slug ? (
+								<div className="mt-auto flex flex-wrap gap-2 pt-5">
+									{e.cta ? (
+										<Button asChild size="sm">
+											<a href={e.cta.href} target="_blank" rel="noreferrer">
+												{e.cta.label}
+											</a>
+										</Button>
+									) : null}
+									<Button asChild size="sm" variant="outline">
+										<Link href={`/events#${e.slug}`}>Event details</Link>
+									</Button>
+								</div>
+							) : null}
 						</article>
 					);
 				})}
