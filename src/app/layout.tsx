@@ -99,7 +99,7 @@ const organizationJsonLd = {
 		"Volunteer-led 501(c)(3) nonprofit caring for Lafayette-Pointer Park, nine acres of green space in Chevy Chase, Washington DC.",
 	foundingDate: String(site.founded),
 	email: site.email,
-	sameAs: [`https://www.instagram.com/${site.instagram}`],
+	sameAs: [`https://www.instagram.com/${site.instagram}`, site.facebookUrl],
 	address: {
 		"@type": "PostalAddress",
 		streetAddress: site.mailingAddress.line1,

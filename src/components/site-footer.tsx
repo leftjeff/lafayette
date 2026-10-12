@@ -1,4 +1,4 @@
-import { Camera, Mail, MailPlus } from "lucide-react";
+import { Camera, Mail, MailPlus, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
@@ -38,6 +38,17 @@ export function SiteFooter() {
 								rel="noreferrer"
 							>
 								@{site.instagram}
+							</a>
+						</p>
+						<p className="flex items-center gap-2">
+							<Users className="size-4" />
+							<a
+								className="hover:text-white"
+								href={site.facebookUrl}
+								target="_blank"
+								rel="noreferrer"
+							>
+								Facebook: {site.name}
 							</a>
 						</p>
 					</div>

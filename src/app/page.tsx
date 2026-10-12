@@ -536,6 +536,16 @@ function ContactSignup() {
 						>
 							@{site.instagram}
 						</a>
+						<br />
+						Follow on Facebook:{" "}
+						<a
+							className="text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+							href={site.facebookUrl}
+							target="_blank"
+							rel="noreferrer"
+						>
+							{site.name}
+						</a>
 					</p>
 				</div>
 				<NewsletterForm />

@@ -1,4 +1,4 @@
-import { Camera, Mail, MailPlus, MapPin } from "lucide-react";
+import { Camera, Mail, MailPlus, MapPin, Users } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
@@ -10,12 +10,12 @@ import { ContactForm } from "./contact-form";
 export const metadata: Metadata = {
 	title: "Contact",
 	description:
-		"Contact Friends of Lafayette-Pointer Park — email, mail, or Instagram. Volunteer-led 501(c)(3) nonprofit in Chevy Chase, Washington DC.",
+		"Contact Friends of Lafayette-Pointer Park — email, mail, Instagram, or Facebook. Volunteer-led 501(c)(3) nonprofit in Chevy Chase, Washington DC.",
 	alternates: { canonical: "/contact" },
 	openGraph: {
 		title: "Contact — Friends of Lafayette-Pointer Park",
 		description:
-			"Reach Friends of Lafayette-Pointer Park — by email, by mail, or on Instagram.",
+			"Reach Friends of Lafayette-Pointer Park — by email, by mail, or on Instagram and Facebook.",
 		url: "/contact",
 		type: "website",
 	},
@@ -60,6 +60,21 @@ export default function ContactPage() {
 							</a>
 						}
 						note="Photos and news from the park."
+					/>
+					<ContactBlock
+						icon={Users}
+						title="Facebook"
+						body={
+							<a
+								href={site.facebookUrl}
+								target="_blank"
+								rel="noreferrer"
+								className="text-primary underline"
+							>
+								{site.name}
+							</a>
+						}
+						note="Event updates and community news."
 					/>
 					<ContactBlock
 						icon={MapPin}
