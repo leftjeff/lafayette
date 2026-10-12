@@ -13,7 +13,7 @@ export const site = {
 	// Keep .com here until mail forwarding exists for info@lafayettepointerpark.org.
 	// The .com domain has Cloudflare Email Routing configured; the .org does not.
 	email: "info@lafayettepointerpark.com",
-	instagram: "friendsofthefolp",
+	instagram: "FriendsofLafayettePointerPark",
 	// Modern PayPal donation URL — surfaces Venmo as a funding option on
 	// mobile as well as desktop. The legacy cgi-bin/webscr hosted-button page
 	// only offered PayPal + card on mobile web.

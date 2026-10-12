@@ -33,7 +33,7 @@ export function SiteFooter() {
 							<Camera className="size-4" />
 							<a
 								className="hover:text-white"
-								href={`https://instagram.com/${site.instagram}`}
+								href={`https://www.instagram.com/${site.instagram}`}
 								target="_blank"
 								rel="noreferrer"
 							>

@@ -1,4 +1,4 @@
-import { Mail, MailPlus, MapPin } from "lucide-react";
+import { Camera, Mail, MailPlus, MapPin } from "lucide-react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/breadcrumb-jsonld";
@@ -45,6 +45,21 @@ export default function ContactPage() {
 							</a>
 						}
 						note="Best for general questions and event coordination."
+					/>
+					<ContactBlock
+						icon={Camera}
+						title="Instagram"
+						body={
+							<a
+								href={`https://www.instagram.com/${site.instagram}`}
+								target="_blank"
+								rel="noreferrer"
+								className="text-primary underline"
+							>
+								@{site.instagram}
+							</a>
+						}
+						note="Photos and news from the park."
 					/>
 					<ContactBlock
 						icon={MapPin}

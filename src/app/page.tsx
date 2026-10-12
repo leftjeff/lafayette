@@ -530,7 +530,7 @@ function ContactSignup() {
 						Follow on Instagram:{" "}
 						<a
 							className="text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
-							href={`https://instagram.com/${site.instagram}`}
+							href={`https://www.instagram.com/${site.instagram}`}
 							target="_blank"
 							rel="noreferrer"
 						>
