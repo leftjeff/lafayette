@@ -32,20 +32,6 @@ const eventPhotos: Record<string, Array<{ src: string; alt: string }>> = {
 			alt: "The finished “Be Kind” bear carving on the old oak stump, with families and a dog gathered at the bench beneath it",
 		},
 	],
-	"Fall Clean-Up: Thank You!": [
-		{
-			src: "/photos/cleanup-volunteers.jpg",
-			alt: "Volunteers digging and planting along a roadside bed during a park clean-up",
-		},
-		{
-			src: "/photos/cleanup-planting-families.jpg",
-			alt: "Kids and parents planting in a freshly mulched bed during a park clean-up",
-		},
-		{
-			src: "/photos/cleanup-group.jpg",
-			alt: "A large group of neighbors working together under the cherry trees during a park clean-up",
-		},
-	],
 	"Spring Cleanup Day": [
 		{
 			src: "/photos/cleanup-group.jpg",

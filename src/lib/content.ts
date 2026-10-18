@@ -89,7 +89,7 @@ export const upcomingEvents: EventItem[] = [
 	{
 		date: "2026-10-17",
 		slug: "fall-cleanup",
-		title: "Fall Clean-Up: Thank You!",
+		title: "2026 Fall Clean-Up!",
 		description:
 			"Thanks to all our friends and neighbors who came out Saturday, October 17th for our Fall Clean-Up in the park. Invasives removed, bulbs planted, beds mulched, the new athletic field weeded, and trash picked up. You all are amazing!",
 		type: "volunteer",
@@ -129,6 +129,15 @@ export const upcomingEvents: EventItem[] = [
 			"80–90 neighbors turned out to rake, weed, mulch, and prune across the park. Thank you to everyone who came — the gardens are in great shape heading into summer.",
 		type: "volunteer",
 		status: "past",
+	},
+	{
+		date: "2026-11-14",
+		slug: "november-meetup",
+		title: "Monthly Meet-Up",
+		description:
+			"Join friends and neighbors Saturday, November 14th from 9 a.m. to noon for our monthly meet-up in Lafayette-Pointer Park. Come for an hour or stay the whole morning — all are welcome!",
+		type: "volunteer",
+		status: "upcoming",
 	},
 	{
 		date: "2026-09-15",

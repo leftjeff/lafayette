@@ -367,21 +367,20 @@ function Sponsors() {
 
 function UpcomingPeek() {
 	const wrapUp = upcomingEvents.find((e) => e.slug === "fall-cleanup");
-	const next = upcomingEvents
-		.filter(
-			(e) =>
-				e.status === "upcoming" &&
-				e.title !== "Annual Fund Drive Kickoff" &&
-				e.slug !== "lafayette-field",
-		)
-		.slice(0, 3);
+	const next = upcomingEvents.filter(
+		(e) =>
+			e.status === "upcoming" &&
+			e.title !== "Annual Fund Drive Kickoff" &&
+			e.slug !== "lafayette-field",
+	);
+	const [featured, ...rest] = next;
 	return (
 		<Section className="py-16 sm:py-20">
 			<div className="flex flex-wrap items-end justify-between gap-6">
 				<div>
 					<p className="eyebrow">In the park</p>
 					<h2 className="mt-3 font-heading text-3xl tracking-tight sm:text-4xl">
-						{wrapUp ? "Thank you, neighbors!" : "What\u2019s coming up"}
+						What&rsquo;s coming up
 					</h2>
 				</div>
 				<Button asChild variant="ghost">
@@ -390,55 +389,120 @@ function UpcomingPeek() {
 					</Link>
 				</Button>
 			</div>
-			<div
-				className={`mt-10 grid gap-6 ${next.length > 1 ? "sm:grid-cols-2" : ""}`}
-			>
-				{wrapUp ? <FallCleanupWrapUpCard event={wrapUp} /> : null}
-				{next.map((e, i) => {
-					const d = new Date(`${e.date}T12:00:00`);
-					const dateStr =
-						e.dateLabel ??
-						d.toLocaleDateString("en-US", {
-							month: "long",
-							day: "numeric",
-							year: "numeric",
-						});
-					const accents = [
-						"border-l-4 border-l-primary",
-						"border-l-4 border-l-[color:var(--clay)]",
-						"border-l-4 border-l-[color:var(--amber)]",
-					];
-					return (
-						<article
-							key={e.title}
-							className={`flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm ${accents[i % accents.length]}`}
-						>
-							<p className="eyebrow">{dateStr}</p>
-							<h3 className="mt-3 font-heading text-2xl tracking-tight">
-								{e.title}
-							</h3>
-							<p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-								{e.description}
-							</p>
-							{e.slug ? (
-								<div className="mt-auto flex flex-wrap gap-2 pt-5">
-									{e.cta ? (
-										<Button asChild size="sm">
-											<a href={e.cta.href} target="_blank" rel="noreferrer">
-												{e.cta.label}
-											</a>
-										</Button>
+			<div className="mt-10 space-y-6">
+				{featured ? <FeaturedEventCard event={featured} /> : null}
+				{rest.length > 0 ? (
+					<div className="grid gap-6 sm:grid-cols-2">
+						{rest.map((e, i) => {
+							const d = new Date(`${e.date}T12:00:00`);
+							const dateStr =
+								e.dateLabel ??
+								d.toLocaleDateString("en-US", {
+									month: "long",
+									day: "numeric",
+									year: "numeric",
+								});
+							const accents = [
+								"border-l-4 border-l-primary",
+								"border-l-4 border-l-[color:var(--clay)]",
+								"border-l-4 border-l-[color:var(--amber)]",
+							];
+							return (
+								<article
+									key={e.title}
+									className={`flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm ${accents[i % accents.length]}`}
+								>
+									<p className="eyebrow">{dateStr}</p>
+									<h3 className="mt-3 font-heading text-2xl tracking-tight">
+										{e.title}
+									</h3>
+									<p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+										{e.description}
+									</p>
+									{e.slug ? (
+										<div className="mt-auto flex flex-wrap gap-2 pt-5">
+											{e.cta ? (
+												<Button asChild size="sm">
+													<a href={e.cta.href} target="_blank" rel="noreferrer">
+														{e.cta.label}
+													</a>
+												</Button>
+											) : null}
+											<Button asChild size="sm" variant="outline">
+												<Link href={`/events#${e.slug}`}>Event details</Link>
+											</Button>
+										</div>
 									) : null}
-									<Button asChild size="sm" variant="outline">
-										<Link href={`/events#${e.slug}`}>Event details</Link>
-									</Button>
-								</div>
-							) : null}
-						</article>
-					);
-				})}
+								</article>
+							);
+						})}
+					</div>
+				) : null}
+				{wrapUp ? <FallCleanupWrapUpCard event={wrapUp} /> : null}
 			</div>
 		</Section>
+	);
+}
+
+function FeaturedEventCard({
+	event,
+}: {
+	event: (typeof upcomingEvents)[number];
+}) {
+	const d = new Date(`${event.date}T12:00:00`);
+	const dateStr = d.toLocaleDateString("en-US", {
+		weekday: "long",
+		month: "long",
+		day: "numeric",
+	});
+	return (
+		<article
+			id={event.slug}
+			className="relative flex flex-col overflow-hidden rounded-2xl bg-[color:var(--primary-deep)] text-white shadow-xl ring-4 ring-[color:var(--amber)] lg:flex-row"
+		>
+			<div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[360px] lg:w-1/2">
+				<Image
+					src="/photos/gazebo.jpg"
+					alt="The gazebo at Lafayette-Pointer Park"
+					fill
+					sizes="(min-width: 1024px) 50vw, 100vw"
+					className="object-cover"
+				/>
+				<span className="absolute left-4 top-4 rounded-full bg-[color:var(--amber)] px-3 py-1 font-heading text-xs uppercase tracking-[0.18em] text-[color:var(--primary-deep)] shadow-md">
+					Save the date
+				</span>
+			</div>
+			<div className="flex flex-1 flex-col p-6 sm:p-8 lg:p-10">
+				<p className="font-heading text-sm uppercase tracking-[0.18em] text-[color:var(--amber)]">
+					{dateStr} · 9 a.m.–Noon
+				</p>
+				<h3 className="mt-2 font-heading text-3xl tracking-tight text-white sm:text-4xl">
+					{event.title}
+				</h3>
+				<p className="mt-3 text-base leading-relaxed text-white/85">
+					{event.description}
+				</p>
+				<div className="mt-auto flex flex-col gap-2 pt-6">
+					{event.cta ? (
+						<Button
+							asChild
+							size="lg"
+							className="w-full bg-[color:var(--amber)] text-base font-semibold text-[color:var(--primary-deep)] hover:bg-[color:var(--amber)]/90"
+						>
+							<a href={event.cta.href} target="_blank" rel="noreferrer">
+								{event.cta.label}
+							</a>
+						</Button>
+					) : null}
+					<Link
+						href={`/events#${event.slug}`}
+						className="text-center text-sm text-white/80 underline decoration-white/40 underline-offset-4 hover:text-white"
+					>
+						Event details
+					</Link>
+				</div>
+			</div>
+		</article>
 	);
 }
 
@@ -448,48 +512,35 @@ function FallCleanupWrapUpCard({
 	event: (typeof upcomingEvents)[number];
 }) {
 	return (
-		<article className="relative flex flex-col overflow-hidden rounded-2xl bg-[color:var(--primary-deep)] text-white shadow-xl lg:flex-row">
-			<div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[380px] lg:w-1/2">
-				<Image
-					src="/photos/cleanup-volunteers.jpg"
-					alt="Volunteers digging and planting along a roadside bed during a park clean-up"
-					fill
-					sizes="(min-width: 1024px) 50vw, 100vw"
-					className="object-cover"
-				/>
+		<article className="flex flex-col rounded-2xl border border-border border-l-4 border-l-[color:var(--clay)] bg-card p-6 shadow-sm sm:p-8">
+			<p className="eyebrow text-[color:var(--clay)]">Completed · fall 2026</p>
+			<h3 className="mt-3 font-heading text-2xl tracking-tight">
+				{event.title}
+			</h3>
+			<div className="mt-3 space-y-3 text-sm leading-relaxed text-muted-foreground">
+				{(event.body ?? [event.description]).map((p) => (
+					<p key={p}>{p}</p>
+				))}
 			</div>
-			<div className="flex flex-1 flex-col p-6 sm:p-8 lg:p-10">
-				<p className="font-heading text-sm uppercase tracking-[0.18em] text-[color:var(--amber)]">
-					Saturday, October 17
+			{event.highlights ? (
+				<ul className="mt-4 space-y-1.5 text-sm text-[color:var(--heading)]">
+					{event.highlights.map((h) => (
+						<li key={h} className="flex gap-2">
+							<span aria-hidden="true">✅</span>
+							<span>{h}</span>
+						</li>
+					))}
+				</ul>
+			) : null}
+			{event.afterword ? (
+				<p className="mt-4 text-sm font-medium text-[color:var(--heading)]">
+					{event.afterword}
 				</p>
-				<h3 className="mt-2 font-heading text-3xl tracking-tight text-white">
-					{event.title}
-				</h3>
-				<p className="mt-3 text-sm leading-relaxed text-white/85">
-					Thanks to all our friends and neighbors who came out for our Fall
-					Clean-Up in the park. Here&rsquo;s what we got done together:
-				</p>
-				{event.highlights ? (
-					<ul className="mt-4 space-y-1.5 text-sm text-white">
-						{event.highlights.map((h) => (
-							<li key={h} className="flex gap-2">
-								<span aria-hidden="true">✅</span>
-								<span>{h}</span>
-							</li>
-						))}
-					</ul>
-				) : null}
-				<p className="mt-4 text-sm font-medium text-white">
-					You all are amazing. Stay tuned for our next park cleaning!
-				</p>
-				<div className="mt-auto pt-6">
-					<Link
-						href={`/events#${event.slug}`}
-						className="text-sm text-white/80 underline decoration-white/40 underline-offset-4 hover:text-white"
-					>
-						See photos and details
-					</Link>
-				</div>
+			) : null}
+			<div className="mt-auto pt-5">
+				<Button asChild size="sm" variant="outline">
+					<Link href={`/events#${event.slug}`}>Event details</Link>
+				</Button>
 			</div>
 		</article>
 	);
