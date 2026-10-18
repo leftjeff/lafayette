@@ -194,7 +194,7 @@ function BearProject() {
 	return (
 		<section className="border-y border-[color:var(--clay)]/20 bg-[color:var(--cream)]/60">
 			<Section className="py-16 sm:py-20">
-				<div className="max-w-3xl">
+				<div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-14">
 					<div>
 						<p className="eyebrow text-[color:var(--clay)]">
 							Completed · summer 2026
@@ -218,60 +218,60 @@ function BearProject() {
 							for project history, artist details, and how the carving came
 							together.
 						</p>
-						<figure className="mt-8">
-							<div className="relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-border/60">
-								<Image
-									src="/photos/bear-carving-finished.jpg"
-									alt="The finished “Be Kind” bear carving on the old oak stump, with families and a dog gathered at the bench beneath it"
-									fill
-									sizes="(min-width: 1024px) 55vw, 100vw"
-									className="object-cover object-[50%_62%]"
-								/>
-							</div>
-							<div className="mt-3 grid grid-cols-3 gap-3">
-								{[
-									{
-										src: "/photos/bear-carving-progress-trunk.jpg",
-										alt: "The storm-damaged 250-year-old oak stump before carving, with a “Donate to the Bear” sign",
-									},
-									{
-										src: "/photos/bear-carving-progress-form.jpg",
-										alt: "The bear’s shape beginning to emerge from the oak as the carving gets underway",
-									},
-									{
-										src: "/photos/bear-carving-finished-kids.jpg",
-										alt: "Two children looking up at the nearly finished bear carving",
-									},
-								].map((p) => (
-									<div
-										key={p.src}
-										className="relative aspect-[3/4] overflow-hidden rounded-xl ring-1 ring-border/60"
-									>
-										<Image
-											src={p.src}
-											alt={p.alt}
-											fill
-											sizes="(min-width: 1024px) 18vw, 30vw"
-											className="object-cover"
-										/>
-									</div>
-								))}
-							</div>
-							<figcaption className="mt-3 text-sm text-muted-foreground">
-								From storm-damaged oak to finished carving, June 8–12, 2026.
-								Artist Paul Waclo — see more at{" "}
-								<a
-									href="https://www.chainsawcarvingbypaul.com/"
-									target="_blank"
-									rel="noreferrer"
-									className="text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
-								>
-									chainsawcarvingbypaul.com
-								</a>
-								.
-							</figcaption>
-						</figure>
 					</div>
+					<figure className="lg:self-center">
+						<div className="relative aspect-[4/3] overflow-hidden rounded-2xl ring-1 ring-border/60">
+							<Image
+								src="/photos/bear-carving-finished.jpg"
+								alt="The finished “Be Kind” bear carving on the old oak stump, with families and a dog gathered at the bench beneath it"
+								fill
+								sizes="(min-width: 1024px) 40vw, 100vw"
+								className="object-cover object-[50%_62%]"
+							/>
+						</div>
+						<div className="mt-3 grid grid-cols-3 gap-3">
+							{[
+								{
+									src: "/photos/bear-carving-progress-trunk.jpg",
+									alt: "The storm-damaged 250-year-old oak stump before carving, with a “Donate to the Bear” sign",
+								},
+								{
+									src: "/photos/bear-carving-progress-form.jpg",
+									alt: "The bear’s shape beginning to emerge from the oak as the carving gets underway",
+								},
+								{
+									src: "/photos/bear-carving-finished-kids.jpg",
+									alt: "Two children looking up at the nearly finished bear carving",
+								},
+							].map((p) => (
+								<div
+									key={p.src}
+									className="relative aspect-[3/4] overflow-hidden rounded-xl ring-1 ring-border/60"
+								>
+									<Image
+										src={p.src}
+										alt={p.alt}
+										fill
+										sizes="(min-width: 1024px) 13vw, 30vw"
+										className="object-cover"
+									/>
+								</div>
+							))}
+						</div>
+						<figcaption className="mt-3 text-sm text-muted-foreground">
+							From storm-damaged oak to finished carving, June 8–12, 2026.
+							Artist Paul Waclo — see more at{" "}
+							<a
+								href="https://www.chainsawcarvingbypaul.com/"
+								target="_blank"
+								rel="noreferrer"
+								className="text-primary underline decoration-primary/40 underline-offset-4 hover:decoration-primary"
+							>
+								chainsawcarvingbypaul.com
+							</a>
+							.
+						</figcaption>
+					</figure>
 				</div>
 			</Section>
 		</section>
