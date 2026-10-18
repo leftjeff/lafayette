@@ -457,9 +457,6 @@ function FallCleanupWrapUpCard({
 					sizes="(min-width: 1024px) 50vw, 100vw"
 					className="object-cover"
 				/>
-				<span className="absolute left-4 top-4 rounded-full bg-[color:var(--amber)] px-3 py-1 font-heading text-xs uppercase tracking-[0.18em] text-[color:var(--primary-deep)] shadow-md">
-					Mission accomplished
-				</span>
 			</div>
 			<div className="flex flex-1 flex-col p-6 sm:p-8 lg:p-10">
 				<p className="font-heading text-sm uppercase tracking-[0.18em] text-[color:var(--amber)]">
