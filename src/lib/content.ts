@@ -91,7 +91,7 @@ export const upcomingEvents: EventItem[] = [
 		slug: "fall-cleanup",
 		title: "2026 Fall Clean-Up!",
 		description:
-			"Thanks to all our friends and neighbors who came out Saturday, October 17th for our Fall Clean-Up in the park. Invasives removed, bulbs planted, beds mulched, the new athletic field weeded, and trash picked up. You all are amazing!",
+			"Thanks to all our friends and neighbors who came out Saturday, October 17th for our Fall Clean-Up in the park. Invasives removed, bulbs planted, beds mulched, the new athletic field weeded, and trash picked up.",
 		type: "volunteer",
 		status: "past",
 		body: [
