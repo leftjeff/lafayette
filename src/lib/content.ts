@@ -104,7 +104,6 @@ export const upcomingEvents: EventItem[] = [
 			"Weeded the new athletic field",
 			"Trash pick-up",
 		],
-		afterword: "You all are amazing. Stay tuned for our next park cleaning!",
 	},
 	{
 		date: "2026-06-12",
