@@ -34,16 +34,16 @@ const eventPhotos: Record<string, Array<{ src: string; alt: string }>> = {
 	],
 	"2026 Fall Clean-up": [
 		{
-			src: "/photos/fall-cleanup-field.jpg",
-			alt: "Neighbors and kids with buckets weeding the new athletic field in front of the recreation center",
+			src: "/photos/fall-cleanup-sign.jpg",
+			alt: "Kids planting bulbs in the bed beside the Lafayette-Pointer Park sign",
 		},
 		{
 			src: "/photos/fall-cleanup-beds.jpg",
 			alt: "Volunteers clearing invasives and mulching the perimeter beds along the sidewalk",
 		},
 		{
-			src: "/photos/fall-cleanup-sign.jpg",
-			alt: "Kids planting bulbs in the bed beside the Lafayette-Pointer Park sign",
+			src: "/photos/fall-cleanup-field.jpg",
+			alt: "Neighbors and kids with buckets weeding the new athletic field in front of the recreation center",
 		},
 	],
 	"2026 Spring Clean-up": [

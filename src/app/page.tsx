@@ -32,7 +32,7 @@ export default function Home() {
 
 function MissionStrip() {
 	return (
-		<Section className="py-10 text-center sm:py-12">
+		<Section className="py-8 text-center sm:py-10">
 			<p className="mx-auto max-w-3xl text-base leading-relaxed text-muted-foreground sm:text-lg">
 				Friends of Lafayette-Pointer Park, Inc. is a non-profit organization
 				incorporated in the District of Columbia to assist the DC Department of
@@ -49,7 +49,7 @@ function MissionStrip() {
 function Hero() {
 	return (
 		<div className="relative overflow-hidden bg-gradient-to-br from-secondary via-background to-[color:var(--cream)]">
-			<Section className="relative pb-16 pt-12 sm:pt-14 lg:pb-20">
+			<Section className="relative pb-12 pt-10 sm:pt-12 lg:pb-14">
 				<div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
 					<div>
 						<p className="eyebrow">Chevy Chase, Washington DC</p>
@@ -160,7 +160,7 @@ const photoStripTiles: Array<PhotoTile | VignetteTile> = [
 
 function PhotoStrip() {
 	return (
-		<Section id="photos" className="scroll-mt-24 pb-12">
+		<Section id="photos" className="scroll-mt-24 pb-10">
 			<ul className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6">
 				{photoStripTiles.map((t) => (
 					<li
@@ -193,8 +193,8 @@ function PhotoStrip() {
 function BearProject() {
 	return (
 		<section className="border-y border-[color:var(--clay)]/20 bg-[color:var(--cream)]/60">
-			<Section className="py-16 sm:py-20">
-				<div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-14">
+			<Section className="py-12 sm:py-14">
+				<div className="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
 					<div>
 						<p className="eyebrow text-[color:var(--clay)]">
 							Completed · summer 2026
@@ -202,12 +202,12 @@ function BearProject() {
 						<h2 className="mt-3 font-heading text-3xl tracking-tight text-balance sm:text-4xl">
 							{bearCampaign.title}
 						</h2>
-						<div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+						<div className="mt-5 space-y-3 text-base leading-relaxed text-muted-foreground">
 							{bearCampaign.body.map((p) => (
 								<p key={p.slice(0, 40)}>{p}</p>
 							))}
 						</div>
-						<p className="mt-6 text-base leading-relaxed text-muted-foreground">
+						<p className="mt-4 text-base leading-relaxed text-muted-foreground">
 							Read the{" "}
 							<Link
 								href="/events#bear-carving"
@@ -280,14 +280,14 @@ function BearProject() {
 
 function FeaturedProject() {
 	return (
-		<Section className="py-16 sm:py-20">
-			<div className="grid gap-14 lg:grid-cols-[1.2fr_1fr]">
+		<Section className="py-12 sm:py-14">
+			<div className="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:gap-12">
 				<div>
 					<p className="eyebrow">Ongoing support</p>
 					<h2 className="mt-3 font-heading text-3xl tracking-tight text-balance sm:text-4xl">
 						{featuredCampaign.title}
 					</h2>
-					<div className="mt-6 space-y-4 text-base leading-relaxed text-muted-foreground">
+					<div className="mt-5 space-y-3 text-base leading-relaxed text-muted-foreground">
 						{featuredCampaign.body.map((p) => (
 							<p key={p.slice(0, 40)}>{p}</p>
 						))}
@@ -340,13 +340,13 @@ function DonationForm() {
 function Sponsors() {
 	return (
 		<section className="bg-[color:var(--primary-deep)] text-white">
-			<Section className="py-16 sm:py-20">
+			<Section className="py-12 sm:py-14">
 				<div className="text-center">
 					<p className="font-heading uppercase tracking-[0.22em] text-white/70">
 						Partners who help keep our park thriving
 					</p>
 				</div>
-				<ul className="mt-14 grid gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
+				<ul className="mt-10 grid gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-5">
 					{sponsors.map((s) => (
 						<li key={s.name} className="flex flex-col items-center text-center">
 							<div className="flex size-24 items-center justify-center rounded-full bg-white/95 text-[color:var(--primary-deep)] shadow-md ring-1 ring-white/30">
@@ -375,7 +375,7 @@ function UpcomingPeek() {
 	);
 	const [featured, ...rest] = next;
 	return (
-		<Section className="py-16 sm:py-20">
+		<Section className="py-12 sm:py-14">
 			<div className="flex flex-wrap items-end justify-between gap-6">
 				<div>
 					<p className="eyebrow">In the park</p>
@@ -389,7 +389,7 @@ function UpcomingPeek() {
 					</Link>
 				</Button>
 			</div>
-			<div className="mt-10 space-y-6">
+			<div className="mt-8 space-y-5">
 				{featured ? <FeaturedEventCard event={featured} /> : null}
 				{rest.length > 0 ? (
 					<div className="grid gap-6 sm:grid-cols-2">
@@ -508,16 +508,16 @@ function FeaturedEventCard({
 
 const fallCleanupPhotos = [
 	{
-		src: "/photos/fall-cleanup-field.jpg",
-		alt: "Neighbors and kids with buckets weeding the new athletic field in front of the recreation center",
+		src: "/photos/fall-cleanup-sign.jpg",
+		alt: "Kids planting bulbs in the bed beside the Lafayette-Pointer Park sign",
 	},
 	{
 		src: "/photos/fall-cleanup-beds.jpg",
 		alt: "Volunteers clearing invasives and mulching the perimeter beds along the sidewalk",
 	},
 	{
-		src: "/photos/fall-cleanup-sign.jpg",
-		alt: "Kids planting bulbs in the bed beside the Lafayette-Pointer Park sign",
+		src: "/photos/fall-cleanup-field.jpg",
+		alt: "Neighbors and kids with buckets weeding the new athletic field in front of the recreation center",
 	},
 ];
 
@@ -527,7 +527,7 @@ function FallCleanupWrapUpCard({
 	event: (typeof upcomingEvents)[number];
 }) {
 	return (
-		<article className="flex flex-col rounded-2xl border border-border border-l-4 border-l-[color:var(--clay)] bg-card p-6 shadow-sm sm:p-8">
+		<article className="flex flex-col rounded-2xl border border-border border-l-4 border-l-[color:var(--sky)] bg-card p-6 shadow-sm sm:p-8">
 			<p className="eyebrow text-[color:var(--clay)]">Completed · fall 2026</p>
 			<h3 className="mt-3 font-heading text-2xl tracking-tight">
 				{event.title}
@@ -579,7 +579,7 @@ function FallCleanupWrapUpCard({
 
 function ContactSignup() {
 	return (
-		<Section className="pb-24">
+		<Section className="pb-16">
 			<div className="grid items-stretch gap-8 rounded-2xl border border-border bg-card p-8 shadow-sm sm:p-10 lg:grid-cols-[1fr_1.05fr_0.85fr]">
 				<div className="relative overflow-hidden rounded-2xl bg-secondary aspect-[4/5] lg:aspect-auto lg:min-h-[260px]">
 					<Image
