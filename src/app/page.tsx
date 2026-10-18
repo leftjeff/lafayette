@@ -194,7 +194,7 @@ function BearProject() {
 	return (
 		<section className="border-y border-[color:var(--clay)]/20 bg-[color:var(--cream)]/60">
 			<Section className="py-16 sm:py-20">
-				<div className="mx-auto max-w-3xl">
+				<div className="max-w-3xl">
 					<div>
 						<p className="eyebrow text-[color:var(--clay)]">
 							Completed · summer 2026
