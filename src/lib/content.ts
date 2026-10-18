@@ -80,10 +80,32 @@ export type EventItem = {
 	dateLabel?: string;
 	slug?: string;
 	body?: string[];
+	highlights?: string[];
+	afterword?: string;
 	cta?: { label: string; href: string };
 };
 
 export const upcomingEvents: EventItem[] = [
+	{
+		date: "2026-10-17",
+		slug: "fall-cleanup",
+		title: "Fall Clean-Up: Thank You!",
+		description:
+			"Thanks to all our friends and neighbors who came out Saturday, October 17th for our Fall Clean-Up in the park. Invasives removed, bulbs planted, beds mulched, the new athletic field weeded, and trash picked up. You all are amazing!",
+		type: "volunteer",
+		status: "past",
+		body: [
+			"Thanks to all our friends and neighbors who came out Saturday, October 17th for our Fall Clean-Up in the park. Here's what we got done together:",
+		],
+		highlights: [
+			"Invasives removed from the perimeter beds",
+			"Bulbs planted for spring",
+			"Mulched to suppress weeds",
+			"Weeded the new athletic field",
+			"Trash pick-up",
+		],
+		afterword: "You all are amazing. Stay tuned for our next park cleaning!",
+	},
 	{
 		date: "2026-06-12",
 		slug: "bear-carving",
@@ -107,24 +129,6 @@ export const upcomingEvents: EventItem[] = [
 			"80–90 neighbors turned out to rake, weed, mulch, and prune across the park. Thank you to everyone who came — the gardens are in great shape heading into summer.",
 		type: "volunteer",
 		status: "past",
-	},
-	{
-		date: "2026-10-17",
-		slug: "fall-cleanup",
-		title: "Annual Fall Clean-Up",
-		description:
-			"Join friends and neighbors Saturday, October 17th from 10 a.m. to 1 p.m. for our Annual Fall Clean-Up in Lafayette-Pointer Park. Grab your gardening gloves and come on out — any time you can spend is a big help, and kids are very welcome.",
-		type: "volunteer",
-		status: "upcoming",
-		body: [
-			"Join friends and neighbors Saturday, October 17th from 10 a.m. to 1 p.m. for our Annual Fall Clean-Up in Lafayette-Pointer Park. Sign up for a spot below, grab your gardening gloves, and come on out! We'll start at 10 a.m. and end at 1 p.m. — any time you can spend is a big help. Kids are very welcome.",
-			"Refreshments, donuts, and service hours available!",
-			"Feel free to bring friends and help us spread the word. Thank you!",
-		],
-		cta: {
-			label: "Sign up to volunteer",
-			href: "https://www.signupgenius.com/go/10C0B4CADAC2CA6F58-65873667-lafayettepointer#/",
-		},
 	},
 	{
 		date: "2026-09-15",

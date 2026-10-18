@@ -366,6 +366,7 @@ function Sponsors() {
 }
 
 function UpcomingPeek() {
+	const wrapUp = upcomingEvents.find((e) => e.slug === "fall-cleanup");
 	const next = upcomingEvents
 		.filter(
 			(e) =>
@@ -380,7 +381,7 @@ function UpcomingPeek() {
 				<div>
 					<p className="eyebrow">In the park</p>
 					<h2 className="mt-3 font-heading text-3xl tracking-tight sm:text-4xl">
-						What&rsquo;s coming up
+						{wrapUp ? "Thank you, neighbors!" : "What\u2019s coming up"}
 					</h2>
 				</div>
 				<Button asChild variant="ghost">
@@ -392,6 +393,7 @@ function UpcomingPeek() {
 			<div
 				className={`mt-10 grid gap-6 ${next.length > 1 ? "sm:grid-cols-2" : ""}`}
 			>
+				{wrapUp ? <FallCleanupWrapUpCard event={wrapUp} /> : null}
 				{next.map((e, i) => {
 					const d = new Date(`${e.date}T12:00:00`);
 					const dateStr =
@@ -406,9 +408,6 @@ function UpcomingPeek() {
 						"border-l-4 border-l-[color:var(--clay)]",
 						"border-l-4 border-l-[color:var(--amber)]",
 					];
-					if (e.slug === "fall-cleanup") {
-						return <FallCleanupCard key={e.title} event={e} />;
-					}
 					return (
 						<article
 							key={e.title}
@@ -443,56 +442,55 @@ function UpcomingPeek() {
 	);
 }
 
-function FallCleanupCard({
+function FallCleanupWrapUpCard({
 	event,
 }: {
 	event: (typeof upcomingEvents)[number];
 }) {
 	return (
-		<article className="relative flex flex-col overflow-hidden rounded-2xl bg-[color:var(--primary-deep)] text-white shadow-xl ring-4 ring-[color:var(--amber)] lg:flex-row">
+		<article className="relative flex flex-col overflow-hidden rounded-2xl bg-[color:var(--primary-deep)] text-white shadow-xl lg:flex-row">
 			<div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[380px] lg:w-1/2">
 				<Image
-					src="/photos/cleanup-planting-families.jpg"
-					alt="Kids and parents planting a garden bed together at a park clean-up day"
+					src="/photos/cleanup-volunteers.jpg"
+					alt="Volunteers digging and planting along a roadside bed during a park clean-up"
 					fill
 					sizes="(min-width: 1024px) 50vw, 100vw"
 					className="object-cover"
 				/>
 				<span className="absolute left-4 top-4 rounded-full bg-[color:var(--amber)] px-3 py-1 font-heading text-xs uppercase tracking-[0.18em] text-[color:var(--primary-deep)] shadow-md">
-					Volunteers needed!
+					Mission accomplished
 				</span>
 			</div>
 			<div className="flex flex-1 flex-col p-6 sm:p-8 lg:p-10">
 				<p className="font-heading text-sm uppercase tracking-[0.18em] text-[color:var(--amber)]">
-					Saturday, Oct 17 · 10 a.m.–1 p.m.
+					Saturday, October 17
 				</p>
 				<h3 className="mt-2 font-heading text-3xl tracking-tight text-white">
 					{event.title}
 				</h3>
 				<p className="mt-3 text-sm leading-relaxed text-white/85">
-					Grab your gardening gloves and help get the park ready for winter.
-					Come for an hour or stay all morning — kids are very welcome!
+					Thanks to all our friends and neighbors who came out for our Fall
+					Clean-Up in the park. Here&rsquo;s what we got done together:
 				</p>
-				<p className="mt-3 text-sm font-medium text-white">
-					🍩 Donuts · ☕ Refreshments · ✅ Service hours
+				{event.highlights ? (
+					<ul className="mt-4 space-y-1.5 text-sm text-white">
+						{event.highlights.map((h) => (
+							<li key={h} className="flex gap-2">
+								<span aria-hidden="true">✅</span>
+								<span>{h}</span>
+							</li>
+						))}
+					</ul>
+				) : null}
+				<p className="mt-4 text-sm font-medium text-white">
+					You all are amazing. Stay tuned for our next park cleaning!
 				</p>
-				<div className="mt-auto flex flex-col gap-2 pt-6">
-					{event.cta ? (
-						<Button
-							asChild
-							size="lg"
-							className="w-full bg-[color:var(--amber)] text-base font-semibold text-[color:var(--primary-deep)] hover:bg-[color:var(--amber)]/90"
-						>
-							<a href={event.cta.href} target="_blank" rel="noreferrer">
-								{event.cta.label}
-							</a>
-						</Button>
-					) : null}
+				<div className="mt-auto pt-6">
 					<Link
 						href={`/events#${event.slug}`}
-						className="text-center text-sm text-white/80 underline decoration-white/40 underline-offset-4 hover:text-white"
+						className="text-sm text-white/80 underline decoration-white/40 underline-offset-4 hover:text-white"
 					>
-						Event details
+						See photos and details
 					</Link>
 				</div>
 			</div>
