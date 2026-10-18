@@ -89,7 +89,7 @@ export const upcomingEvents: EventItem[] = [
 	{
 		date: "2026-10-17",
 		slug: "fall-cleanup",
-		title: "2026 Fall Clean-Up!",
+		title: "2026 Fall Clean-up",
 		description:
 			"Thanks to all our friends and neighbors who came out Saturday, October 17th for our Fall Clean-Up in the park. Invasives removed, bulbs planted, beds mulched, the new athletic field weeded, and trash picked up.",
 		type: "volunteer",
@@ -108,7 +108,7 @@ export const upcomingEvents: EventItem[] = [
 	{
 		date: "2026-06-12",
 		slug: "bear-carving",
-		title: "The Bear Carving Is Complete!",
+		title: "The Bear Carving Is Complete",
 		description:
 			"We did it! FOLP reached its ten thousand dollar fundraising goal and artist Paul Waclo completed the bear carving the week of June 8–12, 2026 — turning a storm-damaged 250-year-old oak stump into a sculpture of a bear, the mascot of Lafayette Elementary School.",
 		type: "community",
@@ -123,7 +123,7 @@ export const upcomingEvents: EventItem[] = [
 	},
 	{
 		date: "2026-04-18",
-		title: "Spring Cleanup Day",
+		title: "2026 Spring Clean-up",
 		description:
 			"80–90 neighbors turned out to rake, weed, mulch, and prune across the park. Thank you to everyone who came — the gardens are in great shape heading into summer.",
 		type: "volunteer",
@@ -176,7 +176,7 @@ export const accomplishments = [
 export const donationAmounts = [25, 50, 100, 250, 500] as const;
 
 export const bearCampaign = {
-	title: "The Bear Carving Is Complete!",
+	title: "The Bear Carving Is Complete",
 	body: [
 		"We did it! Thanks to an outpouring of community support, FOLP reached its ten thousand dollar fundraising goal, and artist Paul Waclo completed the bear carving the week of June 8–12, 2026. One of Lafayette-Pointer Park's beloved 250-year-old oaks — damaged in a major windstorm last summer — has been transformed into a sculpture of a bear, the longtime mascot of Lafayette Elementary School.",
 		"FOLP and organizers worked with Lafayette Elementary School to arrange field trips so every class could visit Paul at work, and on Tuesday, June 9th the community gathered for a Honey Strawberry Shortcake and Lemonade party at the carving site to celebrate. Thank you to everyone who gave, volunteered, and came out to cheer the bear to life!",

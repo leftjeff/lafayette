@@ -14,7 +14,7 @@ import {
 import { site } from "@/lib/site";
 
 const eventPhotos: Record<string, Array<{ src: string; alt: string }>> = {
-	"The Bear Carving Is Complete!": [
+	"The Bear Carving Is Complete": [
 		{
 			src: "/photos/bear-carving-progress-trunk.jpg",
 			alt: "The storm-damaged 250-year-old oak stump before carving, with a “Donate to the Bear” sign",
@@ -32,7 +32,7 @@ const eventPhotos: Record<string, Array<{ src: string; alt: string }>> = {
 			alt: "The finished “Be Kind” bear carving on the old oak stump, with families and a dog gathered at the bench beneath it",
 		},
 	],
-	"2026 Fall Clean-Up!": [
+	"2026 Fall Clean-up": [
 		{
 			src: "/photos/fall-cleanup-field.jpg",
 			alt: "Neighbors and kids with buckets weeding the new athletic field in front of the recreation center",
@@ -46,7 +46,7 @@ const eventPhotos: Record<string, Array<{ src: string; alt: string }>> = {
 			alt: "Kids planting bulbs in the bed beside the Lafayette-Pointer Park sign",
 		},
 	],
-	"Spring Cleanup Day": [
+	"2026 Spring Clean-up": [
 		{
 			src: "/photos/cleanup-group.jpg",
 			alt: "A large group of neighbors working together under the cherry trees during the spring cleanup",
