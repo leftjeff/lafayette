@@ -506,6 +506,21 @@ function FeaturedEventCard({
 	);
 }
 
+const fallCleanupPhotos = [
+	{
+		src: "/photos/fall-cleanup-field.jpg",
+		alt: "Neighbors and kids with buckets weeding the new athletic field in front of the recreation center",
+	},
+	{
+		src: "/photos/fall-cleanup-beds.jpg",
+		alt: "Volunteers clearing invasives and mulching the perimeter beds along the sidewalk",
+	},
+	{
+		src: "/photos/fall-cleanup-sign.jpg",
+		alt: "Kids planting bulbs in the bed beside the Lafayette-Pointer Park sign",
+	},
+];
+
 function FallCleanupWrapUpCard({
 	event,
 }: {
@@ -537,6 +552,22 @@ function FallCleanupWrapUpCard({
 					{event.afterword}
 				</p>
 			) : null}
+			<div className="mt-5 grid gap-3 sm:grid-cols-3">
+				{fallCleanupPhotos.map((p) => (
+					<div
+						key={p.src}
+						className="relative aspect-[4/3] overflow-hidden rounded-xl ring-1 ring-border/60"
+					>
+						<Image
+							src={p.src}
+							alt={p.alt}
+							fill
+							sizes="(min-width: 1024px) 30vw, (min-width: 640px) 33vw, 100vw"
+							className="object-cover"
+						/>
+					</div>
+				))}
+			</div>
 			<div className="mt-auto pt-5">
 				<Button asChild size="sm" variant="outline">
 					<Link href={`/events#${event.slug}`}>Event details</Link>

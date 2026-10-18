@@ -32,6 +32,20 @@ const eventPhotos: Record<string, Array<{ src: string; alt: string }>> = {
 			alt: "The finished “Be Kind” bear carving on the old oak stump, with families and a dog gathered at the bench beneath it",
 		},
 	],
+	"2026 Fall Clean-Up!": [
+		{
+			src: "/photos/fall-cleanup-field.jpg",
+			alt: "Neighbors and kids with buckets weeding the new athletic field in front of the recreation center",
+		},
+		{
+			src: "/photos/fall-cleanup-beds.jpg",
+			alt: "Volunteers clearing invasives and mulching the perimeter beds along the sidewalk",
+		},
+		{
+			src: "/photos/fall-cleanup-sign.jpg",
+			alt: "Kids planting bulbs in the bed beside the Lafayette-Pointer Park sign",
+		},
+	],
 	"Spring Cleanup Day": [
 		{
 			src: "/photos/cleanup-group.jpg",
