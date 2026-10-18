@@ -474,7 +474,8 @@ function FeaturedEventCard({
 			</div>
 			<div className="flex flex-1 flex-col p-6 sm:p-8 lg:p-10">
 				<p className="font-heading text-sm uppercase tracking-[0.18em] text-[color:var(--amber)]">
-					{dateStr} · 9 a.m.–Noon
+					{dateStr}
+					{event.timeLabel ? ` · ${event.timeLabel}` : ""}
 				</p>
 				<h3 className="mt-2 font-heading text-3xl tracking-tight text-white sm:text-4xl">
 					{event.title}

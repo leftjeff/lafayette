@@ -158,9 +158,68 @@ function BearDonorRoll() {
 	);
 }
 
+function FeaturedUpcomingEvent({
+	event,
+}: {
+	event: (typeof upcomingEvents)[number];
+}) {
+	const d = new Date(`${event.date}T12:00:00`);
+	const dateStr = d.toLocaleDateString("en-US", {
+		weekday: "long",
+		month: "long",
+		day: "numeric",
+	});
+	return (
+		<li
+			id={event.slug}
+			className="flex scroll-mt-24 flex-col overflow-hidden rounded-2xl bg-[color:var(--primary-deep)] text-white shadow-xl ring-4 ring-[color:var(--amber)] lg:flex-row"
+		>
+			<div className="relative aspect-[16/10] lg:aspect-auto lg:min-h-[360px] lg:w-2/5">
+				<Image
+					src="/photos/gazebo.jpg"
+					alt="The gazebo at Lafayette-Pointer Park"
+					fill
+					sizes="(min-width: 1024px) 40vw, 100vw"
+					className="object-cover"
+				/>
+				<span className="absolute left-4 top-4 rounded-full bg-[color:var(--amber)] px-3 py-1 font-heading text-xs uppercase tracking-[0.18em] text-[color:var(--primary-deep)] shadow-md">
+					Save the date
+				</span>
+			</div>
+			<div className="flex flex-1 flex-col p-6 sm:p-8 lg:p-10">
+				<p className="font-heading text-sm uppercase tracking-[0.18em] text-[color:var(--amber)]">
+					{dateStr}
+					{event.timeLabel ? ` · ${event.timeLabel}` : ""}
+				</p>
+				<h3 className="mt-2 font-heading text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+					{event.title}
+				</h3>
+				<div className="mt-4 space-y-3 text-base leading-relaxed text-white/85">
+					{(event.body ?? [event.description]).map((p) => (
+						<p key={p}>{p}</p>
+					))}
+				</div>
+				{event.cta ? (
+					<Button
+						asChild
+						size="lg"
+						className="mt-6 w-full bg-[color:var(--amber)] text-base font-semibold text-[color:var(--primary-deep)] hover:bg-[color:var(--amber)]/90 sm:w-auto sm:self-start sm:px-10"
+					>
+						<a href={event.cta.href} target="_blank" rel="noreferrer">
+							{event.cta.label}
+						</a>
+					</Button>
+				) : null}
+				<AddToCalendar event={event} />
+			</div>
+		</li>
+	);
+}
+
 export default function EventsPage() {
 	const past = upcomingEvents.filter((e) => e.status === "past");
 	const upcoming = upcomingEvents.filter((e) => e.status === "upcoming");
+	const featuredSlug = upcoming.find((e) => e.slug)?.slug;
 	return (
 		<div>
 			<BreadcrumbJsonLd crumbs={[{ name: "Events", href: "/events" }]} />
@@ -194,6 +253,9 @@ export default function EventsPage() {
 						<ol className="mt-6 space-y-5">
 							{upcoming.map((e) => {
 								const d = new Date(`${e.date}T12:00:00`);
+								if (e.slug && e.slug === featuredSlug) {
+									return <FeaturedUpcomingEvent key={e.title} event={e} />;
+								}
 								return (
 									<li
 										key={e.title}

@@ -78,6 +78,7 @@ export type EventItem = {
 	type: "volunteer" | "community" | "fundraiser";
 	status: "past" | "upcoming";
 	dateLabel?: string;
+	timeLabel?: string;
 	slug?: string;
 	body?: string[];
 	highlights?: string[];
@@ -134,6 +135,7 @@ const allEvents: EventItem[] = [
 		date: "2026-11-14",
 		slug: "november-meetup",
 		title: "Monthly Meet-Up",
+		timeLabel: "9 a.m.–Noon",
 		description:
 			"Join friends and neighbors Saturday, November 14th from 9 a.m. to noon for our monthly meet-up in Lafayette-Pointer Park. Come for an hour or stay the whole morning — all are welcome!",
 		type: "volunteer",
