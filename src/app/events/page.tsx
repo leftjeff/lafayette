@@ -278,7 +278,7 @@ export default function EventsPage() {
 									>
 										<div className="flex flex-col items-start gap-1">
 											<span className="text-xs font-medium uppercase tracking-[0.18em] text-[color:var(--clay)]">
-												Took place
+												Completed
 											</span>
 											<span className="font-heading text-2xl leading-tight text-[color:var(--heading)]">
 												{d.toLocaleDateString("en-US", {
