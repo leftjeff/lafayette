@@ -82,10 +82,11 @@ export type EventItem = {
 	body?: string[];
 	highlights?: string[];
 	afterword?: string;
+	hidden?: boolean;
 	cta?: { label: string; href: string };
 };
 
-export const upcomingEvents: EventItem[] = [
+const allEvents: EventItem[] = [
 	{
 		date: "2026-10-17",
 		slug: "fall-cleanup",
@@ -141,6 +142,7 @@ export const upcomingEvents: EventItem[] = [
 	{
 		date: "2026-09-15",
 		slug: "lafayette-field",
+		hidden: true,
 		title: "Volunteer Opportunity: Help Lafayette Athletic Field 🌱",
 		description:
 			"The Lafayette Athletic Field has been getting some summer TLC, but a few areas of new grass that dried out are now susceptible to weeds. FOLP is looking for volunteers to help give the field some care — every bit of help makes a difference.",
@@ -163,6 +165,9 @@ export const upcomingEvents: EventItem[] = [
 		dateLabel: "Winter",
 	},
 ];
+
+// Hidden events stay in the list above but are not shown anywhere on the site.
+export const upcomingEvents: EventItem[] = allEvents.filter((e) => !e.hidden);
 
 export const accomplishments = [
 	"Funded the resurfacing of the tennis courts",
