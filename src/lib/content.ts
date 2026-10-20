@@ -134,7 +134,7 @@ const allEvents: EventItem[] = [
 	{
 		date: "2026-11-14",
 		slug: "november-meetup",
-		title: "Monthly Meet-Up",
+		title: "Monthly Meet-Up: Fall Planting",
 		timeLabel: "9 a.m.–Noon",
 		description:
 			"Join friends and neighbors Saturday, November 14th from 9 a.m. to noon for our monthly meet-up in Lafayette-Pointer Park. Come for an hour or stay the whole morning — all are welcome!",
