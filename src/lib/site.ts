@@ -32,3 +32,8 @@ export const site = {
 		{ href: "/contact", label: "Contact Us" },
 	],
 } as const;
+
+/** Shown to visitors when an upstream send fails; the detail is logged server-side only. */
+export function visitorErrorMessage() {
+	return `Something went wrong — please email us at ${site.email}.`;
+}

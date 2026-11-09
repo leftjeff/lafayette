@@ -17,6 +17,7 @@ import { POST as newsletterPOST } from "@/app/api/newsletter/route";
 import { submitContact } from "@/app/contact/actions";
 import { submitSignup } from "@/app/signup/actions";
 import { upcomingEvents } from "@/lib/content";
+import { visitorErrorMessage } from "@/lib/site";
 
 beforeEach(() => {
 	for (const f of Object.values(email)) f.mockReset();
@@ -118,6 +119,18 @@ describe("contact form action", () => {
 		const r = await submitContact(null, form(good));
 		expect(r.ok).toBe(false);
 	});
+
+	it("never shows upstream error text to the visitor", async () => {
+		const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+		email.sendContactMessage.mockRejectedValueOnce(
+			new Error("MAILCHIMP_TRANSACTIONAL_API_KEY is not set"),
+		);
+		const r = await submitContact(null, form(good));
+		expect(r).toEqual({ ok: false, error: visitorErrorMessage() });
+		expect(r.error).not.toMatch(/MAILCHIMP|not set/);
+		expect(spy).toHaveBeenCalled();
+		spy.mockRestore();
+	});
 });
 
 describe("signup form action", () => {
@@ -138,5 +151,19 @@ describe("signup form action", () => {
 		const r = await submitSignup(null, form(fields));
 		expect(r.error).toBeTruthy();
 		expect(email.sendSignupNotification).not.toHaveBeenCalled();
+	});
+
+	it("never shows upstream error text to the visitor", async () => {
+		const spy = vi.spyOn(console, "error").mockImplementation(() => {});
+		email.sendSignupNotification.mockRejectedValueOnce(
+			new Error(
+				'Email send failed: {"status":"error","message":"Invalid API key"}',
+			),
+		);
+		const r = await submitSignup(null, form(good));
+		expect(r).toEqual({ error: visitorErrorMessage() });
+		expect(r.error).not.toMatch(/Invalid API key|Email send failed/);
+		expect(spy).toHaveBeenCalled();
+		spy.mockRestore();
 	});
 });
