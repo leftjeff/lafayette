@@ -8,7 +8,11 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "eslint",
-		"prepare": "git config core.hooksPath .githooks || true"
+		"prepare": "git config core.hooksPath .githooks || true",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"check": "eslint && biome check tests vitest.config.ts && tsc --noEmit && vitest run",
+		"gate": "pnpm check && next build"
 	},
 	"dependencies": {
 		"@vercel/analytics": "^2.0.1",
@@ -35,6 +39,7 @@
 		"eslint": "^9",
 		"eslint-config-next": "16.2.6",
 		"tailwindcss": "^4",
-		"typescript": "^5"
+		"typescript": "^5",
+		"vitest": "^5.1.0"
 	}
 }

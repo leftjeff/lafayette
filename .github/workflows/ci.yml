@@ -39,5 +39,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Lint
-        run: pnpm lint
+      # Full release gate: lint, biome, typecheck, tests, production build.
+      # Must be green on the commit before any `vercel deploy` (GA stage).
+      - name: Full gate
+        run: pnpm gate
