@@ -1,0 +1,18 @@
+{
+	"schema": "bench-gate/1",
+	"lane": "gate",
+	"needs": {
+		"cpu": 4,
+		"mem": "4G",
+		"runtimes": ["node24.21.0"],
+		"gpu": "none",
+		"platform": "linux"
+	},
+	"command": [
+		"sh",
+		"-c",
+		"export npm_config_cache=\"$PWD/.npm\" NEXT_TELEMETRY_DISABLED=1 && P=\"npx --yes pnpm@10.33.4\" && $P install --frozen-lockfile --reporter=silent && $P gate && echo '[gate] LAFAYETTE GATE OK'"
+	],
+	"success_regex": "^\\[gate\\] LAFAYETTE GATE OK$",
+	"max_seconds": 1200
+}
