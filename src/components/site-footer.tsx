@@ -107,7 +107,7 @@ export function SiteFooter() {
 					<span>
 						© {new Date().getFullYear()} {site.name}. All rights reserved.
 					</span>
-					<span>501(c)(3) nonprofit · EIN on request</span>
+					<span>501(c)(3) nonprofit · EIN 52-2171854</span>
 				</div>
 			</div>
 		</footer>

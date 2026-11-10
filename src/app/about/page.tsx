@@ -37,6 +37,7 @@ export default function AboutPage() {
 				<aside className="space-y-6 text-sm text-muted-foreground lg:sticky lg:top-24 lg:h-fit">
 					<Fact label="Founded" value="1999" />
 					<Fact label="Status" value="501(c)(3) nonprofit" />
+					<Fact label="EIN" value="52-2171854" />
 					<Fact label="Park size" value="Nine acres" />
 					<Fact label="Location" value="Ward 4, Chevy Chase DC" />
 					<Fact
